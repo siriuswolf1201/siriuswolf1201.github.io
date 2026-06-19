@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>FM348.2 ON AIR — Rotaract District 3482</title>
+  <meta name="description" content="FM348.2 放送 — 這個頻率，讓我們連結在一起。" />
+
+  <!-- Google Fonts: 筆刷標題 / 印章粗體 / 中文 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Anton&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== 背景場景 ===== -->
+  <div class="scene" aria-hidden="true">
+    <div class="grid-paper"></div>
+    <div class="cloud cloud-a"></div>
+    <div class="cloud cloud-b"></div>
+    <div class="cloud cloud-c"></div>
+
+    <!-- 手繪塗鴉 -->
+    <svg class="doodle doodle-butterfly" viewBox="0 0 120 120">
+      <g fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round">
+        <path d="M60 70 C30 30 5 45 25 70 C5 95 35 100 60 72" />
+        <path d="M60 70 C90 30 115 45 95 70 C115 95 85 100 60 72" />
+        <path d="M60 50 L60 92 M60 50 C56 44 52 42 50 40 M60 50 C64 44 68 42 70 40" />
+      </g>
+    </svg>
+    <svg class="doodle doodle-stars" viewBox="0 0 80 80">
+      <g fill="#fff">
+        <path d="M40 8 L44 34 L70 38 L44 42 L40 70 L36 42 L10 38 L36 34 Z" />
+      </g>
+    </svg>
+    <svg class="doodle doodle-swoosh" viewBox="0 0 260 60">
+      <path d="M5 40 C60 5 120 5 175 35 C200 48 230 30 255 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+    </svg>
+    <svg class="doodle doodle-wave" viewBox="0 0 220 40">
+      <path d="M5 20 q15 -16 30 0 t30 0 t30 0 t30 0 t30 0 t30 0" fill="none" stroke="#7ea9d6" stroke-width="3" stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <!-- ===== 主畫面 ===== -->
+  <main class="stage">
+    <!-- 頂部：logo + 標題 + 印章 -->
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/logo.png" alt="" onerror="this.classList.add('is-missing')" />
+        <div class="brand-text">
+          <span class="brand-rotaract">Rotaract</span>
+          <span class="brand-district">District 3482</span>
+        </div>
+        <div class="brand-impact">CREATE<br />LASTING<br />IMPACT</div>
+      </div>
+
+      <div class="titleblock">
+        <span class="stamp">ON AIR</span>
+        <h1 class="brush-title">FM348.2</h1>
+        <span class="brush-onair">ON AIR</span>
+        <p class="subtitle">FM348.2 放送 — 這個頻率，讓我們連結在一起</p>
+      </div>
+    </header>
+
+    <!-- 內容：左收音機 + 右便利貼/清單 -->
+    <section class="console">
+      <!-- ===== 復古手提音響 ===== -->
+      <div class="boombox" id="boombox">
+        <div class="bb-handle"></div>
+
+        <div class="bb-body">
+          <!-- 上排：頻率讀數 + ON AIR 燈 -->
+          <div class="bb-toprow">
+            <div class="freq-display">
+              <span class="freq-prefix">FM</span>
+              <span class="freq-value" id="freqValue">348.2</span>
+              <span class="freq-unit">MHz</span>
+            </div>
+            <div class="onair-lamp" id="onairLamp">
+              <span class="lamp-dot"></span>
+              <span class="lamp-text">ON AIR</span>
+            </div>
+          </div>
+
+          <!-- 調頻刻度窗 -->
+          <div class="tuner" id="tuner">
+            <div class="tuner-window">
+              <div class="tuner-scale" id="tunerScale"><!-- 刻度由 JS 產生 --></div>
+              <div class="tuner-marks" id="tunerMarks"><!-- 各台標記由 JS 產生 --></div>
+              <div class="tuner-needle" id="tunerNeedle">
+                <div class="needle-grip"></div>
+              </div>
+            </div>
+            <p class="tuner-hint">← 拖曳指針掃台，或點右側清單直接選台 →</p>
+          </div>
+
+          <!-- 下排：喇叭 + 卡帶 + 喇叭 -->
+          <div class="bb-deckrow">
+            <div class="speaker speaker-left" id="speakerLeft"><span></span></div>
+
+            <div class="cassette" id="cassette">
+              <div class="cassette-window">
+                <div class="reel reel-left"><span></span></div>
+                <div class="reel reel-right"><span></span></div>
+              </div>
+              <div class="cassette-label">FM 348.2</div>
+            </div>
+
+            <div class="speaker speaker-right" id="speakerRight"><span></span></div>
+          </div>
+
+          <!-- 控制列 -->
+          <div class="bb-controls">
+            <button class="ctrl-btn" id="playBtn" aria-label="播放 / 暫停">
+              <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>
+            </button>
+
+            <div class="knob-group">
+              <span class="knob-label">音量</span>
+              <input type="range" id="volume" class="knob-slider" min="0" max="100" value="75" />
+            </div>
+
+            <button class="static-toggle is-on" id="staticToggle" aria-pressed="true">
+              <span class="dot"></span> 掃台雜訊
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 右側：便利貼 + 頻道清單 ===== -->
+      <aside class="sidepanel">
+        <div class="sticky-note" id="stickyNote">
+          <div class="sticky-tape"></div>
+          <p class="sticky-now">NOW PLAYING</p>
+          <h2 class="sticky-name" id="nowName">尚未選台</h2>
+          <p class="sticky-intro" id="nowIntro">拖曳指針或點選下方頻道，開始收聽各社的故事。</p>
+        </div>
+
+        <div class="stationlist-wrap">
+          <p class="stationlist-title">頻道清單</p>
+          <ul class="stationlist" id="stationList"><!-- 由 JS 產生 --></ul>
+        </div>
+      </aside>
+    </section>
+
+    <!-- 角落植栽 -->
+    <svg class="plant" viewBox="0 0 160 200" aria-hidden="true">
+      <path d="M70 200 L62 120 Q60 105 78 100 L92 98 Q108 100 104 118 L98 200 Z" fill="#e7e1d6" />
+      <path d="M70 200 L62 120 Q60 105 78 100" fill="none" stroke="#cfc7b8" stroke-width="2" />
+      <g fill="#5a9367">
+        <path d="M80 100 C40 90 30 50 55 30 C75 55 85 75 80 100 Z" />
+        <path d="M80 100 C120 90 130 50 105 30 C85 55 75 75 80 100 Z" />
+        <path d="M80 95 C55 70 60 35 80 18 C100 35 105 70 80 95 Z" />
+      </g>
+      <g fill="none" stroke="#3f7a4f" stroke-width="1.5">
+        <path d="M80 100 C66 70 62 45 66 30" />
+        <path d="M80 100 C94 70 98 45 94 30" />
+        <path d="M80 95 L80 22" />
+      </g>
+    </svg>
+  </main>
+
+  <!-- ===== 開機 overlay (點擊解鎖音訊) ===== -->
+  <div class="poweron" id="powerOn">
+    <div class="poweron-inner">
+      <span class="stamp poweron-stamp">ON AIR</span>
+      <h1 class="brush-title poweron-title">FM348.2</h1>
+      <p class="poweron-sub">這個頻率，讓我們連結在一起</p>
+      <button class="poweron-btn" id="powerBtn">
+        <span class="poweron-power">⏻</span>
+        按一下開機收聽
+      </button>
+      <p class="poweron-hint">建議橫向擺放平板、開啟全螢幕</p>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
