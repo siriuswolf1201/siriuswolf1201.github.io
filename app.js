@@ -300,7 +300,7 @@ function initClubExplorer() {
         <div class="club-card-tags">${tagsHTML}</div>
         <div class="club-card-footer">
           <span class="club-sponsor">輔導：${club.sponsor}</span>
-          <!-- <button class="club-more-btn" onclick="openClubModal('${club.id}')">深入探索</button> -->
+          <button class="club-more-btn" onclick="openClubModal('${club.id}')">深入探索</button>
         </div>
       `;
       clubGrid.appendChild(card);
