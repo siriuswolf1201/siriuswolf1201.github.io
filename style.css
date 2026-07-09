@@ -2045,6 +2045,12 @@ select.form-control {
   transform: translateY(-2px);
 }
 
+.form-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* --- 成功 Popup 模態視窗 --- */
 .success-overlay {
   position: fixed;

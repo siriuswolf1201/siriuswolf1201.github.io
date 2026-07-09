@@ -1,0 +1,30 @@
+{
+  "id": "taipei-daan",
+  "name": "台北大安社",
+  "englishName": "Rotaract Club of Taipei Da-An",
+  "sponsor": "台北大安扶輪社",
+  "meetingTime": "每雙週六 19:00 - 21:30",
+  "meetingPlace": "台北市大安區忠孝東路四段 (大安青年活動中心)",
+  "category": "service",
+  "categoryLabel": "社會服務",
+  "tags": ["偏鄉教育", "弱勢關懷", "陪伴計畫", "慈善公益"],
+  "slogan": "大愛無疆，安居樂業！深耕社區弱勢關懷。",
+  "intro": "台北大安扶青社長期關注偏鄉教育與社區弱勢族群。透過長期穩定的「小太陽陪伴計畫」，為弱勢家庭孩童提供課後輔導、科普教育與探索成長營，用愛與耐心陪伴孩子跨越障礙，創造溫暖改變。",
+  "officers": [
+    { "role": "社長 President", "name": "林志明", "title": "社工師", "avatar": "❤️" },
+    { "role": "秘書 Secretary", "name": "許家瑜", "title": "兒童心理輔導師", "avatar": "🧸" },
+    { "role": "財務 Treasurer", "name": "高偉哲", "title": "非營利組織專案主任", "avatar": "💰" },
+    { "role": "輔導顧問 Advisor", "name": "陳志強", "title": "前社長 / 特殊教育學校校長", "avatar": "👨‍🏫" },
+    { "role": "社務主委 Club Service", "name": "黃郁雯", "title": "活動企劃經理", "avatar": "🎉" },
+    { "role": "社服主委 Community Service", "name": "楊智超", "title": "職能治療師", "avatar": "👨‍⚕️" },
+    { "role": "職業主委 Vocational", "name": "董佳玲", "title": "職涯發展諮詢師", "avatar": "💼" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "江宜庭", "title": "社群品牌視覺設計師", "avatar": "🎨" }
+  ],
+  "annualActivities": [
+    { "time": "08月", "title": "大安小太陽山林探索夏令營", "desc": "帶領弱勢學童走出城市，進行三天兩夜的生態與自我挑戰探索。" },
+    { "time": "11月", "title": "銀髮與幼童代間聯合彩繪牆", "desc": "結合社區長輩與學童，共同彩繪社區老舊牆面，活化社區。" },
+    { "time": "01月", "title": "歲末暖心義賣與送暖活動", "desc": "籌集社會資源，為獨居長者與清寒家庭配送禦寒物資。" },
+    { "time": "04月", "title": "偏鄉小學書庫與圖書室重建", "desc": "募集二手優質童書，前往偏鄉學校協助建立專屬閱讀角。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "daan@rid3482.org" }
+}

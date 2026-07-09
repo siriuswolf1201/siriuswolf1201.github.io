@@ -1,0 +1,30 @@
+{
+  "id": "taipei-dalongdong",
+  "name": "台北大龍峒社",
+  "englishName": "Rotaract Club of Taipei Dalongdong",
+  "sponsor": "台北大龍峒扶輪社",
+  "meetingTime": "每雙週日 14:00 - 16:30",
+  "meetingPlace": "台北市大同區哈密街 (大龍峒保安宮藝文教室)",
+  "category": "culture",
+  "categoryLabel": "在地文化",
+  "tags": ["文資保存", "傳統技藝", "社區走讀", "民俗文化"],
+  "slogan": "大龍騰飛，峒心協力！活化傳統民俗生命力。",
+  "intro": "以古老歷史街區大龍峒為基地，台北大龍峒扶青社深耕於傳統建築藝術、廟宇民俗與傳統手工藝的推廣。我們與大龍峒保安宮、台北孔廟等單位密切合作，策劃走讀與技藝工作坊，將文化資產轉化為青年的時尚新語言。",
+  "officers": [
+    { "role": "社長 President", "name": "李博文", "title": "古蹟修復助理規劃師", "avatar": "🏯" },
+    { "role": "秘書 Secretary", "name": "吳庭妤", "title": "文化導覽解說員", "avatar": "🎤" },
+    { "role": "財務 Treasurer", "name": "謝佳霖", "title": "傳統工藝研究家", "avatar": "🎨" },
+    { "role": "輔導顧問 Advisor", "name": "張大同", "title": "文資學者 / 大同區史專家", "avatar": "👨‍🏫" },
+    { "role": "社務主委 Club Service", "name": "林士傑", "title": "餐飲服務經理", "avatar": "☕" },
+    { "role": "社服主委 Community Service", "name": "黃詩婷", "title": "藝術治療師", "avatar": "🧸" },
+    { "role": "職業主委 Vocational", "name": "陳俊安", "title": "建築設計師", "avatar": "📐" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "盧筱晴", "title": "文化局專案執行長", "avatar": "📰" }
+  ],
+  "annualActivities": [
+    { "time": "09月", "title": "孔廟釋奠典禮青年走讀會", "desc": "引導青年深入體驗教師節孔廟八佾舞與祭孔大典的歷史意涵。" },
+    { "time": "11月", "title": "保生文化祭民俗體驗工作坊", "desc": "辦理剪紙、掌中戲、傳統捏麵人等傳統技藝教學與體驗。" },
+    { "time": "02月", "title": "元宵大龍峒尋寶解謎走讀", "desc": "以實境解謎方式引導大眾探訪古街古廟，推動寓教於樂的觀光。" },
+    { "time": "05月", "title": "傳統木雕與漆藝美學講座", "desc": "邀請國家級工藝大師，親自分享古建修復與藝術創作經驗。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "dalongdong@rid3482.org" }
+}

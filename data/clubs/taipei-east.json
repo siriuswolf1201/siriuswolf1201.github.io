@@ -1,0 +1,30 @@
+{
+  "id": "taipei-east",
+  "name": "台北城東社",
+  "englishName": "Rotaract Club of Taipei East",
+  "sponsor": "台北城東扶輪社",
+  "meetingTime": "每雙週日 10:00 - 12:30",
+  "meetingPlace": "台北市大安區和平東路一段 (城東藝文空間)",
+  "category": "international",
+  "categoryLabel": "國際多元",
+  "tags": ["國際交流", "英語口說", "跨國友誼", "多元包容"],
+  "slogan": "城東視界，連結國際！展現新世代國際影響力。",
+  "intro": "台北城東扶青社以國際視野與多元包容為核心精神。定期舉辦全英文例會與跨國文化沙龍，並與多個海外姊妹團體保持緊密合作，為青年打造一個無需出國就能對接國際的優質社交平台。",
+  "officers": [
+    { "role": "社長 President", "name": "張志豪", "title": "跨國貿易專員", "avatar": "🌍" },
+    { "role": "秘書 Secretary", "name": "陳冠廷", "title": "英語口譯師", "avatar": "🗣️" },
+    { "role": "財務 Treasurer", "name": "廖珮珊", "title": "外商採購經理", "avatar": "💳" },
+    { "role": "輔導顧問 Advisor", "name": "簡東賢", "title": "前社長 / 貿易公司副總", "avatar": "👨‍💼" },
+    { "role": "社務主委 Club Service", "name": "游淑敏", "title": "人資管理師", "avatar": "👥" },
+    { "role": "社服主委 Community Service", "name": "洪家明", "title": "NGO 專案幹事", "avatar": "🌱" },
+    { "role": "職業主委 Vocational", "name": "吳佩儒", "title": "外商獵頭顧問", "avatar": "💼" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "羅子恩", "title": "英語文案撰寫師", "avatar": "📝" }
+  ],
+  "annualActivities": [
+    { "time": "09月", "title": "國際文化美食嘉年華", "desc": "邀請在台外籍青年與團員共同交流各國文化與美食。" },
+    { "time": "12月", "title": "姐妹社跨國線上聯合例會", "desc": "與日本、韓國姐妹社互動，探討全球青年社會責任。" },
+    { "time": "03月", "title": "亞太青年國際大使選拔", "desc": "提供團員前往海外參與扶青國際論壇的全額贊助機會。" },
+    { "time": "05月", "title": "英語簡報力與演講大賽", "desc": "提升全英文商務簡報技巧與國際談判表達。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "east@rid3482.org" }
+}

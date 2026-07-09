@@ -854,7 +854,7 @@ function initClubExplorer() {
         <div class="club-card-tags">${tagsHTML}</div>
         <div class="club-card-footer">
           <span class="club-sponsor">輔導：${club.sponsor}</span>
-          <button class="club-more-btn" onclick="openClubModal('${club.id}')">深入探索</button>
+          <!-- <button class="club-more-btn" onclick="openClubModal('${club.id}')">深入探索</button> -->
         </div>
       `;
       clubGrid.appendChild(card);
@@ -1140,6 +1140,38 @@ function initQuiz() {
 }
 
 // G. 諮詢意願表單提交驗證
+
+// 官網諮詢表單 -> Google 表單 (https://forms.gle/mBFya8zAHj4b13Sm7) 的對接設定
+const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSel-xOOxTm2wtWrlA5ltWg2AL_Wy6zJM2VJNSPSJtFfpgvAdQ/formResponse";
+const GOOGLE_FORM_ENTRY_IDS = {
+  name: "entry.454029254",
+  phone: "entry.1939506800",
+  email: "entry.131539977",
+  club: "entry.498700543",
+  message: "entry.2012810118"
+};
+// Google 表單下拉選單的選項文字與官網 CLUBS_DATA 的社名並不完全一致（例如官網「台北圓滿社」對應表單「8 圓環扶青社」），
+// 這裡對照官網 club.name 轉換成表單能辨識的選項文字，確保諮詢意願能正確歸類到該社。
+const CLUB_NAME_TO_GOOGLE_FORM_OPTION = {
+  "台北城中社": "3 城中扶青社",
+  "台北城東社": "4 城東扶青社",
+  "台北大稻埕社": "6 大稻埕扶青社",
+  "台北北海社": "7 北海扶青社",
+  "台北大安社": "9 大安扶青社",
+  "台北大龍峒社": "10 大龍峒扶青社",
+  "台北西北區社": "11 西北區扶青社",
+  "台北百城社": "12 百城扶青社",
+  "台北圓滿社": "8 圓環扶青社",
+  "台北上城社": "17 上城扶青社",
+  "台北邑德社": "19 邑德扶青社",
+  "台北百合社": "20 百合扶青社",
+  "台北怡東社": "21 怡東扶青社",
+  "台北城中北醫大社": "22 城中北醫大扶青社",
+  "台北旭日社": "23 旭日扶青社",
+  "台北雙子星AI社": "24 雙子星AI扶青社",
+  "台北景文科大社": "25 景文科大扶青社"
+};
+
 function initContactForm() {
   const form = document.getElementById("contact-form");
   const successModal = document.getElementById("success-popup");
@@ -1166,28 +1198,55 @@ function initContactForm() {
     const phone = document.getElementById("form-phone").value.trim();
     const email = document.getElementById("form-email").value.trim();
     const clubSelected = document.getElementById("form-club").value;
+    const message = document.getElementById("form-message").value.trim();
 
     if (!name || !phone || !email) {
       alert("⚠️ 請完整填寫姓名、電話與電子郵件欄位，感謝您的配合！");
       return;
     }
 
-    // 顯示表單提交成功模組，並動態寫入稱呼
-    const successMsg = document.getElementById("success-popup-message");
-    successMsg.innerHTML = `
-      親愛的 <strong>${name}</strong> 您好：<br>
-      我們已成功收到您想加入<strong>「${clubSelected}」</strong>的意願申請！<br><br>
-      地區團隊與該社秘書長將在 3 個工作天內，以電子郵件 (<strong>${email}</strong>) 或電話與您取得聯繫，並邀請您參與最近一次的精彩例會活動！<br><br>
-      讓我們在 2026-27 年度一起：<br>
-      <strong>「WOW! 青年影響力 共創新世紀！」</strong>
-    `;
+    const submitBtn = form.querySelector(".form-btn-submit");
+    if (submitBtn) submitBtn.disabled = true;
 
-    successModal.style.display = "flex";
-    setTimeout(() => {
-      successModal.classList.add("show");
-    }, 10);
+    const params = new URLSearchParams();
+    params.append(GOOGLE_FORM_ENTRY_IDS.name, name);
+    params.append(GOOGLE_FORM_ENTRY_IDS.phone, phone);
+    params.append(GOOGLE_FORM_ENTRY_IDS.email, email);
+    params.append(GOOGLE_FORM_ENTRY_IDS.club, CLUB_NAME_TO_GOOGLE_FORM_OPTION[clubSelected] || clubSelected);
+    params.append(GOOGLE_FORM_ENTRY_IDS.message, message);
 
-    form.reset();
+    // Google 表單的 formResponse 端點不支援 CORS，用 no-cors 送出即可，
+    // 瀏覽器無法讀取回應內容，所以這裡樂觀地把「沒有網路錯誤」當成功，
+    // 實際是否有正確寫入回覆試算表，需要另外到 Google 表單後台確認。
+    fetch(GOOGLE_FORM_ACTION_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: params
+    })
+      .then(() => {
+        // 顯示表單提交成功模組，並動態寫入稱呼
+        const successMsg = document.getElementById("success-popup-message");
+        successMsg.innerHTML = `
+          親愛的 <strong>${name}</strong> 您好：<br>
+          我們已成功收到您想加入<strong>「${clubSelected}」</strong>的意願申請！<br><br>
+          地區團隊與該社秘書長將在 3 個工作天內，以電子郵件 (<strong>${email}</strong>) 或電話與您取得聯繫，並邀請您參與最近一次的精彩例會活動！<br><br>
+          讓我們在 2026-27 年度一起：<br>
+          <strong>「WOW! 青年影響力 共創新世紀！」</strong>
+        `;
+
+        successModal.style.display = "flex";
+        setTimeout(() => {
+          successModal.classList.add("show");
+        }, 10);
+
+        form.reset();
+      })
+      .catch(() => {
+        alert("⚠️ 提交時發生網路問題，請確認網路連線後再試一次。若持續發生，歡迎直接與我們聯繫。");
+      })
+      .finally(() => {
+        if (submitBtn) submitBtn.disabled = false;
+      });
   });
 
   // 關閉成功 Popup

@@ -1,0 +1,30 @@
+{
+  "id": "taipei-dadaocheng",
+  "name": "台北大稻埕社",
+  "englishName": "Rotaract Club of Taipei Dadaocheng",
+  "sponsor": "台北大稻埕扶輪社",
+  "meetingTime": "每雙週六 10:00 - 12:30",
+  "meetingPlace": "台北市大同區迪化街一段 (大稻埕歷史街區埕樂軒)",
+  "category": "culture",
+  "categoryLabel": "在地文化",
+  "tags": ["在地文化", "地方創生", "古蹟活化", "休閒聯誼"],
+  "slogan": "埕現經典，創藝無限！讓在地文化發揮持恆影響。",
+  "intro": "根植於大稻埕深厚的歷史底蘊，台北大稻埕扶青社將傳統文化與現代創意完美融合。我們致力於地方創生、古蹟活化推廣以及迪化街商圈導覽服務，以創新的青年視角為老街區注入源源不絕的活力。",
+  "officers": [
+    { "role": "社長 President", "name": "葉致遠", "title": "文創品牌共同創辦人", "avatar": "🏺" },
+    { "role": "秘書 Secretary", "name": "劉子瑄", "title": "歷史文博研究員", "avatar": "📜" },
+    { "role": "財務 Treasurer", "name": "施柏毅", "title": "室內設計師", "avatar": "📐" },
+    { "role": "輔導顧問 Advisor", "name": "莊朝敏", "title": "迪化街茶行傳承人", "avatar": "🍵" },
+    { "role": "社務主委 Club Service", "name": "方怡婷", "title": "社群行銷規劃師", "avatar": "📱" },
+    { "role": "社服主委 Community Service", "name": "曾建宇", "title": "社區營造工作者", "avatar": "🏡" },
+    { "role": "職業主委 Vocational", "name": "薛宇凱", "title": "獨立策展人", "avatar": "🖼️" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "吳欣倫", "title": "旅遊部落客 / 網紅", "avatar": "📸" }
+  ],
+  "annualActivities": [
+    { "time": "08月", "title": "大稻埕文化創藝節", "desc": "在迪化街舉辦復古市集、古蹟導覽與文創產品發表。" },
+    { "time": "10月", "title": "老字號店家數位轉型計畫", "desc": "協助大稻埕傳統南北貨及茶行建立社群品牌與行銷策略。" },
+    { "time": "01月", "title": "迪化街年貨大街暖心導覽", "desc": "提供市民與外國遊客深度年俗與歷史建物導覽。" },
+    { "time": "04月", "title": "茶藝美學與香道體驗工作坊", "desc": "邀請大稻埕茶師親自授課，體驗茶香文化精髓。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "dadaocheng@rid3482.org" }
+}

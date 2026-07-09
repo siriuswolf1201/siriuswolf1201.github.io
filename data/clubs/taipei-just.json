@@ -1,0 +1,30 @@
+{
+  "id": "taipei-just",
+  "name": "台北景文科大社",
+  "englishName": "Rotaract Club of Taipei Just",
+  "sponsor": "台北景文扶輪社",
+  "meetingTime": "每雙週三 12:30 - 15:00",
+  "meetingPlace": "新北市新店區安忠路99號 (景文科技大學校區)",
+  "category": "campus",
+  "categoryLabel": "校園大專",
+  "tags": ["大專校園", "技職技能", "在地創生", "社區服務"],
+  "slogan": "景文創藝，青創力行！展現技職青年在地影響力。",
+  "intro": "台北景文科大扶青社以大專青年的活力與景文科大豐沛的技職技能為基礎。我們深入社區進行新店溪流域環境監測、設計創意地方創生方案，並利用觀光餐旅與設計等專業技能辦理長輩關懷例會，充分實踐社會關懷。",
+  "officers": [
+    { "role": "社長 President", "name": "張志誠", "title": "景文餐飲管理系大三", "avatar": "👨‍🍳" },
+    { "role": "秘書 Secretary", "name": "許家榮", "title": "景文視覺傳達系大三", "avatar": "🎨" },
+    { "role": "財務 Treasurer", "name": "吳欣儒", "title": "景文旅遊管理系大三", "avatar": "✈️" },
+    { "role": "輔導顧問 Advisor", "name": "鄭景文", "title": "前社長 / 精品連鎖咖啡店店長", "avatar": "👨‍💼" },
+    { "role": "社務主委 Club Service", "name": "蔡技能", "title": "景文應用外語系大三", "avatar": "🗣️" },
+    { "role": "社服主委 Community Service", "name": "黃創藝", "title": "景文多媒體設計系大三", "avatar": "🖥️" },
+    { "role": "職業主委 Vocational", "name": "陳餐飲", "title": "景文烘焙廚藝系大三", "avatar": "🍞" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "林旅遊", "title": "景文航空服務系大三", "avatar": "🛫" }
+  ],
+  "annualActivities": [
+    { "time": "09月", "title": "新店溪生態保育與聯合淨溪", "desc": "結合學校環安組，定期舉辦新店溪沿岸淨溪與水質安全監測服務。" },
+    { "time": "11月", "title": "溫暖長青：養生餐飲與手作大會", "desc": "發揮餐飲與餐旅專業，為社區獨居長者親手製作美味營養膳食與手作互動。" },
+    { "time": "03月", "title": "景文大專青年創意市集大會", "desc": "校內大型創意市集，展示學生創藝手作，義賣所得支持偏鄉教育。" },
+    { "time": "05月", "title": "技職之光：偏鄉學子技能導引營", "desc": "邀請偏鄉青少年到校，體驗咖啡拉花、餐飲調酒及包裝設計基礎實作。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "just@rid3482.org" }
+}

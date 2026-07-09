@@ -1,0 +1,30 @@
+{
+  "id": "taipei-gemini-ai",
+  "name": "台北雙子星AI社",
+  "englishName": "Rotaract Club of Taipei Gemini AI",
+  "sponsor": "台北雙子星扶輪社",
+  "meetingTime": "每雙週六 10:00 - 12:30",
+  "meetingPlace": "台北市信義區信義路四段 (雙子星科技AI孵化器)",
+  "category": "tech",
+  "categoryLabel": "新創科技",
+  "tags": ["人工智慧", "數位轉型", "AI工作流", "科技創新"],
+  "slogan": "智啟雙子，AI創新！用先進科技共創嶄新世紀。",
+  "intro": "台北雙子星AI扶青社是全台首創以「AI科技創新與數位轉型」為核心定位的扶青社。團員多為 AI 研發工程師、數據分析師、UI 設計師與科技愛好者。我們積極推廣 AI 普惠教育、AI 工作流優化工作坊及科技創新服務，賦能青年共創 AI 時代的持恆影響。",
+  "officers": [
+    { "role": "社長 President", "name": "林哲宇", "title": "AI 演算法工程師", "avatar": "🤖" },
+    { "role": "秘書 Secretary", "name": "蔡明宏", "title": "生成式 AI 工作流講師", "avatar": "⚡" },
+    { "role": "財務 Treasurer", "name": "黃郁晴", "title": "科技創投投資分析師", "avatar": "💻" },
+    { "role": "輔導顧問 Advisor", "name": "蕭科技", "title": "AI 晶片公司研發處長", "avatar": "👨‍💻" },
+    { "role": "社務主委 Club Service", "name": "張智慧", "title": "全端開發工程師", "avatar": "💻" },
+    { "role": "社服主委 Community Service", "name": "廖自動", "title": "自動化流程架構師", "avatar": "⚙️" },
+    { "role": "職業主委 Vocational", "name": "楊數據", "title": "資料科學大師", "avatar": "📊" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "賴聯絡", "title": "科技公關商務拓展", "avatar": "📢" }
+  ],
+  "annualActivities": [
+    { "time": "08月", "title": "雙子星青年 AI 創新黑客松", "desc": "針對社會與環境問題，利用生成式 AI 技術於 24 小時內開發創新解決方案。" },
+    { "time": "11月", "title": "中小企業 AI 數位轉型義診服務", "desc": "協助地方傳統店家及公益組織，設計並導入免費 AI 自動化客服與行銷工作流。" },
+    { "time": "02月", "title": "全球 AI 先鋒科技論壇與產業展望", "desc": "邀請國內外頂尖 AI 學者與獨角獸公司主管，解析未來五年人工智慧趨勢。" },
+    { "time": "05月", "title": "AI 高效能辦公與影音創作實戰營", "desc": "培訓團員與外部大眾使用 Midjourney、ChatGPT 等工具提高生產力。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "geminiai@rid3482.org" }
+}

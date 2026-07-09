@@ -1,0 +1,30 @@
+{
+  "id": "taipei-northsea",
+  "name": "台北北海社",
+  "englishName": "Rotaract Club of Taipei North Sea",
+  "sponsor": "台北北海扶輪社",
+  "meetingTime": "每雙週日 14:00 - 16:30",
+  "meetingPlace": "台北市中正區忠孝西路一段 (天成商業大樓)",
+  "category": "service",
+  "categoryLabel": "社會服務",
+  "tags": ["環境保護", "海洋生態", "無塑生活", "環保科技"],
+  "slogan": "愛護海洋，北海最行！共創蔚藍新世紀。",
+  "intro": "台北北海扶青社是一個高度專注於海洋生態保育與環境永續發展的行動派社團。我們秉持「用行動代替口號」的信念，長年深耕北海岸海洋淨灘、無塑生活推廣，並結合環保知識教育，共創永續家園。",
+  "officers": [
+    { "role": "社長 President", "name": "王俊傑", "title": "ESG 永續規劃師", "avatar": "🌱" },
+    { "role": "秘書 Secretary", "name": "蔡依珊", "title": "環境科學研究助理", "avatar": "🧪" },
+    { "role": "財務 Treasurer", "name": "徐浩軒", "title": "綠能科技工程師", "avatar": "⚡" },
+    { "role": "輔導顧問 Advisor", "name": "吳正雄", "title": "環保設備廠總經理", "avatar": "🏭" },
+    { "role": "社務主委 Club Service", "name": "許哲銘", "title": "硬體工程師", "avatar": "🔧" },
+    { "role": "社服主委 Community Service", "name": "梁凱特", "title": "荒野保護協會志工", "avatar": "☘️" },
+    { "role": "職業主委 Vocational", "name": "詹明峰", "title": "專利代理人", "avatar": "⚖️" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "鄧佩蓉", "title": "永續科技公關經理", "avatar": "🌍" }
+  ],
+  "annualActivities": [
+    { "time": "07月", "title": "北海岸夏日大型聯合淨灘", "desc": "號召地區上百名青年深入海岸，清理海洋廢棄物並進行垃圾分類監測。" },
+    { "time": "10月", "title": "減塑生活挑戰與低碳講座", "desc": "推廣無塑飲食概念，邀請環保意見領袖舉辦座談。" },
+    { "time": "03月", "title": "小學生海洋保育推廣營隊", "desc": "前往沿海偏鄉小學舉辦海洋知識科普與手作體驗。" },
+    { "time": "05月", "title": "綠色永續綠生活市集", "desc": "與環保品牌合作，舉辦低碳商品與蔬食體驗推廣活動。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "northsea@rid3482.org" }
+}

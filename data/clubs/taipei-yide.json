@@ -1,0 +1,30 @@
+{
+  "id": "taipei-yide",
+  "name": "台北邑德社",
+  "englishName": "Rotaract Club of Taipei Yi-De",
+  "sponsor": "台北邑德扶輪社",
+  "meetingTime": "每雙週日 10:00 - 12:30",
+  "meetingPlace": "台北市松山區民生東路五段 (民生社區活動中心教室)",
+  "category": "service",
+  "categoryLabel": "社會服務",
+  "tags": ["銀髮關懷", "代間共融", "長青陪伴", "社區共生"],
+  "slogan": "邑聚賢德，暖心相伴！打造代間和諧新世紀。",
+  "intro": "台北邑德扶青社的核心使命是推動「高齡友善社會」與「代間共融」。我們相信長輩的智慧是社會的寶藏，透過創新的長青陪伴方案、數位科技教學、青銀共創手作等，消弭世代隔閡，打造溫暖和諧的社區共生圈。",
+  "officers": [
+    { "role": "社長 President", "name": "徐若嵐", "title": "高齡福祉照照護師", "avatar": "👵" },
+    { "role": "秘書 Secretary", "name": "劉致遠", "title": "復健物理治療師", "avatar": "👨‍⚕️" },
+    { "role": "財務 Treasurer", "name": "鍾心怡", "title": "高齡營養調理師", "avatar": "🍲" },
+    { "role": "輔導顧問 Advisor", "name": "陳邑德", "title": "安養機構運營長", "avatar": "🏡" },
+    { "role": "社務主委 Club Service", "name": "李德華", "title": "社區活動規劃師", "avatar": "🎉" },
+    { "role": "社服主委 Community Service", "name": "蔡淑芬", "title": "老人社工專員", "avatar": "❤️" },
+    { "role": "職業主委 Vocational", "name": "張慶祥", "title": "長照科技系統顧問", "avatar": "📱" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "游美林", "title": "社區發展協會聯絡官", "avatar": "📢" }
+  ],
+  "annualActivities": [
+    { "time": "08月", "title": "青銀共創樂齡數位科技體驗營", "desc": "教導社區銀髮長輩使用智慧型手機、社群軟體及常用便利生活 App。" },
+    { "time": "10月", "title": "憶起幸福：長輩故事手繪繪本展", "desc": "聆聽長者人生故事，由青年插畫師繪製成精美繪本並公開展覽。" },
+    { "time": "01月", "title": "邑德暖心歲末樂齡圍爐歌唱大賽", "desc": "結合社區長輩與青年，共同舉辦年菜圍爐、經典老歌歡唱，散播溫暖。" },
+    { "time": "04月", "title": "樂齡防跌與銀髮健走健康推廣", "desc": "協同物理治療師，為社區長輩提供肌力檢測、防跌衛教與健走活動。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "yide@rid3482.org" }
+}

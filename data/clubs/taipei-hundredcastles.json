@@ -1,0 +1,30 @@
+{
+  "id": "taipei-hundredcastles",
+  "name": "台北百城社",
+  "englishName": "Rotaract Club of Taipei Hundred Castles",
+  "sponsor": "台北百城扶輪社",
+  "meetingTime": "每雙週日 14:00 - 16:30",
+  "meetingPlace": "台北市信義區基隆路一段 (百城新創基地)",
+  "category": "tech",
+  "categoryLabel": "新創科技",
+  "tags": ["青年創業", "新創沙龍", "創投媒合", "商業模式"],
+  "slogan": "百城聚力，築夢新創！引領青年創業新世代。",
+  "intro": "台北百城扶青社是青年創業家的搖籃。我們聚集了許多新創公司創辦人、自媒體工作者以及有志創業的青年，透過商業模式分析、創業資源對接、品牌行銷實戰以及創投沙龍，將好的點子落地生根，共築事業新城堡。",
+  "officers": [
+    { "role": "社長 President", "name": "柯宗達", "title": "電商科技公司創辦人", "avatar": "🚀" },
+    { "role": "秘書 Secretary", "name": "簡嘉宏", "title": "募資顧問平台總監", "avatar": "💼" },
+    { "role": "財務 Treasurer", "name": "游雅婷", "title": "新創財務分析師", "avatar": "📊" },
+    { "role": "輔導顧問 Advisor", "name": "孫建平", "title": "天使投資人 / 創投合夥人", "avatar": "💸" },
+    { "role": "社務主委 Club Service", "name": "廖元智", "title": "自媒體運營總監", "avatar": "📱" },
+    { "role": "社服主委 Community Service", "name": "曾韋捷", "title": "綠能社企發起人", "avatar": "🌱" },
+    { "role": "職業主委 Vocational", "name": "傅怡樺", "title": "品牌策略總監", "avatar": "🎪" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "邱宇萱", "title": "群眾募資專案主任", "avatar": "📢" }
+  ],
+  "annualActivities": [
+    { "time": "09月", "title": "百城青年新創路演與Demo Day", "desc": "提供創業青年向輔導社企業家及專業創投人展示商業計畫的機會。" },
+    { "time": "12月", "title": "品牌自媒體與數位行銷實戰營", "desc": "邀請頂尖行銷人傳授社群行銷、SEO 佈局與個人品牌變現邏輯。" },
+    { "time": "02月", "title": "矽谷商業模式與新創趨勢座談", "desc": "研討國際新興商業模式，激發跨領域創新思考。" },
+    { "time": "05月", "title": "創業者心路歷程與心理韌性沙龍", "desc": "探討創業路上的壓力管理與心智韌性，打造支持性同儕網絡。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "hundredcastles@rid3482.org" }
+}

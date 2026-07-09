@@ -1,0 +1,30 @@
+{
+  "id": "taipei-yidong",
+  "name": "台北怡東社",
+  "englishName": "Rotaract Club of Taipei Yi-Dong",
+  "sponsor": "台北怡東扶輪社",
+  "meetingTime": "每雙週日 14:00 - 16:30",
+  "meetingPlace": "台北市信義區光復南路 (怡東綠色共享空間)",
+  "category": "service",
+  "categoryLabel": "社會服務",
+  "tags": ["都市永續", "綠色生活", "減碳科普", "生態農耕"],
+  "slogan": "怡然自得，綠色永續！怡東引領低碳生活新潮流。",
+  "intro": "台北怡東扶青社聚焦於「綠色永續發展 (Sustainability)」與「都市低碳生活」。我們推廣都市小農契作、廚餘回收製肥、綠色盆栽療癒以及氣候變遷科普教育，讓綠色環保不再是沉重的負擔，而是青年日常時尚的新潮流。",
+  "officers": [
+    { "role": "社長 President", "name": "潘俊瑋", "title": "綠色永續供應鏈顧問", "avatar": "🌲" },
+    { "role": "秘書 Secretary", "name": "郭秀敏", "title": "植物療法美學師", "avatar": "🌿" },
+    { "role": "財務 Treasurer", "name": "蘇星宇", "title": "碳權交易專案副理", "avatar": "📊" },
+    { "role": "輔導顧問 Advisor", "name": "高怡東", "title": "有機農業產銷班長", "avatar": "🚜" },
+    { "role": "社務主委 Club Service", "name": "鄧亦翔", "title": "綠色建材銷售總監", "avatar": "🏡" },
+    { "role": "社服主委 Community Service", "name": "羅逸帆", "title": "濕地生態保育解說員", "avatar": "🌾" },
+    { "role": "職業主委 Vocational", "name": "楊瑞琪", "title": "低碳飲食營養師", "avatar": "🥗" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "葉芷妤", "title": "環保倡議品牌公關", "avatar": "📢" }
+  ],
+  "annualActivities": [
+    { "time": "08月", "title": "怡東都市屋頂小農契作體驗", "desc": "在市區頂樓推行都市農耕，親手栽種無毒蔬菜，推廣地產地消。" },
+    { "time": "11月", "title": "低碳生活挑戰賽與綠生活市集", "desc": "號召社員進行為期一週的低碳排挑戰，並辦理環保低碳市集。" },
+    { "time": "02月", "title": "氣候變遷與減碳經濟科普沙龍", "desc": "邀請環境工程博士，深入淺出剖析全球碳中和與氣候變遷趨勢。" },
+    { "time": "04月", "title": "都市盆栽療癒與永生花盆景手作", "desc": "結合綠意植物與美學設計，體驗親手製作能綠化空間的盆栽。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "yidong@rid3482.org" }
+}

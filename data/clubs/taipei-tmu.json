@@ -1,0 +1,30 @@
+{
+  "id": "taipei-tmu",
+  "name": "台北城中北醫大社",
+  "englishName": "Rotaract Club of Taipei Central TMU",
+  "sponsor": "台北城中扶輪社",
+  "meetingTime": "每雙週五 18:30 - 21:00",
+  "meetingPlace": "台北市信義區吳興街250號 (台北醫學大學校區)",
+  "category": "campus",
+  "categoryLabel": "校園大專",
+  "tags": ["大專校園", "醫學科普", "衛教服務", "健康防老"],
+  "slogan": "北醫城中，醫心守護！發揮醫學大專青年影響力。",
+  "intro": "作為地區少數的校園與大專特色社團，台北城中北醫大扶青社將醫學專業、衛教科普與社會服務緊密結合。我們常深入偏鄉小學與原民部落，提供衛教科普服務、健康健檢宣導，以實踐大專青年的社會責任。",
+  "officers": [
+    { "role": "社長 President", "name": "高子婷", "title": "北醫醫學系大四", "avatar": "👩‍⚕️" },
+    { "role": "秘書 Secretary", "name": "黃品嘉", "title": "北醫藥學系大三", "avatar": "💊" },
+    { "role": "財務 Treasurer", "name": "廖柏宇", "title": "北醫牙醫系大三", "avatar": "🦷" },
+    { "role": "輔導顧問 Advisor", "name": "邱醫德", "title": "附設醫院住院醫師 / 前社長", "avatar": "👨‍⚕️" },
+    { "role": "社務主委 Club Service", "name": "楊健康", "title": "北醫呼吸治療系大三", "avatar": "🌬️" },
+    { "role": "社服主委 Community Service", "name": "林科普", "title": "北醫公共衛生系大三", "avatar": "🧬" },
+    { "role": "職業主委 Vocational", "name": "張生技", "title": "北醫高齡健康管理系大二", "avatar": "🧓" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "廖保健", "title": "北醫護理系大三", "avatar": "🩺" }
+  ],
+  "annualActivities": [
+    { "time": "07月", "title": "暑期偏鄉醫療關懷與健康衛教營", "desc": "深入台灣偏遠部落，為當地居民提供基礎衛教諮詢與兒童科普科學營。" },
+    { "time": "10月", "title": "都市銀髮族防智力退化大腦活化營", "desc": "在台北社區辦理腦力益智遊戲與長輩心理健康諮詢服務。" },
+    { "time": "03月", "title": "醫學大專青年健康促進大會", "desc": "校內大型健康促進宣導，提供免費體脂肪量測與均衡飲食衛教。" },
+    { "time": "05月", "title": "精油芳療與中藥養生手作例會", "desc": "結合現代醫學與中醫養生，親自調配舒壓草本精油及草本茶包。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "tmu@rid3482.org" }
+}

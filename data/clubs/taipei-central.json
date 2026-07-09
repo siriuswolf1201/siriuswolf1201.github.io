@@ -1,0 +1,30 @@
+{
+  "id": "taipei-central",
+  "name": "台北城中社",
+  "englishName": "Rotaract Club of Taipei Central",
+  "sponsor": "台北城中扶輪社",
+  "meetingTime": "每雙週六 14:00 - 16:30",
+  "meetingPlace": "台北市中正區徐州路2號 (地區會所 / 輔導社例會所)",
+  "category": "business",
+  "categoryLabel": "學術商務",
+  "tags": ["職業發展", "商務實戰", "簡報演說", "業界對接"],
+  "slogan": "城懷大志，中流砥柱！創造持恆商務影響力。",
+  "intro": "台北城中扶青社是地區最具代表性的商務與職業發展特色社團之一。我們致力於為青年提供商業趨勢論壇、公開演說培訓及跨界資源對接，引導團員在服務中探索職業方向，為職涯鋪路。",
+  "officers": [
+    { "role": "社長 President", "name": "陳宇軒", "title": "科技業專案經理", "avatar": "👨‍💻" },
+    { "role": "秘書 Secretary", "name": "林妤庭", "title": "外商行銷專員", "avatar": "👩‍💼" },
+    { "role": "財務 Treasurer", "name": "黃子豪", "title": "會計師事務所審計員", "avatar": "📊" },
+    { "role": "輔導顧問 Advisor", "name": "徐國豪", "title": "前社長 / 生技公司創辦人", "avatar": "👨‍💼" },
+    { "role": "社務主委 Club Service", "name": "周智傑", "title": "資訊工程師", "avatar": "💻" },
+    { "role": "社服主委 Community Service", "name": "謝欣妤", "title": "活動企劃專員", "avatar": "❤️" },
+    { "role": "職業主委 Vocational", "name": "梁哲瑋", "title": "新創產品經理", "avatar": "🚀" },
+    { "role": "國際(公關)主委 Int. & PR", "name": "蔡雅雯", "title": "品牌公關顧問", "avatar": "📢" }
+  ],
+  "annualActivities": [
+    { "time": "08月", "title": "年度青年商業與創業論壇", "desc": "邀請知名企業創辦人與新創導師，分享商業實戰經驗。" },
+    { "time": "11月", "title": "跨業模擬商務談判競賽", "desc": "模擬跨國商務合作談判，鍛鍊溝通與談判能力。" },
+    { "time": "02月", "title": "輔導社社友企業實地參訪", "desc": "走訪前輩企業，汲取經營管理心法與兩代對談。" },
+    { "time": "04月", "title": "卓越職業力提昇工作坊", "desc": "履歷面試模擬與高階商務簡報力培訓。" }
+  ],
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "central@rid3482.org" }
+}
