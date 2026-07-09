@@ -1,22 +1,146 @@
 {
   "cabinet": {
+    "_note": "地區確認之正式編制，共 19 位幹部。姓名/所屬社/簡介皆待地區團隊確認後填入。",
     "tier1": [
-      { "role": "地區代表 DRR", "name": "林冠宇", "club": "台北城中扶青社", "avatar": "👔", "desc": "「WOW! 青年影響力 共創新世紀！」帶領全體 3482 地區青年共創高峰。" }
+      {
+        "role": "地區代表",
+        "name": "DRR Ariel",
+        "club": "台北魅力扶輪社 / 台北大安扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      }
     ],
     "tier2": [
-      { "role": "地區秘書長 DS", "name": "張逸安", "club": "台北大安扶青社", "avatar": "✒️", "desc": "統籌地區行政運作、文書資訊傳達與跨地區合作引薦。" },
-      { "role": "地區副秘書長 DDS", "name": "謝欣妤", "club": "台北圓滿扶青社", "avatar": "✨", "desc": "協助秘書長綜理地區會務，加強各分社行政溝通與紀錄彙整。" },
-      { "role": "地區財務長 DT", "name": "陳品妤", "club": "台北上城扶青社", "avatar": "📊", "desc": "嚴謹控管年度預算，精準配置地區社會服務與活動專款。" }
+      {
+        "role": "地區秘書",
+        "name": "DS Emily",
+        "club": "台北城中北醫大扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "地區副秘書",
+        "name": "VDS Tanya",
+        "club": "台北大稻埕扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "地區財務",
+        "name": "PP Warren",
+        "club": "台北上城扶輪社 / 台北上城扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "地區顧問",
+        "name": "IPDRR Jacky",
+        "club": "台北西北區扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      }
     ],
     "tier3": [
-      { "role": "地區副代表 ADRR", "name": "徐佳琪", "club": "台北大稻埕扶青社", "avatar": "👩‍💼", "desc": "分工深耕第一分區，促進分社間的資源串聯與地方創生計畫整合。" },
-      { "role": "地區副代表 ADRR", "name": "黃莉婷", "club": "台北百合扶青社", "avatar": "👩‍🏫", "desc": "分工輔導第二分區，引領分社多元成長與年度地區聯合專案對接。" }
+      {
+        "role": "地區副代表",
+        "name": "VDRR Lucy",
+        "club": "台北邑德扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "地區副代表",
+        "name": "PDRR Stone",
+        "club": "台北環河扶輪社 / 台北圓環扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "地區副代表",
+        "name": "VDRR Ethan",
+        "club": "台北大稻埕扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      }
     ],
     "tier4": [
-      { "role": "團務委員會主委", "name": "王哲瑋", "club": "台北西北區社", "avatar": "💡", "desc": "規劃幹部講習會 (DOTS) 與地區年會，全面提升社務水平。" },
-      { "role": "社會服務委員會主委", "name": "賴佩君", "club": "台北北海社", "avatar": "🌱", "desc": "策劃年度跨社永續綠色聯合倡議服務，實踐永續影響力。" },
-      { "role": "職業發展委員會主委", "name": "劉建志", "club": "台北雙子星AI社", "avatar": "🦾", "desc": "對接輔導社企業資源，辦理青年AI工作流實戰等職場增能課。" },
-      { "role": "國際(公關)服務主委", "name": "鄭又瑄", "club": "台北城東社", "avatar": "✈️", "desc": "暢通亞太扶青會議聯絡窗口，帶領青年代表接軌國際。" }
+      {
+        "role": "社務主委",
+        "name": "Jeff",
+        "club": "台北城中北醫大扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "社務副主委",
+        "name": "Fischer",
+        "club": "台北邑德扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "社服主委",
+        "name": "CP David",
+        "club": "台北景文科大扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "職業主委",
+        "name": "Tina",
+        "club": "台北大安扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "職業副主委",
+        "name": "PP Tom",
+        "club": "台北百城扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "國際主委",
+        "name": "Sirius",
+        "club": "台北環河扶輪社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "國際副主委",
+        "name": "Taming",
+        "club": "台北邑德扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "公共關係主委",
+        "name": "Kano",
+        "club": "台北魅力扶輪社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "公共關係副主委",
+        "name": "IPP Ian",
+        "club": "台北大龍峒扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "公共形象主委",
+        "name": "IPP Borris",
+        "club": "台北城中扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      },
+      {
+        "role": "社員增長主委",
+        "name": "PP SyaSya",
+        "club": "台北圓環扶青社",
+        "avatar": "❓",
+        "desc": "待確認"
+      }
     ]
   },
   "timeline": [

@@ -4,574 +4,31 @@
  * Slogan: WOW! 青年影響力 共創新世紀！ (YOUTH IMPACT • NEW ERA)
  */
 
-// 1. 17 個扶青社的完整資料庫 (每個分社皆配置完整的 8 位核心內閣幹部)
-const CLUBS_DATA = [
-  {
-    id: "taipei-central",
-    name: "台北城中社",
-    englishName: "Rotaract Club of Taipei Central",
-    sponsor: "台北城中扶輪社",
-    meetingTime: "每雙週六 14:00 - 16:30",
-    meetingPlace: "台北市中正區徐州路2號 (地區會所 / 輔導社例會所)",
-    category: "business",
-    categoryLabel: "學術商務",
-    tags: ["職業發展", "商務實戰", "簡報演說", "業界對接"],
-    slogan: "城懷大志，中流砥柱！創造持恆商務影響力。",
-    intro: "台北城中扶青社是地區最具代表性的商務與職業發展特色社團之一。我們致力於為青年提供商業趨勢論壇、公開演說培訓及跨界資源對接，引導團員在服務中探索職業方向，為職涯鋪路。",
-    officers: [
-      { role: "社長 President", name: "陳宇軒", title: "科技業專案經理", avatar: "👨‍💻" },
-      { role: "秘書 Secretary", name: "林妤庭", title: "外商行銷專員", avatar: "👩‍💼" },
-      { role: "財務 Treasurer", name: "黃子豪", title: "會計師事務所審計員", avatar: "📊" },
-      { role: "輔導顧問 Advisor", name: "徐國豪", title: "前社長 / 生技公司創辦人", avatar: "👨‍💼" },
-      { role: "社務主委 Club Service", name: "周智傑", title: "資訊工程師", avatar: "💻" },
-      { role: "社服主委 Community Service", name: "謝欣妤", title: "活動企劃專員", avatar: "❤️" },
-      { role: "職業主委 Vocational", name: "梁哲瑋", title: "新創產品經理", avatar: "🚀" },
-      { role: "國際(公關)主委 Int. & PR", name: "蔡雅雯", title: "品牌公關顧問", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "年度青年商業與創業論壇", desc: "邀請知名企業創辦人與新創導師，分享商業實戰經驗。" },
-      { time: "11月", title: "跨業模擬商務談判競賽", desc: "模擬跨國商務合作談判，鍛鍊溝通與談判能力。" },
-      { time: "02月", title: "輔導社社友企業實地參訪", desc: "走訪前輩企業，汲取經營管理心法與兩代對談。" },
-      { time: "04月", title: "卓越職業力提昇工作坊", desc: "履歷面試模擬與高階商務簡報力培訓。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "central@rid3482.org" }
-  },
-  {
-    id: "taipei-east",
-    name: "台北城東社",
-    englishName: "Rotaract Club of Taipei East",
-    sponsor: "台北城東扶輪社",
-    meetingTime: "每雙週日 10:00 - 12:30",
-    meetingPlace: "台北市大安區和平東路一段 (城東藝文空間)",
-    category: "international",
-    categoryLabel: "國際多元",
-    tags: ["國際交流", "英語口說", "跨國友誼", "多元包容"],
-    slogan: "城東視界，連結國際！展現新世代國際影響力。",
-    intro: "台北城東扶青社以國際視野與多元包容為核心精神。定期舉辦全英文例會與跨國文化沙龍，並與多個海外姊妹團體保持緊密合作，為青年打造一個無需出國就能對接國際的優質社交平台。",
-    officers: [
-      { role: "社長 President", name: "張志豪", title: "跨國貿易專員", avatar: "🌍" },
-      { role: "秘書 Secretary", name: "陳冠廷", title: "英語口譯師", avatar: "🗣️" },
-      { role: "財務 Treasurer", name: "廖珮珊", title: "外商採購經理", avatar: "💳" },
-      { role: "輔導顧問 Advisor", name: "簡東賢", title: "前社長 / 貿易公司副總", avatar: "👨‍💼" },
-      { role: "社務主委 Club Service", name: "游淑敏", title: "人資管理師", avatar: "👥" },
-      { role: "社服主委 Community Service", name: "洪家明", title: "NGO 專案幹事", avatar: "🌱" },
-      { role: "職業主委 Vocational", name: "吳佩儒", title: "外商獵頭顧問", avatar: "💼" },
-      { role: "國際(公關)主委 Int. & PR", name: "羅子恩", title: "英語文案撰寫師", avatar: "📝" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "國際文化美食嘉年華", desc: "邀請在台外籍青年與團員共同交流各國文化與美食。" },
-      { time: "12月", title: "姐妹社跨國線上聯合例會", desc: "與日本、韓國姐妹社互動，探討全球青年社會責任。" },
-      { time: "03月", title: "亞太青年國際大使選拔", desc: "提供團員前往海外參與扶青國際論壇的全額贊助機會。" },
-      { time: "05月", title: "英語簡報力與演講大賽", desc: "提升全英文商務簡報技巧與國際談判表達。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "east@rid3482.org" }
-  },
-  {
-    id: "taipei-dadaocheng",
-    name: "台北大稻埕社",
-    englishName: "Rotaract Club of Taipei Dadaocheng",
-    sponsor: "台北大稻埕扶輪社",
-    meetingTime: "每雙週六 10:00 - 12:30",
-    meetingPlace: "台北市大同區迪化街一段 (大稻埕歷史街區埕樂軒)",
-    category: "culture",
-    categoryLabel: "在地文化",
-    tags: ["在地文化", "地方創生", "古蹟活化", "休閒聯誼"],
-    slogan: "埕現經典，創藝無限！讓在地文化發揮持恆影響。",
-    intro: "根植於大稻埕深厚的歷史底蘊，台北大稻埕扶青社將傳統文化與現代創意完美融合。我們致力於地方創生、古蹟活化推廣以及迪化街商圈導覽服務，以創新的青年視角為老街區注入源源不絕的活力。",
-    officers: [
-      { role: "社長 President", name: "葉致遠", title: "文創品牌共同創辦人", avatar: "🏺" },
-      { role: "秘書 Secretary", name: "劉子瑄", title: "歷史文博研究員", avatar: "📜" },
-      { role: "財務 Treasurer", name: "施柏毅", title: "室內設計師", avatar: "📐" },
-      { role: "輔導顧問 Advisor", name: "莊朝敏", title: "迪化街茶行傳承人", avatar: "🍵" },
-      { role: "社務主委 Club Service", name: "方怡婷", title: "社群行銷規劃師", avatar: "📱" },
-      { role: "社服主委 Community Service", name: "曾建宇", title: "社區營造工作者", avatar: "🏡" },
-      { role: "職業主委 Vocational", name: "薛宇凱", title: "獨立策展人", avatar: "🖼️" },
-      { role: "國際(公關)主委 Int. & PR", name: "吳欣倫", title: "旅遊部落客 / 網紅", avatar: "📸" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "大稻埕文化創藝節", desc: "在迪化街舉辦復古市集、古蹟導覽與文創產品發表。" },
-      { time: "10月", title: "老字號店家數位轉型計畫", desc: "協助大稻埕傳統南北貨及茶行建立社群品牌與行銷策略。" },
-      { time: "01月", title: "迪化街年貨大街暖心導覽", desc: "提供市民與外國遊客深度年俗與歷史建物導覽。" },
-      { time: "04月", title: "茶藝美學與香道體驗工作坊", desc: "邀請大稻埕茶師親自授課，體驗茶香文化精髓。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "dadaocheng@rid3482.org" }
-  },
-  {
-    id: "taipei-northsea",
-    name: "台北北海社",
-    englishName: "Rotaract Club of Taipei North Sea",
-    sponsor: "台北北海扶輪社",
-    meetingTime: "每雙週日 14:00 - 16:30",
-    meetingPlace: "台北市中正區忠孝西路一段 (天成商業大樓)",
-    category: "service",
-    categoryLabel: "社會服務",
-    tags: ["環境保護", "海洋生態", "無塑生活", "環保科技"],
-    slogan: "愛護海洋，北海最行！共創蔚藍新世紀。",
-    intro: "台北北海扶青社是一個高度專注於海洋生態保育與環境永續發展的行動派社團。我們秉持「用行動代替口號」的信念，長年深耕北海岸海洋淨灘、無塑生活推廣，並結合環保知識教育，共創永續家園。",
-    officers: [
-      { role: "社長 President", name: "王俊傑", title: "ESG 永續規劃師", avatar: "🌱" },
-      { role: "秘書 Secretary", name: "蔡依珊", title: "環境科學研究助理", avatar: "🧪" },
-      { role: "財務 Treasurer", name: "徐浩軒", title: "綠能科技工程師", avatar: "⚡" },
-      { role: "輔導顧問 Advisor", name: "吳正雄", title: "環保設備廠總經理", avatar: "🏭" },
-      { role: "社務主委 Club Service", name: "許哲銘", title: "硬體工程師", avatar: "🔧" },
-      { role: "社服主委 Community Service", name: "梁凱特", title: "荒野保護協會志工", avatar: "☘️" },
-      { role: "職業主委 Vocational", name: "詹明峰", title: "專利代理人", avatar: "⚖️" },
-      { role: "國際(公關)主委 Int. & PR", name: "鄧佩蓉", title: "永續科技公關經理", avatar: "🌍" }
-    ],
-    annualActivities: [
-      { time: "07月", title: "北海岸夏日大型聯合淨灘", desc: "號召地區上百名青年深入海岸，清理海洋廢棄物並進行垃圾分類監測。" },
-      { time: "10月", title: "減塑生活挑戰與低碳講座", desc: "推廣無塑飲食概念，邀請環保意見領袖舉辦座談。" },
-      { time: "03月", title: "小學生海洋保育推廣營隊", desc: "前往沿海偏鄉小學舉辦海洋知識科普與手作體驗。" },
-      { time: "05月", title: "綠色永續綠生活市集", desc: "與環保品牌合作，舉辦低碳商品與蔬食體驗推廣活動。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "northsea@rid3482.org" }
-  },
-  {
-    id: "taipei-daan",
-    name: "台北大安社",
-    englishName: "Rotaract Club of Taipei Da-An",
-    sponsor: "台北大安扶輪社",
-    meetingTime: "每雙週六 19:00 - 21:30",
-    meetingPlace: "台北市大安區忠孝東路四段 (大安青年活動中心)",
-    category: "service",
-    categoryLabel: "社會服務",
-    tags: ["偏鄉教育", "弱勢關懷", "陪伴計畫", "慈善公益"],
-    slogan: "大愛無疆，安居樂業！深耕社區弱勢關懷。",
-    intro: "台北大安扶青社長期關注偏鄉教育與社區弱勢族群。透過長期穩定的「小太陽陪伴計畫」，為弱勢家庭孩童提供課後輔導、科普教育與探索成長營，用愛與耐心陪伴孩子跨越障礙，創造溫暖改變。",
-    officers: [
-      { role: "社長 President", name: "林志明", title: "社工師", avatar: "❤️" },
-      { role: "秘書 Secretary", name: "許家瑜", title: "兒童心理輔導師", avatar: "🧸" },
-      { role: "財務 Treasurer", name: "高偉哲", title: "非營利組織專案主任", avatar: "💰" },
-      { role: "輔導顧問 Advisor", name: "陳志強", title: "前社長 / 特殊教育學校校長", avatar: "👨‍🏫" },
-      { role: "社務主委 Club Service", name: "黃郁雯", title: "活動企劃經理", avatar: "🎉" },
-      { role: "社服主委 Community Service", name: "楊智超", title: "職能治療師", avatar: "👨‍⚕️" },
-      { role: "職業主委 Vocational", name: "董佳玲", title: "職涯發展諮詢師", avatar: "💼" },
-      { role: "國際(公關)主委 Int. & PR", name: "江宜庭", title: "社群品牌視覺設計師", avatar: "🎨" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "大安小太陽山林探索夏令營", desc: "帶領弱勢學童走出城市，進行三天兩夜的生態與自我挑戰探索。" },
-      { time: "11月", title: "銀髮與幼童代間聯合彩繪牆", desc: "結合社區長輩與學童，共同彩繪社區老舊牆面，活化社區。" },
-      { time: "01月", title: "歲末暖心義賣與送暖活動", desc: "籌集社會資源，為獨居長者與清寒家庭配送禦寒物資。" },
-      { time: "04月", title: "偏鄉小學書庫與圖書室重建", desc: "募集二手優質童書，前往偏鄉學校協助建立專屬閱讀角。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "daan@rid3482.org" }
-  },
-  {
-    id: "taipei-dalongdong",
-    name: "台北大龍峒社",
-    englishName: "Rotaract Club of Taipei Dalongdong",
-    sponsor: "台北大龍峒扶輪社",
-    meetingTime: "每雙週日 14:00 - 16:30",
-    meetingPlace: "台北市大同區哈密街 (大龍峒保安宮藝文教室)",
-    category: "culture",
-    categoryLabel: "在地文化",
-    tags: ["文資保存", "傳統技藝", "社區走讀", "民俗文化"],
-    slogan: "大龍騰飛，峒心協力！活化傳統民俗生命力。",
-    intro: "以古老歷史街區大龍峒為基地，台北大龍峒扶青社深耕於傳統建築藝術、廟宇民俗與傳統手工藝的推廣。我們與大龍峒保安宮、台北孔廟等單位密切合作，策劃走讀與技藝工作坊，將文化資產轉化為青年的時尚新語言。",
-    officers: [
-      { role: "社長 President", name: "李博文", title: "古蹟修復助理規劃師", avatar: "🏯" },
-      { role: "秘書 Secretary", name: "吳庭妤", title: "文化導覽解說員", avatar: "🎤" },
-      { role: "財務 Treasurer", name: "謝佳霖", title: "傳統工藝研究家", avatar: "🎨" },
-      { role: "輔導顧問 Advisor", name: "張大同", title: "文資學者 / 大同區史專家", avatar: "👨‍🏫" },
-      { role: "社務主委 Club Service", name: "林士傑", title: "餐飲服務經理", avatar: "☕" },
-      { role: "社服主委 Community Service", name: "黃詩婷", title: "藝術治療師", avatar: "🧸" },
-      { role: "職業主委 Vocational", name: "陳俊安", title: "建築設計師", avatar: "📐" },
-      { role: "國際(公關)主委 Int. & PR", name: "盧筱晴", title: "文化局專案執行長", avatar: "📰" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "孔廟釋奠典禮青年走讀會", desc: "引導青年深入體驗教師節孔廟八佾舞與祭孔大典的歷史意涵。" },
-      { time: "11月", title: "保生文化祭民俗體驗工作坊", desc: "辦理剪紙、掌中戲、傳統捏麵人等傳統技藝教學與體驗。" },
-      { time: "02月", title: "元宵大龍峒尋寶解謎走讀", desc: "以實境解謎方式引導大眾探訪古街古廟，推動寓教於樂的觀光。" },
-      { time: "05月", title: "傳統木雕與漆藝美學講座", desc: "邀請國家級工藝大師，親自分享古建修復與藝術創作經驗。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "dalongdong@rid3482.org" }
-  },
-  {
-    id: "taipei-northwest",
-    name: "台北西北區社",
-    englishName: "Rotaract Club of Taipei Northwest",
-    sponsor: "台北西北區扶輪社",
-    meetingTime: "每雙週防 14:00 - 16:30",
-    meetingPlace: "台北市中山區南京東路二段 (輔導社例會所)",
-    category: "business",
-    categoryLabel: "學術商務",
-    tags: ["職涯探索", "職場實力", "商務引薦", "技能培訓"],
-    slogan: "西北領航，職引未來！共創專業發展影響力。",
-    intro: "台北西北區扶青社是青年的「職涯加速器」。我們重點培育團員的職場硬實力與軟實力，包含 AI 辦公工具應用、專案管理、簡報演說以及跨業人脈引薦，幫助剛踏入社會的青年快速適應並在職場上脫穎而出。",
-    officers: [
-      { role: "社長 President", name: "周子修", title: "外商獵頭顧問", avatar: "👔" },
-      { role: "秘書 Secretary", name: "楊采婕", title: "UI/UX 設計師", avatar: "🎨" },
-      { role: "財務 Treasurer", name: "張皓倫", title: "金融投資分析師", avatar: "📈" },
-      { role: "輔導顧問 Advisor", name: "潘俊良", title: "前社長 / 外商科技亞太總監", avatar: "👨‍💻" },
-      { role: "社務主委 Club Service", name: "郭家豪", title: "前端工程師", avatar: "💻" },
-      { role: "社服主委 Community Service", name: "戴郁軒", title: "偏鄉教育志工領隊", avatar: "🏫" },
-      { role: "職業主委 Vocational", name: "鄭宇傑", title: "外商產品經理 (PM)", avatar: "🚀" },
-      { role: "國際(公關)主委 Int. & PR", name: "蘇筠媛", title: "商務英語培訓講師", avatar: "🗣️" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "青年模擬面試與履歷健檢大會", desc: "邀請高階經理人與 HR 主管，提供一對一深度履歷指導與模擬面試。" },
-      { time: "11月", title: "高效專案管理與數位工具實戰", desc: "精實培訓專案管理邏輯，並分享 Notion、Slack 等高效工具系統架構。" },
-      { time: "01月", title: "西北青年跨業人才媒合沙龍", desc: "創造各行各業青年深度交流的平台，探尋潛在合作機會。" },
-      { time: "04月", title: "職場高EQ與商務談判技能課", desc: "掌握高難度溝通技巧，提升危機處理與商務談判優勢。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "northwest@rid3482.org" }
-  },
-  {
-    id: "taipei-hundredcastles",
-    name: "台北百城社",
-    englishName: "Rotaract Club of Taipei Hundred Castles",
-    sponsor: "台北百城扶輪社",
-    meetingTime: "每雙週日 14:00 - 16:30",
-    meetingPlace: "台北市信義區基隆路一段 (百城新創基地)",
-    category: "tech",
-    categoryLabel: "新創科技",
-    tags: ["青年創業", "新創沙龍", "創投媒合", "商業模式"],
-    slogan: "百城聚力，築夢新創！引領青年創業新世代。",
-    intro: "台北百城扶青社是青年創業家的搖籃。我們聚集了許多新創公司創辦人、自媒體工作者以及有志創業的青年，透過商業模式分析、創業資源對接、品牌行銷實戰以及創投沙龍，將好的點子落地生根，共築事業新城堡。",
-    officers: [
-      { role: "社長 President", name: "柯宗達", title: "電商科技公司創辦人", avatar: "🚀" },
-      { role: "秘書 Secretary", name: "簡嘉宏", title: "募資顧問平台總監", avatar: "💼" },
-      { role: "財務 Treasurer", name: "游雅婷", title: "新創財務分析師", avatar: "📊" },
-      { role: "輔導顧問 Advisor", name: "孫建平", title: "天使投資人 / 創投合夥人", avatar: "💸" },
-      { role: "社務主委 Club Service", name: "廖元智", title: "自媒體運營總監", avatar: "📱" },
-      { role: "社服主委 Community Service", name: "曾韋捷", title: "綠能社企發起人", avatar: "🌱" },
-      { role: "職業主委 Vocational", name: "傅怡樺", title: "品牌策略總監", avatar: "🎪" },
-      { role: "國際(公關)主委 Int. & PR", name: "邱宇萱", title: "群眾募資專案主任", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "百城青年新創路演與Demo Day", desc: "提供創業青年向輔導社企業家及專業創投人展示商業計畫的機會。" },
-      { time: "12月", title: "品牌自媒體與數位行銷實戰營", desc: "邀請頂尖行銷人傳授社群行銷、SEO 佈局與個人品牌變現邏輯。" },
-      { time: "02月", title: "矽谷商業模式與新創趨勢座談", desc: "研討國際新興商業模式，激發跨領域創新思考。" },
-      { time: "05月", title: "創業者心路歷程與心理韌性沙龍", desc: "探討創業路上的壓力管理與心智韌性，打造支持性同儕網絡。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "hundredcastles@rid3482.org" }
-  },
-  {
-    id: "taipei-harmony",
-    name: "台北圓滿社",
-    englishName: "Rotaract Club of Taipei Harmony",
-    sponsor: "台北圓滿扶輪社",
-    meetingTime: "每雙週六 14:00 - 16:30",
-    meetingPlace: "台北市大安區新生南路三段 (圓滿生活美學館)",
-    category: "fellowship",
-    categoryLabel: "聯誼休閒",
-    tags: ["生活美學", "心靈成長", "手作美感", "健康生活"],
-    slogan: "生活圓滿，心靈富足！共創品味生活新哲學。",
-    intro: "台北圓滿扶青社提倡「生活與工作的完美平衡 (Work-Life Balance)」。我們以心靈成長、美感手作、健康養生以及品味生活為出發點，定期舉辦茶道體驗、花藝美學、戶外瑜珈與閱讀分享，讓青年在繁忙的步調中找到安頓身心的圓滿港灣。",
-    officers: [
-      { role: "社長 President", name: "孫立廷", title: "生活美學空間策劃師", avatar: "🧘" },
-      { role: "秘書 Secretary", name: "鄭伊珊", title: "精油芳療諮詢師", avatar: "🌸" },
-      { role: "財務 Treasurer", name: "郭建均", title: "健身營養教練", avatar: "🥑" },
-      { role: "輔導顧問 Advisor", name: "劉圓滿", title: "前社長 / 瑜珈會館創辦人", avatar: "🧘‍♀️" },
-      { role: "社務主委 Club Service", name: "蔡政宏", title: "精品咖啡烘豆師", avatar: "☕" },
-      { role: "社服主委 Community Service", name: "林佳蓉", title: "流浪動物之家志工", avatar: "🐶" },
-      { role: "職業主委 Vocational", name: "施佑儒", title: "花藝設計師", avatar: "💐" },
-      { role: "國際(公關)主委 Int. & PR", name: "陳心怡", title: "藝術策展經理", avatar: "🖼️" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "森林療癒與秋日戶外瑜珈營", desc: "走入大自然，結合正念冥想與瑜珈，釋放都市生活的壓力。" },
-      { time: "11月", title: "花藝設計與生活美感體驗課", desc: "透過親手插花，學習色彩搭配與生活空間美化技巧。" },
-      { time: "02月", title: "春日圍爐茶會與精油香氛調配", desc: "品茗優質台茶，並親自調配專屬個人的心靈香氛精油。" },
-      { time: "04月", title: "圓滿生活美學閱讀沙龍", desc: "深入研討身心健康、極簡生活與自我實踐等經典好書。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "harmony@rid3482.org" }
-  },
-  {
-    id: "taipei-uptown",
-    name: "台北上城社",
-    englishName: "Rotaract Club of Taipei Uptown",
-    sponsor: "台北上城扶輪社",
-    meetingTime: "每雙週五 19:30 - 22:00",
-    meetingPlace: "台北市信義區信義路五段 (台北101商務會議中心)",
-    category: "business",
-    categoryLabel: "學術商務",
-    tags: ["英語簡報", "高階社交", "跨領域合作", "國際商務"],
-    slogan: "上城風範，追求卓越！成就新世代商業菁英。",
-    intro: "台北上城扶青社致力於為青年菁英打造一個高質感的雙語社交與專業合作網絡。聚會多以全英文或中英雙語進行，涵蓋國際財經脈動趨勢、地緣政治、商務談判以及精緻禮儀培訓，旨在培養具有國際視野與領導魅力的上城青年。",
-    officers: [
-      { role: "社長 President", name: "何承翰", title: "外商投行法務分析師", avatar: "🤵" },
-      { role: "秘書 Secretary", name: "沈佳瑩", title: "跨國公關經理", avatar: "👩‍💼" },
-      { role: "財務 Treasurer", name: "賴宇涵", title: "國際精算師", avatar: "🧮" },
-      { role: "輔導顧問 Advisor", name: "羅上城", title: "律師事務所高級合夥人", avatar: "⚖️" },
-      { role: "社務主委 Club Service", name: "錢克強", title: "金融外匯分析師", avatar: "📈" },
-      { role: "社服主委 Community Service", name: "孫維辰", title: "國際慈善基金會專員", avatar: "🌍" },
-      { role: "職業主委 Vocational", name: "汪筱婷", title: "跨國管理諮詢師 (Consultant)", avatar: "💼" },
-      { role: "國際(公關)主委 Int. & PR", name: "白恩宇", title: "雙語商務公關總監", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "上城雙語商務簡報大賽", desc: "模擬向國際創投進行商業募資路演，競逐最高榮譽與創業資金。" },
-      { time: "12月", title: "跨業菁英雞尾酒晚會與商業沙龍", desc: "在精緻場所進行深度社交，引薦多元商務資源與潛在合作夥伴。" },
-      { time: "02月", title: "國際金融與地緣政治趨勢講堂", desc: "邀請知名財經學者與智庫顧問，深入剖析當前全球經濟演變。" },
-      { time: "04月", title: "西式商務禮儀與美酒品鑑雅集", desc: "學習專業的高階商務社交禮儀、著裝規範與紅酒文化常識。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "uptown@rid3482.org" }
-  },
-  {
-    id: "taipei-yide",
-    name: "台北邑德社",
-    englishName: "Rotaract Club of Taipei Yi-De",
-    sponsor: "台北邑德扶輪社",
-    meetingTime: "每雙週日 10:00 - 12:30",
-    meetingPlace: "台北市松山區民生東路五段 (民生社區活動中心教室)",
-    category: "service",
-    categoryLabel: "社會服務",
-    tags: ["銀髮關懷", "代間共融", "長青陪伴", "社區共生"],
-    slogan: "邑聚賢德，暖心相伴！打造代間和諧新世紀。",
-    intro: "台北邑德扶青社的核心使命是推動「高齡友善社會」與「代間共融」。我們相信長輩的智慧是社會的寶藏，透過創新的長青陪伴方案、數位科技教學、青銀共創手作等，消弭世代隔閡，打造溫暖和諧的社區共生圈。",
-    officers: [
-      { role: "社長 President", name: "徐若嵐", title: "高齡福祉照照護師", avatar: "👵" },
-      { role: "秘書 Secretary", name: "劉致遠", title: "復健物理治療師", avatar: "👨‍⚕️" },
-      { role: "財務 Treasurer", name: "鍾心怡", title: "高齡營養調理師", avatar: "🍲" },
-      { role: "輔導顧問 Advisor", name: "陳邑德", title: "安養機構運營長", avatar: "🏡" },
-      { role: "社務主委 Club Service", name: "李德華", title: "社區活動規劃師", avatar: "🎉" },
-      { role: "社服主委 Community Service", name: "蔡淑芬", title: "老人社工專員", avatar: "❤️" },
-      { role: "職業主委 Vocational", name: "張慶祥", title: "長照科技系統顧問", avatar: "📱" },
-      { role: "國際(公關)主委 Int. & PR", name: "游美林", title: "社區發展協會聯絡官", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "青銀共創樂齡數位科技體驗營", desc: "教導社區銀髮長輩使用智慧型手機、社群軟體及常用便利生活 App。" },
-      { time: "10月", title: "憶起幸福：長輩故事手繪繪本展", desc: "聆聽長者人生故事，由青年插畫師繪製成精美繪本並公開展覽。" },
-      { time: "01月", title: "邑德暖心歲末樂齡圍爐歌唱大賽", desc: "結合社區長輩與青年，共同舉辦年菜圍爐、經典老歌歡唱，散播溫暖。" },
-      { time: "04月", title: "樂齡防跌與銀髮健走健康推廣", desc: "協同物理治療師，為社區長輩提供肌力檢測、防跌衛教與健走活動。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "yide@rid3482.org" }
-  },
-  {
-    id: "taipei-lily",
-    name: "台北百合社",
-    englishName: "Rotaract Club of Taipei Lily",
-    sponsor: "台北百合扶輪社",
-    meetingTime: "每雙週六 14:00 - 16:30",
-    meetingPlace: "台北市中正區忠孝東路一段 (華山文創園區藝文空間)",
-    category: "fellowship",
-    categoryLabel: "聯誼休閒",
-    tags: ["女力賦權", "性別平等", "多元包容", "生命教育"],
-    slogan: "百合綻放，女力領航！綻放新世紀多元包容影響力。",
-    intro: "台北百合扶青社以「女性賦權 (Women Empowerment)」與「多元平等包容 (DEI)」為核心理念。我們倡導不分性別的個人成長，透過傑出女性創辦人分享會、生命美學教育、性別友善講座以及女力公益專案，支持青年綻放獨一無二的自我。",
-    officers: [
-      { role: "社長 President", name: "羅婉婷", title: "新創女力社群主理人", avatar: "👩" },
-      { role: "秘書 Secretary", name: "邱宇承", title: "多元多元倡議專員", avatar: "🤝" },
-      { role: "財務 Treasurer", name: "江映璇", title: "自由平面設計師", avatar: "🎨" },
-      { role: "輔導顧問 Advisor", name: "葉百合", title: "前社長 / 兩性平權基金會主委", avatar: "👩‍🏫" },
-      { role: "社務主委 Club Service", name: "陳筱萱", title: "活動企劃經理", avatar: "🎉" },
-      { role: "社服主委 Community Service", name: "謝承翰", title: "性別友善熱線諮詢師", avatar: "📞" },
-      { role: "職業主委 Vocational", name: "簡妤蓁", title: "人力資源分析師", avatar: "📊" },
-      { role: "國際(公關)主委 Int. & PR", name: "林瑞琪", title: "跨國非營利組織公關", avatar: "🌍" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "百合卓越女力先鋒論壇", desc: "邀請不同領域的女性領導者與創業者，分享突破玻璃天花板的心路歷程。" },
-      { time: "11月", title: "DEI 多元包容企業參訪與對談", desc: "走訪落實性別平等與多元包容的知名企業，探討友善職場環境。" },
-      { time: "03月", title: "國際婦女節彩虹公益路跑", desc: "倡導健康生活與平權，所得款項全數捐贈予婦女救援社會團體。" },
-      { time: "05月", title: "自我探索與情緒療癒藝術工作坊", desc: "透過繪畫與戲劇治療，引導團員認識自我內在，提升心理韌性。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "lily@rid3482.org" }
-  },
-  {
-    id: "taipei-yidong",
-    name: "台北怡東社",
-    englishName: "Rotaract Club of Taipei Yi-Dong",
-    sponsor: "台北怡東扶輪社",
-    meetingTime: "每雙週日 14:00 - 16:30",
-    meetingPlace: "台北市信義區光復南路 (怡東綠色共享空間)",
-    category: "service",
-    categoryLabel: "社會服務",
-    tags: ["都市永續", "綠色生活", "減碳科普", "生態農耕"],
-    slogan: "怡然自得，綠色永續！怡東引領低碳生活新潮流。",
-    intro: "台北怡東扶青社聚焦於「綠色永續發展 (Sustainability)」與「都市低碳生活」。我們推廣都市小農契作、廚餘回收製肥、綠色盆栽療癒以及氣候變遷科普教育，讓綠色環保不再是沉重的負擔，而是青年日常時尚的新潮流。",
-    officers: [
-      { role: "社長 President", name: "潘俊瑋", title: "綠色永續供應鏈顧問", avatar: "🌲" },
-      { role: "秘書 Secretary", name: "郭秀敏", title: "植物療法美學師", avatar: "🌿" },
-      { role: "財務 Treasurer", name: "蘇星宇", title: "碳權交易專案副理", avatar: "📊" },
-      { role: "輔導顧問 Advisor", name: "高怡東", title: "有機農業產銷班長", avatar: "🚜" },
-      { role: "社務主委 Club Service", name: "鄧亦翔", title: "綠色建材銷售總監", avatar: "🏡" },
-      { role: "社服主委 Community Service", name: "羅逸帆", title: "濕地生態保育解說員", avatar: "🌾" },
-      { role: "職業主委 Vocational", name: "楊瑞琪", title: "低碳飲食營養師", avatar: "🥗" },
-      { role: "國際(公關)主委 Int. & PR", name: "葉芷妤", title: "環保倡議品牌公關", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "怡東都市屋頂小農契作體驗", desc: "在市區頂樓推行都市農耕，親手栽種無毒蔬菜，推廣地產地消。" },
-      { time: "11月", title: "低碳生活挑戰賽與綠生活市集", desc: "號召社員進行為期一週的低碳排挑戰，並辦理環保低碳市集。" },
-      { time: "02月", title: "氣候變遷與減碳經濟科普沙龍", desc: "邀請環境工程博士，深入淺出剖析全球碳中和與氣候變遷趨勢。" },
-      { time: "04月", title: "都市盆栽療癒與永生花盆景手作", desc: "結合綠意植物與美學設計，體驗親手製作能綠化空間的盆栽。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "yidong@rid3482.org" }
-  },
-  {
-    id: "taipei-tmu",
-    name: "台北城中北醫大社",
-    englishName: "Rotaract Club of Taipei Central TMU",
-    sponsor: "台北城中扶輪社",
-    meetingTime: "每雙週五 18:30 - 21:00",
-    meetingPlace: "台北市信義區吳興街250號 (台北醫學大學校區)",
-    category: "campus",
-    categoryLabel: "校園大專",
-    tags: ["大專校園", "醫學科普", "衛教服務", "健康防老"],
-    slogan: "北醫城中，醫心守護！發揮醫學大專青年影響力。",
-    intro: "作為地區少數的校園與大專特色社團，台北城中北醫大扶青社將醫學專業、衛教科普與社會服務緊密結合。我們常深入偏鄉小學與原民部落，提供衛教科普服務、健康健檢宣導，以實踐大專青年的社會責任。",
-    officers: [
-      { role: "社長 President", name: "高子婷", title: "北醫醫學系大四", avatar: "👩‍⚕️" },
-      { role: "秘書 Secretary", name: "黃品嘉", title: "北醫藥學系大三", avatar: "💊" },
-      { role: "財務 Treasurer", name: "廖柏宇", title: "北醫牙醫系大三", avatar: "🦷" },
-      { role: "輔導顧問 Advisor", name: "邱醫德", title: "附設醫院住院醫師 / 前社長", avatar: "👨‍⚕️" },
-      { role: "社務主委 Club Service", name: "楊健康", title: "北醫呼吸治療系大三", avatar: "🌬️" },
-      { role: "社服主委 Community Service", name: "林科普", title: "北醫公共衛生系大三", avatar: "🧬" },
-      { role: "職業主委 Vocational", name: "張生技", title: "北醫高齡健康管理系大二", avatar: "🧓" },
-      { role: "國際(公關)主委 Int. & PR", name: "廖保健", title: "北醫護理系大三", avatar: "🩺" }
-    ],
-    annualActivities: [
-      { time: "07月", title: "暑期偏鄉醫療關懷與健康衛教營", desc: "深入台灣偏遠部落，為當地居民提供基礎衛教諮詢與兒童科普科學營。" },
-      { time: "10月", title: "都市銀髮族防智力退化大腦活化營", desc: "在台北社區辦理腦力益智遊戲與長輩心理健康諮詢服務。" },
-      { time: "03月", title: "醫學大專青年健康促進大會", desc: "校內大型健康促進宣導，提供免費體脂肪量測與均衡飲食衛教。" },
-      { time: "05月", title: "精油芳療與中藥養生手作例會", desc: "結合現代醫學與中醫養生，親自調配舒壓草本精油及草本茶包。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "tmu@rid3482.org" }
-  },
-  {
-    id: "taipei-risingsun",
-    name: "台北旭日社",
-    englishName: "Rotaract Club of Taipei Rising Sun",
-    sponsor: "台北旭日扶輪社",
-    meetingTime: "每雙週六 14:00 - 16:30",
-    meetingPlace: "台北市中山區民權東路三段 (旭日創客工坊)",
-    category: "service",
-    categoryLabel: "社會服務",
-    tags: ["教育輔導", "閱讀推廣", "二手書香", "永續學習"],
-    slogan: "旭日東升，希望無窮！用教育與書香溫暖人心。",
-    intro: "台北旭日扶青社秉持「知識改變命運」的核心信念，長年專注於弱勢教育輔導與二手書推廣。我們在社區建立「旭日書屋」，募集社會二手優質圖書，並由團員定期舉辦說故事與課後多元輔導，照亮弱勢孩童的求學之路。",
-    officers: [
-      { role: "社長 President", name: "謝宗翰", title: "實驗教育機構教師", avatar: "👨‍🏫" },
-      { role: "秘書 Secretary", name: "陳宛妤", title: "兒童文學作家", avatar: "✍️" },
-      { role: "財務 Treasurer", name: "鄭子揚", title: "網路書店行銷經理", avatar: "📚" },
-      { role: "輔導顧問 Advisor", name: "黃旭日", title: "前社長 / 兒童課輔基金會主委", avatar: "👨‍💼" },
-      { role: "社務主委 Club Service", name: "廖晨光", title: "兒童心理諮商師", avatar: "🧸" },
-      { role: "社服主委 Community Service", name: "林愛心", title: "偏鄉伴讀志工組長", avatar: "📖" },
-      { role: "職業主委 Vocational", name: "張書香", title: "出版企劃編輯", avatar: "🖋️" },
-      { role: "國際(公關)主委 Int. & PR", name: "郭希望", title: "教育新創行銷主任", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "旭日暖心二手書香募書計畫", desc: "號召企業與市民募集適合少兒閱讀的經典叢書，分裝運送至偏鄉學校。" },
-      { time: "11月", title: "社區少兒說故事與科普繪本營", desc: "在社區圖書館定期辦理週六趣味科普閱讀沙龍，激發孩童學習熱情。" },
-      { time: "01月", title: "旭日清寒青年築夢獎學金評選", desc: "為偏鄉清寒學子提供學習耗材與築夢專款獎助，協助其完成夢想。" },
-      { time: "04月", title: "自媒體閱讀推廣與寫作工作坊", desc: "教導青年利用自媒體進行經典書籍解析與寫作輸出，提升軟實力。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "risingsun@rid3482.org" }
-  },
-  {
-    id: "taipei-gemini-ai",
-    name: "台北雙子星AI社",
-    englishName: "Rotaract Club of Taipei Gemini AI",
-    sponsor: "台北雙子星扶輪社",
-    meetingTime: "每雙週六 10:00 - 12:30",
-    meetingPlace: "台北市信義區信義路四段 (雙子星科技AI孵化器)",
-    category: "tech",
-    categoryLabel: "新創科技",
-    tags: ["人工智慧", "數位轉型", "AI工作流", "科技創新"],
-    slogan: "智啟雙子，AI創新！用先進科技共創嶄新世紀。",
-    intro: "台北雙子星AI扶青社是全台首創以「AI科技創新與數位轉型」為核心定位的扶青社。團員多為 AI 研發工程師、數據分析師、UI 設計師與科技愛好者。我們積極推廣 AI 普惠教育、AI 工作流優化工作坊及科技創新服務，賦能青年共創 AI 時代的持恆影響。",
-    officers: [
-      { role: "社長 President", name: "林哲宇", title: "AI 演算法工程師", avatar: "🤖" },
-      { role: "秘書 Secretary", name: "蔡明宏", title: "生成式 AI 工作流講師", avatar: "⚡" },
-      { role: "財務 Treasurer", name: "黃郁晴", title: "科技創投投資分析師", avatar: "💻" },
-      { role: "輔導顧問 Advisor", name: "蕭科技", title: "AI 晶片公司研發處長", avatar: "👨‍💻" },
-      { role: "社務主委 Club Service", name: "張智慧", title: "全端開發工程師", avatar: "💻" },
-      { role: "社服主委 Community Service", name: "廖自動", title: "自動化流程架構師", avatar: "⚙️" },
-      { role: "職業主委 Vocational", name: "楊數據", title: "資料科學大師", avatar: "📊" },
-      { role: "國際(公關)主委 Int. & PR", name: "賴聯絡", title: "科技公關商務拓展", avatar: "📢" }
-    ],
-    annualActivities: [
-      { time: "08月", title: "雙子星青年 AI 創新黑客松", desc: "針對社會與環境問題，利用生成式 AI 技術於 24 小時內開發創新解決方案。" },
-      { time: "11月", title: "中小企業 AI 數位轉型義診服務", desc: "協助地方傳統店家及公益組織，設計並導入免費 AI 自動化客服與行銷工作流。" },
-      { time: "02月", title: "全球 AI 先鋒科技論壇與產業展望", desc: "邀請國內外頂尖 AI 學者與獨角獸公司主管，解析未來五年人工智慧趨勢。" },
-      { time: "05月", title: "AI 高效能辦公與影音創作實戰營", desc: "培訓團員與外部大眾使用 Midjourney、ChatGPT 等工具提高生產力。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "geminiai@rid3482.org" }
-  },
-  {
-    id: "taipei-just",
-    name: "台北景文科大社",
-    englishName: "Rotaract Club of Taipei Just",
-    sponsor: "台北景文扶輪社",
-    meetingTime: "每雙週三 12:30 - 15:00",
-    meetingPlace: "新北市新店區安忠路99號 (景文科技大學校區)",
-    category: "campus",
-    categoryLabel: "校園大專",
-    tags: ["大專校園", "技職技能", "在地創生", "社區服務"],
-    slogan: "景文創藝，青創力行！展現技職青年在地影響力。",
-    intro: "台北景文科大扶青社以大專青年的活力與景文科大豐沛的技職技能為基礎。我們深入社區進行新店溪流域環境監測、設計創意地方創生方案，並利用觀光餐旅與設計等專業技能辦理長輩關懷例會，充分實踐社會關懷。",
-    officers: [
-      { role: "社長 President", name: "張志誠", title: "景文餐飲管理系大三", avatar: "👨‍🍳" },
-      { role: "秘書 Secretary", name: "許家榮", title: "景文視覺傳達系大三", avatar: "🎨" },
-      { role: "財務 Treasurer", name: "吳欣儒", title: "景文旅遊管理系大三", avatar: "✈️" },
-      { role: "輔導顧問 Advisor", name: "鄭景文", title: "前社長 / 精品連鎖咖啡店店長", avatar: "👨‍💼" },
-      { role: "社務主委 Club Service", name: "蔡技能", title: "景文應用外語系大三", avatar: "🗣️" },
-      { role: "社服主委 Community Service", name: "黃創藝", title: "景文多媒體設計系大三", avatar: "🖥️" },
-      { role: "職業主委 Vocational", name: "陳餐飲", title: "景文烘焙廚藝系大三", avatar: "🍞" },
-      { role: "國際(公關)主委 Int. & PR", name: "林旅遊", title: "景文航空服務系大三", avatar: "🛫" }
-    ],
-    annualActivities: [
-      { time: "09月", title: "新店溪生態保育與聯合淨溪", desc: "結合學校環安組，定期舉辦新店溪沿岸淨溪與水質安全監測服務。" },
-      { time: "11月", title: "溫暖長青：養生餐飲與手作大會", desc: "發揮餐飲與餐旅專業，為社區獨居長者親手製作美味營養膳食與手作互動。" },
-      { time: "03月", title: "景文大專青年創意市集大會", desc: "校內大型創意市集，展示學生創藝手作，義賣所得支持偏鄉教育。" },
-      { time: "05月", title: "技職之光：偏鄉學子技能導引營", desc: "邀請偏鄉青少年到校，體驗咖啡拉花、餐飲調酒及包裝設計基礎實作。" }
-    ],
-    socialLinks: { ig: "https://instagram.com", fb: "https://facebook.com", email: "just@rid3482.org" }
-  }
+// 1. 站台資料一律從 data/ 目錄的 JSON 檔動態載入，資料內容與顯示邏輯分開維護。
+//    CLUBS_DATA / TIMELINE_DATA / DISTRICT_CABINET 在 loadSiteData() resolve 前都是空的，
+//    所有會用到它們的 init 函式都必須等 loadSiteData() 完成後才能呼叫。
+const CLUB_IDS = [
+  "taipei-central", "taipei-east", "taipei-dadaocheng", "taipei-northsea",
+  "taipei-daan", "taipei-dalongdong", "taipei-northwest", "taipei-hundredcastles",
+  "taipei-harmony", "taipei-uptown", "taipei-yide", "taipei-lily",
+  "taipei-yidong", "taipei-tmu", "taipei-risingsun", "taipei-gemini-ai", "taipei-just"
 ];
 
-// 2. 地區年度重大活動資料庫 (互動時間軸)
-const TIMELINE_DATA = [
-  {
-    month: "07月",
-    title: "地區代表及地區團隊就職典禮暨交接年會",
-    type: "district",
-    typeLabel: "地區活動",
-    desc: "宣告 2026-27 年度正式啟航！地區代表 DRR 林冠宇帶領全體地區內閣宣誓就職，並以「WOW! 青年影響力 共創新世紀！」為口號，開啟年度首個精彩盛會。"
-  },
-  {
-    month: "09月",
-    title: "地區扶青社社團幹部訓練講習會 (DOTS)",
-    type: "training",
-    typeLabel: "培訓講習",
-    desc: "為 17 社的核心幹部 (社長、秘書、財務、主委) 提供全方位的領導力與社務營運指導。規劃財務控管、公關推廣、專案企劃及輔導社資源對接等專業講座。"
-  },
-  {
-    month: "10月",
-    title: "扶輪青年領袖營 RYLA (Rotary Youth Leadership Awards)",
-    type: "training",
-    typeLabel: "培訓講習",
-    desc: "兩天一夜的封閉式高強度領袖培訓。邀請國內頂尖新創領袖、社會創新實踐者授課，透過團隊合作破冰、問題解決挑戰與黑客松，全方位賦能青年領袖力。"
-  },
-  {
-    month: "12月",
-    title: "地區扶青聯合聖誕暨愛心慈善晚會",
-    type: "fellowship",
-    typeLabel: "聯誼慈善",
-    desc: "全地區最盛大的歲末聯誼盛宴。結合聖誕派對與慈善公益拍賣，所得款項全數捐贈予 3482 地區年度聯合社會服務專案，用青年的愛心照亮寒冬。"
-  },
-  {
-    month: "02月",
-    title: "地區扶青運動會暨聯誼年會",
-    type: "fellowship",
-    typeLabel: "聯誼慈善",
-    desc: "打破各社藩籬的趣味運動競技大會。包含羽球賽、躲避球賽與團隊障礙賽，以強身健體促進跨社團員之間的深厚情誼，展現青春陽光與朝氣。"
-  },
-  {
-    month: "03月",
-    title: "地區年會暨社會服務成果大展 (District Conference)",
-    type: "district",
-    typeLabel: "地區活動",
-    desc: "年度最重要的成果回顧盛會。17 個扶青社齊聚一堂展示全年度服務影響力，邀請扶輪總監、各輔導社社長見證。大會頒發年度卓越社團、傑出專案等大獎。"
-  },
-  {
-    month: "05月",
-    title: "「共創新世紀」年度地區聯合永續綠色倡議行動",
-    type: "service",
-    typeLabel: "社會服務",
-    desc: "17 個社團與地區團隊攜手發起的跨領域社會服務。結合低碳城市減碳宣導與北海岸聯合淨灘，將「Create Lasting Impact」的理念化為具體的集體行動。"
-  }
-];
+let CLUBS_DATA = [];
+let TIMELINE_DATA = [];
+let DISTRICT_CABINET = null;
 
-// 3. 媒合器測驗題目資料庫
+async function loadSiteData() {
+  const [clubs, district] = await Promise.all([
+    Promise.all(CLUB_IDS.map(id => fetch(`data/clubs/${id}.json`).then(res => res.json()))),
+    fetch("data/district.json").then(res => res.json())
+  ]);
+  CLUBS_DATA = clubs;
+  TIMELINE_DATA = district.timeline;
+  DISTRICT_CABINET = district.cabinet;
+}
+
+// 2. 媒合器測驗題目資料庫
 const QUIZ_QUESTIONS = [
   {
     id: 1,
@@ -620,8 +77,16 @@ const QUIZ_QUESTIONS = [
 ];
 
 // 4. 初始化與事件監聽
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   initNavbar();
+
+  try {
+    await loadSiteData();
+  } catch (err) {
+    console.error("站台資料載入失敗，請確認網站是透過伺服器（而非直接開啟檔案）瀏覽：", err);
+    return;
+  }
+
   initCabinetGrid();
   initEventCarousel();
   initClubExplorer();
@@ -686,27 +151,8 @@ function initCabinetGrid() {
   const treeContainer = document.getElementById("cabinet-tree") || document.getElementById("cabinet-grid");
   if (!treeContainer) return;
 
-  // 1. 定義樹狀層級資料庫 (新增一位副代表與一位副秘書長，完美符合秘書/副秘書、兩位副代表、各大主委之配置)
-  const treeData = {
-    tier1: [
-      { role: "地區代表 DRR", name: "林冠宇", club: "台北城中扶青社", avatar: "👔", image: "", desc: "「WOW! 青年影響力 共創新世紀！」帶領全體 3482 地區青年共創高峰。" }
-    ],
-    tier2: [
-      { role: "地區秘書長 DS", name: "張逸安", club: "台北大安扶青社", avatar: "✒️", image: "", desc: "統籌地區行政運作、文書資訊傳達與跨地區合作引薦。" },
-      { role: "地區副秘書長 DDS", name: "謝欣妤", club: "台北圓滿扶青社", avatar: "✨", image: "", desc: "協助秘書長綜理地區會務，加強各分社行政溝通與紀錄彙整。" },
-      { role: "地區財務長 DT", name: "陳品妤", club: "台北上城扶青社", avatar: "📊", image: "", desc: "嚴謹控管年度預算，精準配置地區社會服務與活動專款。" }
-    ],
-    tier3: [
-      { role: "地區副代表 ADRR", name: "徐佳琪", club: "台北大稻埕扶青社", avatar: "👩‍💼", image: "", desc: "分工深耕第一分區，促進分社間的資源串聯與地方創生計畫整合。" },
-      { role: "地區副代表 ADRR", name: "黃莉婷", club: "台北百合扶青社", avatar: "👩‍🏫", image: "", desc: "分工輔導第二分區，引領分社多元成長與年度地區聯合專案對接。" }
-    ],
-    tier4: [
-      { role: "團務委員會主委", name: "王哲瑋", club: "台北西北區社", avatar: "💡", image: "", desc: "規劃幹部講習會 (DOTS) 與地區年會，全面提升社務水平。" },
-      { role: "社會服務委員會主委", name: "賴佩君", club: "台北北海社", avatar: "🌱", image: "", desc: "策劃年度跨社永續綠色聯合倡議服務，實踐永續影響力。" },
-      { role: "職業發展委員會主委", name: "劉建志", club: "台北雙子星AI社", avatar: "🦾", image: "", desc: "對接輔導社企業資源，辦理青年AI工作流實戰等職場增能課。" },
-      { role: "國際(公關)服務主委", name: "鄭又瑄", club: "台北城東社", avatar: "✈️", image: "", desc: "暢通亞太扶青會議聯絡窗口，帶領青年代表接軌國際。" }
-    ]
-  };
+  // 1. 樹狀層級資料改由 loadSiteData() 從 data/district.json 讀入的 DISTRICT_CABINET 提供
+  const treeData = DISTRICT_CABINET;
 
   // 2. 清空容器並重置 Class 為樹狀排版
   treeContainer.innerHTML = "";
@@ -740,10 +186,10 @@ function initCabinetGrid() {
     <!-- 樹狀連接線 1 -->
     <div class="tree-connector-line"></div>
     
-    <!-- Tier 2: 秘書/副秘書與財務 -->
-    <div class="cabinet-tier-label">─── 核心行政與財務團隊 Executive Secretariat & Finance ───</div>
+    <!-- Tier 2: 秘書/副秘書/財務與顧問 -->
+    <div class="cabinet-tier-label">─── 核心行政財務暨顧問團隊 Executive Secretariat, Finance & Advisor ───</div>
     <div class="cabinet-tier tier-2-wrapper">
-      <div class="tier-cards-grid grid-3">
+      <div class="tier-cards-grid grid-4">
         ${treeData.tier2.map(o => renderCard(o, "cabinet-sec-card")).join("")}
       </div>
     </div>
@@ -751,19 +197,19 @@ function initCabinetGrid() {
     <!-- 樹狀連接線 2 -->
     <div class="tree-connector-line"></div>
     
-    <!-- Tier 3: 兩位副代表 -->
+    <!-- Tier 3: 三位副代表 -->
     <div class="cabinet-tier-label">─── 地區副代表 Associate DRRs ───</div>
     <div class="cabinet-tier tier-3-wrapper">
-      <div class="tier-cards-grid grid-2">
+      <div class="tier-cards-grid grid-3">
         ${treeData.tier3.map(o => renderCard(o, "cabinet-adrr-card")).join("")}
       </div>
     </div>
-    
+
     <!-- 樹狀連接線 3 -->
     <div class="tree-connector-line"></div>
-    
-    <!-- Tier 4: 各大主委 -->
-    <div class="cabinet-tier-label">─── 委員會服務主委 Service Chairs ───</div>
+
+    <!-- Tier 4: 各大主委暨副主委 -->
+    <div class="cabinet-tier-label">─── 委員會主委暨副主委團隊 Service Chairs & Vice Chairs ───</div>
     <div class="cabinet-tier tier-4-wrapper">
       <div class="tier-cards-grid grid-4">
         ${treeData.tier4.map(o => renderCard(o, "cabinet-chair-card")).join("")}
