@@ -1,25 +1,25 @@
 {
   "id": "taipei-harmony",
-  "name": "台北圓滿社",
-  "englishName": "Rotaract Club of Taipei Harmony",
-  "sponsor": "台北圓滿扶輪社",
+  "name": "台北圓環社",
+  "englishName": "Rotaract Club of Taipei Yuanhuan",
+  "sponsor": "台北圓環扶輪社",
   "meetingTime": "每雙週六 14:00 - 16:30",
-  "meetingPlace": "台北市大安區新生南路三段 (圓滿生活美學館)",
+  "meetingPlace": "台北市大同區寧夏路 (建成圓環周邊社區據點)",
   "category": "fellowship",
   "categoryLabel": "聯誼休閒",
-  "tags": ["生活美學", "心靈成長", "手作美感", "健康生活"],
-  "slogan": "生活圓滿，心靈富足！共創品味生活新哲學。",
-  "intro": "台北圓滿扶青社提倡「生活與工作的完美平衡 (Work-Life Balance)」。我們以心靈成長、美感手作、健康養生以及品味生活為出發點，定期舉辦茶道體驗、花藝美學、戶外瑜珈與閱讀分享，讓青年在繁忙的步調中找到安頓身心的圓滿港灣。",
+  "tags": ["在地飲食", "社區共餐", "老城文化", "跨世代交流"],
+  "slogan": "圓聚老城，環扣人情！以美食與共餐溫暖社區。",
+  "intro": "台北圓環扶青社以大稻埕與建成圓環一帶的老城飲食文化為根，推動「以食會友」的社區連結。我們透過社區共餐、庶民美食走讀與老店故事採集，串起跨世代的圓環記憶，讓在地人情味在新世紀繼續發光。",
   "officers": [
     { "role": "社長 President", "name": "張峻華", "title": "P.P. Isaac", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "丘芳瑜", "title": "P.P. Joy", "avatar": "📋" },
     { "role": "輔導主委 Advisor", "name": "張智為", "title": "P.P. Comma", "avatar": "🧭" }
   ],
   "annualActivities": [
-    { "time": "09月", "title": "森林療癒與秋日戶外瑜珈營", "desc": "走入大自然，結合正念冥想與瑜珈，釋放都市生活的壓力。" },
-    { "time": "11月", "title": "花藝設計與生活美感體驗課", "desc": "透過親手插花，學習色彩搭配與生活空間美化技巧。" },
-    { "time": "02月", "title": "春日圍爐茶會與精油香氛調配", "desc": "品茗優質台茶，並親自調配專屬個人的心靈香氛精油。" },
-    { "time": "04月", "title": "圓滿生活美學閱讀沙龍", "desc": "深入研討身心健康、極簡生活與自我實踐等經典好書。" }
+    { "time": "09月", "title": "老城美食走讀與圓環記憶採集", "desc": "帶領青年走訪大稻埕與建成圓環一帶老店，記錄庶民美食與街區故事。" },
+    { "time": "11月", "title": "社區共餐：跨世代圍爐大會", "desc": "邀請社區長者與青年同桌共餐，用一頓飯串起世代之間的溫度。" },
+    { "time": "02月", "title": "在地食材市集與惜食料理工作坊", "desc": "結合在地小農與老店，推廣惜食觀念並體驗手作傳統家常味。" },
+    { "time": "04月", "title": "圓環好味道：社區公益義賣餐會", "desc": "號召店家與志工合辦義賣餐會，所得投入社區關懷服務。" }
   ],
-  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "harmony@rid3482.org" }
+  "socialLinks": { "ig": "https://instagram.com", "fb": "https://facebook.com", "email": "yuanhuan@rid3482.org" }
 }
