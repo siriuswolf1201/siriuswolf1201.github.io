@@ -292,7 +292,6 @@ function initClubExplorer() {
       card.innerHTML = `
         <div class="club-card-header">
           <span class="club-badge badge-${club.category}">${club.categoryLabel}</span>
-          <span class="club-meeting-badge">📅 ${club.meetingTime.split(" ")[0]}</span>
         </div>
         <h3 class="club-card-title">${club.name}</h3>
         <p class="club-card-english">${club.englishName}</p>
@@ -305,6 +304,9 @@ function initClubExplorer() {
       `;
       clubGrid.appendChild(card);
     });
+
+    // 篩選／搜尋後重繪的卡片同樣是動態產生，需補觀察才能淡入顯示。
+    observeFadeIns(clubGrid);
   }
 }
 
@@ -316,7 +318,7 @@ function openClubModal(clubId) {
 
   const modalBody = document.getElementById("modal-body-content");
   
-  // 渲染社團幹部 HTML (共 8 個內閣職位)
+  // 渲染社團幹部 HTML (依 PDF 社長通訊錄提供的真實名單)
   const officersHTML = club.officers.map(officer => {
     // 建立大頭貼渲染邏輯：支援 officer.image，若無圖片則使用 SVG + Emoji 進行優雅降級
     const fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%233A5166" opacity="0.05"/><text x="50%" y="65%" font-size="50" dominant-baseline="middle" text-anchor="middle">${officer.avatar}</text></svg>`;
@@ -360,13 +362,6 @@ function openClubModal(clubId) {
         
         <h3 class="modal-section-title">社團簡介</h3>
         <p class="modal-intro-text">${club.intro}</p>
-        
-        <h3 class="modal-section-title">例會資訊</h3>
-        <ul class="modal-info-list">
-          <li><strong>📅 例會時間：</strong>${club.meetingTime}</li>
-          <li><strong>📍 例會地點：</strong>${club.meetingPlace}</li>
-          <li><strong>🏢 輔導扶輪社：</strong>${club.sponsor}</li>
-        </ul>
 
         <div class="modal-tags-container">${tagsHTML}</div>
 
@@ -417,21 +412,32 @@ function initTimeline() {
   if (!timelineContainer) return;
 
   timelineContainer.innerHTML = "";
-  TIMELINE_DATA.forEach((item, index) => {
-    const isLeft = index % 2 === 0;
-    const timelineItem = document.createElement("div");
-    timelineItem.className = `timeline-item ${isLeft ? "timeline-left" : "timeline-right"} fade-in-up`;
-    
-    timelineItem.innerHTML = `
-      <div class="timeline-date">${item.month}</div>
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <span class="timeline-type timeline-type-${item.type}">${item.typeLabel}</span>
-        <h3 class="timeline-title">${item.title}</h3>
-        <p class="timeline-desc">${item.desc}</p>
+
+  // 按月分組渲染：每個月一個區塊，內含當月 3-4 場活動卡片
+  TIMELINE_DATA.forEach((group) => {
+    const monthBlock = document.createElement("div");
+    monthBlock.className = "cal-month fade-in-up";
+
+    const events = group.events || [];
+    const eventsHTML = events.map(ev => `
+      <div class="cal-event">
+        <div class="cal-event-top">
+          ${ev.date ? `<span class="cal-event-date">${ev.date}</span>` : ""}
+          <span class="cal-event-type timeline-type-${ev.type}">${ev.typeLabel}</span>
+        </div>
+        <h4 class="cal-event-title">${ev.title}</h4>
+        ${ev.desc ? `<p class="cal-event-desc">${ev.desc}</p>` : ""}
       </div>
+    `).join("");
+
+    monthBlock.innerHTML = `
+      <div class="cal-month-header">
+        <span class="cal-month-label">${group.month}</span>
+        <span class="cal-month-count">${events.length} 場活動</span>
+      </div>
+      <div class="cal-event-grid">${eventsHTML}</div>
     `;
-    timelineContainer.appendChild(timelineItem);
+    timelineContainer.appendChild(monthBlock);
   });
 }
 
@@ -567,14 +573,16 @@ function initQuiz() {
         <h3 class="match-card-title">${club.name}</h3>
         <p class="match-card-slogan">「 ${club.slogan} 」</p>
         <ul class="match-info">
-          <li>📅 ${club.meetingTime}</li>
-          <li>📍 ${club.meetingPlace.split(" ")[0]}</li>
           <li>🎯 特色：${club.categoryLabel}</li>
         </ul>
         <button class="match-action-btn" onclick="openClubModal('${club.id}')">查看詳細社介紹 & 聯絡方式</button>
       `;
       matchGrid.appendChild(matchCard);
     });
+
+    // 推薦卡片是測驗完成後才動態產生的，初始化時的觀察器抓不到，
+    // 需在此補觀察，否則卡片會停在 opacity:0 而顯示不出來。
+    observeFadeIns(matchGrid);
 
     // 重新測驗按鈕
     const retakeBtn = document.getElementById("retake-quiz-btn");
@@ -707,25 +715,33 @@ function initContactForm() {
 }
 
 // H. 滾動動畫觸發器
-function initScrollAnimations() {
-  const faders = document.querySelectorAll(".fade-in-up");
+// 全域保存 IntersectionObserver，讓初始化之後才動態產生的 .fade-in-up 元素
+// （媒合器推薦卡、篩選／搜尋後重繪的社團卡）也能補觀察並淡入顯示。
+let fadeInObserver = null;
 
+function observeFadeIns(root) {
+  if (!fadeInObserver || !root) return;
+  root.querySelectorAll(".fade-in-up").forEach(el => {
+    if (!el.classList.contains("visible")) fadeInObserver.observe(el);
+  });
+}
+
+function initScrollAnimations() {
   const appearOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  fadeInObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("visible");
-      appearOnScroll.unobserve(entry.target);
+      observer.unobserve(entry.target);
     });
   }, appearOptions);
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  // 觀察初始化當下頁面上所有 .fade-in-up 元素
+  observeFadeIns(document);
 }
 
 // I. 實作年度精彩活動輪播 Event Carousel

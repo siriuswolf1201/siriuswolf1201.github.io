@@ -11,14 +11,7 @@
   "slogan": "旭日東升，希望無窮！用教育與書香溫暖人心。",
   "intro": "台北旭日扶青社秉持「知識改變命運」的核心信念，長年專注於弱勢教育輔導與二手書推廣。我們在社區建立「旭日書屋」，募集社會二手優質圖書，並由團員定期舉辦說故事與課後多元輔導，照亮弱勢孩童的求學之路。",
   "officers": [
-    { "role": "社長 President", "name": "謝宗翰", "title": "實驗教育機構教師", "avatar": "👨‍🏫" },
-    { "role": "秘書 Secretary", "name": "陳宛妤", "title": "兒童文學作家", "avatar": "✍️" },
-    { "role": "財務 Treasurer", "name": "鄭子揚", "title": "網路書店行銷經理", "avatar": "📚" },
-    { "role": "輔導顧問 Advisor", "name": "黃旭日", "title": "前社長 / 兒童課輔基金會主委", "avatar": "👨‍💼" },
-    { "role": "社務主委 Club Service", "name": "廖晨光", "title": "兒童心理諮商師", "avatar": "🧸" },
-    { "role": "社服主委 Community Service", "name": "林愛心", "title": "偏鄉伴讀志工組長", "avatar": "📖" },
-    { "role": "職業主委 Vocational", "name": "張書香", "title": "出版企劃編輯", "avatar": "🖋️" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "郭希望", "title": "教育新創行銷主任", "avatar": "📢" }
+    { "role": "社長 President", "name": "佐佐木晴", "title": "P. Sasaki Koharu", "avatar": "⭐" }
   ],
   "annualActivities": [
     { "time": "09月", "title": "旭日暖心二手書香募書計畫", "desc": "號召企業與市民募集適合少兒閱讀的經典叢書，分裝運送至偏鄉學校。" },

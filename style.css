@@ -1850,9 +1850,9 @@ section {
   padding: 40px 0;
 }
 
-/* 中央垂直軌跡 */
+/* 中央垂直軌跡 (按月分組版型已停用) */
 .timeline-container::before {
-  content: '';
+  content: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1954,10 +1954,15 @@ section {
   text-transform: uppercase;
 }
 
-.timeline-type-district { background-color: var(--primary); }
-.timeline-type-training { background-color: var(--accent-dark); }
-.timeline-type-fellowship { background-color: #6c757d; }
-.timeline-type-service { background-color: #28a745; }
+/* 委員會色標 (對齊地區行事曆分類) */
+.timeline-type-district { background-color: #c0504d; }      /* 地區 */
+.timeline-type-rotary { background-color: #4a90b8; }        /* 扶輪 */
+.timeline-type-service { background-color: #2f7d95; }       /* 社服 */
+.timeline-type-meeting { background-color: #6f7f90; }       /* 會議 */
+.timeline-type-vocational { background-color: #4a9d5b; }    /* 職業 */
+.timeline-type-international { background-color: #8a76b0; } /* 國際 */
+.timeline-type-club { background-color: #c47a2c; }          /* 社務 */
+.timeline-type-pr { background-color: #c56c94; }            /* 公關 */
 
 .timeline-title {
   font-size: 1.2rem;
@@ -1970,6 +1975,139 @@ section {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* 按月分組行事曆 (每月 3-4 場活動) */
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.cal-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.cal-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.cal-month-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--bg-contrast);
+}
+
+.cal-month-label {
+  font-family: var(--font-title);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--primary);
+  position: relative;
+  padding-left: 16px;
+}
+
+.cal-month-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 70%;
+  border-radius: 3px;
+  background-color: var(--accent);
+}
+
+.cal-month-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.cal-event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cal-event {
+  background: var(--bg-light);
+  border: 1px solid var(--bg-contrast);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.cal-event:hover {
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(184, 155, 107, 0.25);
+  transform: translateY(-4px);
+}
+
+.cal-event-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cal-event-date {
+  font-family: var(--font-title);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+
+.cal-event-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: var(--bg-white);
+  display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cal-event-title {
+  font-size: 1.08rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.cal-event-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .cal-event-grid {
+    grid-template-columns: 1fr;
+  }
+  .cal-month-label {
+    font-size: 1.6rem;
+  }
 }
 
 /* --- 意願諮詢表單 (Contact Form) --- */

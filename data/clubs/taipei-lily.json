@@ -11,14 +11,9 @@
   "slogan": "百合綻放，女力領航！綻放新世紀多元包容影響力。",
   "intro": "台北百合扶青社以「女性賦權 (Women Empowerment)」與「多元平等包容 (DEI)」為核心理念。我們倡導不分性別的個人成長，透過傑出女性創辦人分享會、生命美學教育、性別友善講座以及女力公益專案，支持青年綻放獨一無二的自我。",
   "officers": [
-    { "role": "社長 President", "name": "羅婉婷", "title": "新創女力社群主理人", "avatar": "👩" },
-    { "role": "秘書 Secretary", "name": "邱宇承", "title": "多元多元倡議專員", "avatar": "🤝" },
-    { "role": "財務 Treasurer", "name": "江映璇", "title": "自由平面設計師", "avatar": "🎨" },
-    { "role": "輔導顧問 Advisor", "name": "葉百合", "title": "前社長 / 兩性平權基金會主委", "avatar": "👩‍🏫" },
-    { "role": "社務主委 Club Service", "name": "陳筱萱", "title": "活動企劃經理", "avatar": "🎉" },
-    { "role": "社服主委 Community Service", "name": "謝承翰", "title": "性別友善熱線諮詢師", "avatar": "📞" },
-    { "role": "職業主委 Vocational", "name": "簡妤蓁", "title": "人力資源分析師", "avatar": "📊" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "林瑞琪", "title": "跨國非營利組織公關", "avatar": "🌍" }
+    { "role": "社長 President", "name": "魯安庭", "title": "P. Christine", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "范芷寧", "title": "S. Ning", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "蘇麗惠", "title": "Grace", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "09月", "title": "百合卓越女力先鋒論壇", "desc": "邀請不同領域的女性領導者與創業者，分享突破玻璃天花板的心路歷程。" },

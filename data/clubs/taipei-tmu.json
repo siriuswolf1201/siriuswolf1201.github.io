@@ -11,14 +11,9 @@
   "slogan": "北醫城中，醫心守護！發揮醫學大專青年影響力。",
   "intro": "作為地區少數的校園與大專特色社團，台北城中北醫大扶青社將醫學專業、衛教科普與社會服務緊密結合。我們常深入偏鄉小學與原民部落，提供衛教科普服務、健康健檢宣導，以實踐大專青年的社會責任。",
   "officers": [
-    { "role": "社長 President", "name": "高子婷", "title": "北醫醫學系大四", "avatar": "👩‍⚕️" },
-    { "role": "秘書 Secretary", "name": "黃品嘉", "title": "北醫藥學系大三", "avatar": "💊" },
-    { "role": "財務 Treasurer", "name": "廖柏宇", "title": "北醫牙醫系大三", "avatar": "🦷" },
-    { "role": "輔導顧問 Advisor", "name": "邱醫德", "title": "附設醫院住院醫師 / 前社長", "avatar": "👨‍⚕️" },
-    { "role": "社務主委 Club Service", "name": "楊健康", "title": "北醫呼吸治療系大三", "avatar": "🌬️" },
-    { "role": "社服主委 Community Service", "name": "林科普", "title": "北醫公共衛生系大三", "avatar": "🧬" },
-    { "role": "職業主委 Vocational", "name": "張生技", "title": "北醫高齡健康管理系大二", "avatar": "🧓" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "廖保健", "title": "北醫護理系大三", "avatar": "🩺" }
+    { "role": "社長 President", "name": "龔圓婷", "title": "P. Aliana", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "林凱祺", "title": "S. Steven", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "蔡世偉", "title": "Sway", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "07月", "title": "暑期偏鄉醫療關懷與健康衛教營", "desc": "深入台灣偏遠部落，為當地居民提供基礎衛教諮詢與兒童科普科學營。" },

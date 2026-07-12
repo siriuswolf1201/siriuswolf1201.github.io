@@ -11,14 +11,8 @@
   "slogan": "西北領航，職引未來！共創專業發展影響力。",
   "intro": "台北西北區扶青社是青年的「職涯加速器」。我們重點培育團員的職場硬實力與軟實力，包含 AI 辦公工具應用、專案管理、簡報演說以及跨業人脈引薦，幫助剛踏入社會的青年快速適應並在職場上脫穎而出。",
   "officers": [
-    { "role": "社長 President", "name": "周子修", "title": "外商獵頭顧問", "avatar": "👔" },
-    { "role": "秘書 Secretary", "name": "楊采婕", "title": "UI/UX 設計師", "avatar": "🎨" },
-    { "role": "財務 Treasurer", "name": "張皓倫", "title": "金融投資分析師", "avatar": "📈" },
-    { "role": "輔導顧問 Advisor", "name": "潘俊良", "title": "前社長 / 外商科技亞太總監", "avatar": "👨‍💻" },
-    { "role": "社務主委 Club Service", "name": "郭家豪", "title": "前端工程師", "avatar": "💻" },
-    { "role": "社服主委 Community Service", "name": "戴郁軒", "title": "偏鄉教育志工領隊", "avatar": "🏫" },
-    { "role": "職業主委 Vocational", "name": "鄭宇傑", "title": "外商產品經理 (PM)", "avatar": "🚀" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "蘇筠媛", "title": "商務英語培訓講師", "avatar": "🗣️" }
+    { "role": "社長 President", "name": "楊凱斌", "title": "P. Jacky", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "鄭嘉緯", "title": "P.P. Martin", "avatar": "📋" }
   ],
   "annualActivities": [
     { "time": "08月", "title": "青年模擬面試與履歷健檢大會", "desc": "邀請高階經理人與 HR 主管，提供一對一深度履歷指導與模擬面試。" },

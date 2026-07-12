@@ -11,14 +11,9 @@
   "slogan": "百城聚力，築夢新創！引領青年創業新世代。",
   "intro": "台北百城扶青社是青年創業家的搖籃。我們聚集了許多新創公司創辦人、自媒體工作者以及有志創業的青年，透過商業模式分析、創業資源對接、品牌行銷實戰以及創投沙龍，將好的點子落地生根，共築事業新城堡。",
   "officers": [
-    { "role": "社長 President", "name": "柯宗達", "title": "電商科技公司創辦人", "avatar": "🚀" },
-    { "role": "秘書 Secretary", "name": "簡嘉宏", "title": "募資顧問平台總監", "avatar": "💼" },
-    { "role": "財務 Treasurer", "name": "游雅婷", "title": "新創財務分析師", "avatar": "📊" },
-    { "role": "輔導顧問 Advisor", "name": "孫建平", "title": "天使投資人 / 創投合夥人", "avatar": "💸" },
-    { "role": "社務主委 Club Service", "name": "廖元智", "title": "自媒體運營總監", "avatar": "📱" },
-    { "role": "社服主委 Community Service", "name": "曾韋捷", "title": "綠能社企發起人", "avatar": "🌱" },
-    { "role": "職業主委 Vocational", "name": "傅怡樺", "title": "品牌策略總監", "avatar": "🎪" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "邱宇萱", "title": "群眾募資專案主任", "avatar": "📢" }
+    { "role": "社長 President", "name": "何欣洋", "title": "P. Sam", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "張子宣", "title": "S. Nadia", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "沈沛妍", "title": "P. Betty", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "09月", "title": "百城青年新創路演與Demo Day", "desc": "提供創業青年向輔導社企業家及專業創投人展示商業計畫的機會。" },

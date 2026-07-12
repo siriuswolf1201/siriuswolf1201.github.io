@@ -11,14 +11,11 @@
   "slogan": "邑聚賢德，暖心相伴！打造代間和諧新世紀。",
   "intro": "台北邑德扶青社的核心使命是推動「高齡友善社會」與「代間共融」。我們相信長輩的智慧是社會的寶藏，透過創新的長青陪伴方案、數位科技教學、青銀共創手作等，消弭世代隔閡，打造溫暖和諧的社區共生圈。",
   "officers": [
-    { "role": "社長 President", "name": "徐若嵐", "title": "高齡福祉照照護師", "avatar": "👵" },
-    { "role": "秘書 Secretary", "name": "劉致遠", "title": "復健物理治療師", "avatar": "👨‍⚕️" },
-    { "role": "財務 Treasurer", "name": "鍾心怡", "title": "高齡營養調理師", "avatar": "🍲" },
-    { "role": "輔導顧問 Advisor", "name": "陳邑德", "title": "安養機構運營長", "avatar": "🏡" },
-    { "role": "社務主委 Club Service", "name": "李德華", "title": "社區活動規劃師", "avatar": "🎉" },
-    { "role": "社服主委 Community Service", "name": "蔡淑芬", "title": "老人社工專員", "avatar": "❤️" },
-    { "role": "職業主委 Vocational", "name": "張慶祥", "title": "長照科技系統顧問", "avatar": "📱" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "游美林", "title": "社區發展協會聯絡官", "avatar": "📢" }
+    { "role": "社長 President", "name": "許允盛", "title": "P. Jordan", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "邱子瑒", "title": "P.E. Ace", "avatar": "📋" },
+    { "role": "副秘書 Vice Secretary", "name": "林品妤", "title": "V.S. Fischer", "avatar": "🗂️" },
+    { "role": "副秘書 Vice Secretary", "name": "陳雅珊", "title": "V.S. Wendy", "avatar": "🗂️" },
+    { "role": "輔導主委 Advisor", "name": "郭思偉", "title": "I.P.P. Silas", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "08月", "title": "青銀共創樂齡數位科技體驗營", "desc": "教導社區銀髮長輩使用智慧型手機、社群軟體及常用便利生活 App。" },

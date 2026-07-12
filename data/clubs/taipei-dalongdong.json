@@ -11,14 +11,9 @@
   "slogan": "大龍騰飛，峒心協力！活化傳統民俗生命力。",
   "intro": "以古老歷史街區大龍峒為基地，台北大龍峒扶青社深耕於傳統建築藝術、廟宇民俗與傳統手工藝的推廣。我們與大龍峒保安宮、台北孔廟等單位密切合作，策劃走讀與技藝工作坊，將文化資產轉化為青年的時尚新語言。",
   "officers": [
-    { "role": "社長 President", "name": "李博文", "title": "古蹟修復助理規劃師", "avatar": "🏯" },
-    { "role": "秘書 Secretary", "name": "吳庭妤", "title": "文化導覽解說員", "avatar": "🎤" },
-    { "role": "財務 Treasurer", "name": "謝佳霖", "title": "傳統工藝研究家", "avatar": "🎨" },
-    { "role": "輔導顧問 Advisor", "name": "張大同", "title": "文資學者 / 大同區史專家", "avatar": "👨‍🏫" },
-    { "role": "社務主委 Club Service", "name": "林士傑", "title": "餐飲服務經理", "avatar": "☕" },
-    { "role": "社服主委 Community Service", "name": "黃詩婷", "title": "藝術治療師", "avatar": "🧸" },
-    { "role": "職業主委 Vocational", "name": "陳俊安", "title": "建築設計師", "avatar": "📐" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "盧筱晴", "title": "文化局專案執行長", "avatar": "📰" }
+    { "role": "社長 President", "name": "周秉學", "title": "P. Eric Chou", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "曾彥清", "title": "I.P.P. Ian", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "陳執中", "title": "A-Dentist", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "09月", "title": "孔廟釋奠典禮青年走讀會", "desc": "引導青年深入體驗教師節孔廟八佾舞與祭孔大典的歷史意涵。" },

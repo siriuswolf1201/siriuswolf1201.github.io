@@ -11,14 +11,9 @@
   "slogan": "生活圓滿，心靈富足！共創品味生活新哲學。",
   "intro": "台北圓滿扶青社提倡「生活與工作的完美平衡 (Work-Life Balance)」。我們以心靈成長、美感手作、健康養生以及品味生活為出發點，定期舉辦茶道體驗、花藝美學、戶外瑜珈與閱讀分享，讓青年在繁忙的步調中找到安頓身心的圓滿港灣。",
   "officers": [
-    { "role": "社長 President", "name": "孫立廷", "title": "生活美學空間策劃師", "avatar": "🧘" },
-    { "role": "秘書 Secretary", "name": "鄭伊珊", "title": "精油芳療諮詢師", "avatar": "🌸" },
-    { "role": "財務 Treasurer", "name": "郭建均", "title": "健身營養教練", "avatar": "🥑" },
-    { "role": "輔導顧問 Advisor", "name": "劉圓滿", "title": "前社長 / 瑜珈會館創辦人", "avatar": "🧘‍♀️" },
-    { "role": "社務主委 Club Service", "name": "蔡政宏", "title": "精品咖啡烘豆師", "avatar": "☕" },
-    { "role": "社服主委 Community Service", "name": "林佳蓉", "title": "流浪動物之家志工", "avatar": "🐶" },
-    { "role": "職業主委 Vocational", "name": "施佑儒", "title": "花藝設計師", "avatar": "💐" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "陳心怡", "title": "藝術策展經理", "avatar": "🖼️" }
+    { "role": "社長 President", "name": "張峻華", "title": "P.P. Isaac", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "丘芳瑜", "title": "P.P. Joy", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "張智為", "title": "P.P. Comma", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "09月", "title": "森林療癒與秋日戶外瑜珈營", "desc": "走入大自然，結合正念冥想與瑜珈，釋放都市生活的壓力。" },

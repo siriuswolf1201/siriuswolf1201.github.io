@@ -11,14 +11,9 @@
   "slogan": "大愛無疆，安居樂業！深耕社區弱勢關懷。",
   "intro": "台北大安扶青社長期關注偏鄉教育與社區弱勢族群。透過長期穩定的「小太陽陪伴計畫」，為弱勢家庭孩童提供課後輔導、科普教育與探索成長營，用愛與耐心陪伴孩子跨越障礙，創造溫暖改變。",
   "officers": [
-    { "role": "社長 President", "name": "林志明", "title": "社工師", "avatar": "❤️" },
-    { "role": "秘書 Secretary", "name": "許家瑜", "title": "兒童心理輔導師", "avatar": "🧸" },
-    { "role": "財務 Treasurer", "name": "高偉哲", "title": "非營利組織專案主任", "avatar": "💰" },
-    { "role": "輔導顧問 Advisor", "name": "陳志強", "title": "前社長 / 特殊教育學校校長", "avatar": "👨‍🏫" },
-    { "role": "社務主委 Club Service", "name": "黃郁雯", "title": "活動企劃經理", "avatar": "🎉" },
-    { "role": "社服主委 Community Service", "name": "楊智超", "title": "職能治療師", "avatar": "👨‍⚕️" },
-    { "role": "職業主委 Vocational", "name": "董佳玲", "title": "職涯發展諮詢師", "avatar": "💼" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "江宜庭", "title": "社群品牌視覺設計師", "avatar": "🎨" }
+    { "role": "社長 President", "name": "汪俊宏", "title": "P. Toshi", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "張庭瑄", "title": "S. Tina", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "許駿鵬", "title": "Owen", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "08月", "title": "大安小太陽山林探索夏令營", "desc": "帶領弱勢學童走出城市，進行三天兩夜的生態與自我挑戰探索。" },

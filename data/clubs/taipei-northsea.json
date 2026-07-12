@@ -11,14 +11,10 @@
   "slogan": "愛護海洋，北海最行！共創蔚藍新世紀。",
   "intro": "台北北海扶青社是一個高度專注於海洋生態保育與環境永續發展的行動派社團。我們秉持「用行動代替口號」的信念，長年深耕北海岸海洋淨灘、無塑生活推廣，並結合環保知識教育，共創永續家園。",
   "officers": [
-    { "role": "社長 President", "name": "王俊傑", "title": "ESG 永續規劃師", "avatar": "🌱" },
-    { "role": "秘書 Secretary", "name": "蔡依珊", "title": "環境科學研究助理", "avatar": "🧪" },
-    { "role": "財務 Treasurer", "name": "徐浩軒", "title": "綠能科技工程師", "avatar": "⚡" },
-    { "role": "輔導顧問 Advisor", "name": "吳正雄", "title": "環保設備廠總經理", "avatar": "🏭" },
-    { "role": "社務主委 Club Service", "name": "許哲銘", "title": "硬體工程師", "avatar": "🔧" },
-    { "role": "社服主委 Community Service", "name": "梁凱特", "title": "荒野保護協會志工", "avatar": "☘️" },
-    { "role": "職業主委 Vocational", "name": "詹明峰", "title": "專利代理人", "avatar": "⚖️" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "鄧佩蓉", "title": "永續科技公關經理", "avatar": "🌍" }
+    { "role": "社長 President", "name": "謝昀彣", "title": "P. Wendy", "avatar": "⭐" },
+    { "role": "副社長 Vice President", "name": "余念祖", "title": "V.P. Jeff", "avatar": "🌟" },
+    { "role": "秘書 Secretary", "name": "詹湘樺", "title": "P.P. Katherine", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "陳力豪", "title": "P.P. Howard", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "07月", "title": "北海岸夏日大型聯合淨灘", "desc": "號召地區上百名青年深入海岸，清理海洋廢棄物並進行垃圾分類監測。" },

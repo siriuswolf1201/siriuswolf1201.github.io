@@ -11,14 +11,10 @@
   "slogan": "埕現經典，創藝無限！讓在地文化發揮持恆影響。",
   "intro": "根植於大稻埕深厚的歷史底蘊，台北大稻埕扶青社將傳統文化與現代創意完美融合。我們致力於地方創生、古蹟活化推廣以及迪化街商圈導覽服務，以創新的青年視角為老街區注入源源不絕的活力。",
   "officers": [
-    { "role": "社長 President", "name": "葉致遠", "title": "文創品牌共同創辦人", "avatar": "🏺" },
-    { "role": "秘書 Secretary", "name": "劉子瑄", "title": "歷史文博研究員", "avatar": "📜" },
-    { "role": "財務 Treasurer", "name": "施柏毅", "title": "室內設計師", "avatar": "📐" },
-    { "role": "輔導顧問 Advisor", "name": "莊朝敏", "title": "迪化街茶行傳承人", "avatar": "🍵" },
-    { "role": "社務主委 Club Service", "name": "方怡婷", "title": "社群行銷規劃師", "avatar": "📱" },
-    { "role": "社服主委 Community Service", "name": "曾建宇", "title": "社區營造工作者", "avatar": "🏡" },
-    { "role": "職業主委 Vocational", "name": "薛宇凱", "title": "獨立策展人", "avatar": "🖼️" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "吳欣倫", "title": "旅遊部落客 / 網紅", "avatar": "📸" }
+    { "role": "社長 President", "name": "黃湘庭", "title": "P. Imon", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "祝澄羲", "title": "P.E. Kris", "avatar": "📋" },
+    { "role": "副秘書 Vice Secretary", "name": "卓立軒", "title": "V.D.R.R. Ethan", "avatar": "🗂️" },
+    { "role": "輔導主委 Advisor", "name": "楊景輝", "title": "P.P. Color", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "08月", "title": "大稻埕文化創藝節", "desc": "在迪化街舉辦復古市集、古蹟導覽與文創產品發表。" },

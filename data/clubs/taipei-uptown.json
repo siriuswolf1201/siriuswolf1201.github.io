@@ -11,14 +11,9 @@
   "slogan": "上城風範，追求卓越！成就新世代商業菁英。",
   "intro": "台北上城扶青社致力於為青年菁英打造一個高質感的雙語社交與專業合作網絡。聚會多以全英文或中英雙語進行，涵蓋國際財經脈動趨勢、地緣政治、商務談判以及精緻禮儀培訓，旨在培養具有國際視野與領導魅力的上城青年。",
   "officers": [
-    { "role": "社長 President", "name": "何承翰", "title": "外商投行法務分析師", "avatar": "🤵" },
-    { "role": "秘書 Secretary", "name": "沈佳瑩", "title": "跨國公關經理", "avatar": "👩‍💼" },
-    { "role": "財務 Treasurer", "name": "賴宇涵", "title": "國際精算師", "avatar": "🧮" },
-    { "role": "輔導顧問 Advisor", "name": "羅上城", "title": "律師事務所高級合夥人", "avatar": "⚖️" },
-    { "role": "社務主委 Club Service", "name": "錢克強", "title": "金融外匯分析師", "avatar": "📈" },
-    { "role": "社服主委 Community Service", "name": "孫維辰", "title": "國際慈善基金會專員", "avatar": "🌍" },
-    { "role": "職業主委 Vocational", "name": "汪筱婷", "title": "跨國管理諮詢師 (Consultant)", "avatar": "💼" },
-    { "role": "國際(公關)主委 Int. & PR", "name": "白恩宇", "title": "雙語商務公關總監", "avatar": "📢" }
+    { "role": "社長 President", "name": "林禹柔", "title": "P. Rou", "avatar": "⭐" },
+    { "role": "秘書 Secretary", "name": "姜學良", "title": "P.P. Warren", "avatar": "📋" },
+    { "role": "輔導主委 Advisor", "name": "朱顯明", "title": "Ck", "avatar": "🧭" }
   ],
   "annualActivities": [
     { "time": "09月", "title": "上城雙語商務簡報大賽", "desc": "模擬向國際創投進行商業募資路演，競逐最高榮譽與創業資金。" },
