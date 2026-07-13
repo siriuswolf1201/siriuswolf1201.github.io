@@ -269,13 +269,16 @@ function stopEngine() {
 }
 
 function ensureRealAudio(station) {
+  // mp3 是非同步載入的；等它真的開始播放後，再呼叫一次 updateReception 補上正確音量，
+  // 否則合成佔位音會停在開機當下的音量（就是那個一直不停的嗡嗡聲）。
+  const onPlaying = () => { realAudioActive = true; if (isPlaying) updateReception(); };
   if (audioEl.dataset.src !== station.audio) {
     audioEl.src = station.audio;
     audioEl.dataset.src = station.audio;
     realAudioActive = false;
-    audioEl.play().then(() => { realAudioActive = true; }).catch(() => { realAudioActive = false; });
+    audioEl.play().then(onPlaying).catch(() => { realAudioActive = false; });
   } else if (audioEl.paused) {
-    audioEl.play().then(() => { realAudioActive = true; }).catch(() => { realAudioActive = false; });
+    audioEl.play().then(onPlaying).catch(() => { realAudioActive = false; });
   }
 }
 function stopRealAudio() {
@@ -298,10 +301,13 @@ function updateAudio(station, strength) {
     else stopRealAudio();
   }
 
-  // 節目聲：有真實 mp3 且已在播 → 用 mp3 音量隨強度變；否則用佔位合成音
-  if (station.audio && realAudioActive) {
+  // 節目聲：只要這台有指定真實錄音，就一律走 mp3、把合成佔位音靜音
+  // （mp3 載入中 realAudioActive 還是 false，此時音量先設 0，等 onPlaying 補正確音量，
+  //  避免開機瞬間合成音被開到滿又沒被關掉而形成持續嗡嗡聲）；
+  // 只有 audio 留空字串的台，才用合成佔位音當節目聲。
+  if (station.audio) {
     engine.strengthGain.gain.setTargetAtTime(0.0001, t, 0.05);
-    audioEl.volume = Math.min(1, strength * masterVolume);
+    audioEl.volume = realAudioActive ? Math.min(1, strength * masterVolume) : 0;
   } else {
     engine.strengthGain.gain.setTargetAtTime(strength, t, 0.05);
   }
