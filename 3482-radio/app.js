@@ -39,7 +39,6 @@ let masterVolume = 0.75;
 /* ---------- 漸變參數 ---------- */
 const CLEAN = 0.12;          // 距台心 < 此值：訊號全滿、完全清楚
 const FADE = TOLERANCE;      // 距台心 >= 此值(0.4)：訊號為 0、全是雜訊
-const TONE_BASE = 0.18;      // 佔位音基礎音量
 const STATIC_MAX = 0.06;     // 雜訊最大音量
 
 /* ============================================================================
@@ -189,12 +188,12 @@ tunerWindow.addEventListener("pointercancel", onUp);
 tunerWindow.addEventListener("pointerleave", onUp);
 
 /* ============================================================================
- * WebAudio 引擎：持續運作的「節目聲」+「雜訊」兩個聲道，靠音量交叉淡變
+ * WebAudio 引擎：真實錄音(mp3) + 掃台雜訊；靠音量隨指針到台心的距離交叉淡變（無 mp3 的台靜音）
  * ========================================================================== */
 let audioCtx = null;
 let masterGain = null;
 let noiseBuffer = null;
-let engine = null; // { o1,o2,charGain,strengthGain,lfo, sSrc,sGain, toneStation }
+let engine = null; // { sSrc, sGain, toneStation }
 
 /* 真實 mp3 用 HTMLAudioElement 播放（避免外部 URL 的 CORS 問題） */
 const audioEl = new Audio();
@@ -215,35 +214,10 @@ function initAudio() {
   for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
 }
 
-/* 每台的佔位音高：A 大調五聲音階往上疊 */
-function stationPitch(station) {
-  const idx = sorted.indexOf(station);
-  const pent = [0, 2, 4, 7, 9];
-  const semis = Math.floor(idx / 5) * 12 + pent[idx % 5];
-  return 220 * Math.pow(2, semis / 12);
-}
-
 function startEngine() {
   if (!audioCtx || engine) return;
 
-  // ── 節目聲（佔位合成音）：oscs → charGain(含顫音) → strengthGain(訊號強度) → master
-  const charGain = audioCtx.createGain();
-  charGain.gain.value = TONE_BASE;
-  const strengthGain = audioCtx.createGain();
-  strengthGain.gain.value = 0.0001;
-  charGain.connect(strengthGain);
-  strengthGain.connect(masterGain);
-
-  const o1 = audioCtx.createOscillator(); o1.type = "sine";
-  const o2 = audioCtx.createOscillator(); o2.type = "triangle"; o2.detune.value = 4;
-  o1.connect(charGain); o2.connect(charGain);
-
-  const lfo = audioCtx.createOscillator(); lfo.frequency.value = 0.6;
-  const lfoGain = audioCtx.createGain(); lfoGain.gain.value = 0.05;
-  lfo.connect(lfoGain); lfoGain.connect(charGain.gain);
-  o1.start(); o2.start(); lfo.start();
-
-  // ── 雜訊：noise → bandpass → sGain → master
+  // ── 掃台雜訊：noise → bandpass → sGain → master（靠音量隨訊號強弱交叉淡變）
   const sSrc = audioCtx.createBufferSource();
   sSrc.buffer = noiseBuffer; sSrc.loop = true;
   const bp = audioCtx.createBiquadFilter();
@@ -253,17 +227,16 @@ function startEngine() {
   sSrc.connect(bp); bp.connect(sGain); sGain.connect(masterGain);
   sSrc.start();
 
-  engine = { o1, o2, charGain, strengthGain, lfo, sSrc, sGain, toneStation: null };
+  engine = { sSrc, sGain, toneStation: null };
 }
 
 function stopEngine() {
   if (!engine) return;
   const t = audioCtx.currentTime;
   try {
-    engine.strengthGain.gain.cancelScheduledValues(t);
-    engine.strengthGain.gain.setTargetAtTime(0.0001, t, 0.03);
+    engine.sGain.gain.cancelScheduledValues(t);
     engine.sGain.gain.setTargetAtTime(0.0001, t, 0.03);
-    [engine.o1, engine.o2, engine.lfo, engine.sSrc].forEach((n) => n.stop(t + 0.12));
+    engine.sSrc.stop(t + 0.12);
   } catch (_) {}
   engine = null;
 }
@@ -294,25 +267,15 @@ function updateAudio(station, strength) {
   // 切換到新的一台（發生在兩台正中間，此時 strength≈0，換音無縫）
   if (station !== engine.toneStation) {
     engine.toneStation = station;
-    const f = stationPitch(station);
-    engine.o1.frequency.setTargetAtTime(f, t, 0.02);
-    engine.o2.frequency.setTargetAtTime(f * 1.5, t, 0.02);
     if (station.audio) ensureRealAudio(station);
     else stopRealAudio();
   }
 
-  // 節目聲：只要這台有指定真實錄音，就一律走 mp3、把合成佔位音靜音
-  // （mp3 載入中 realAudioActive 還是 false，此時音量先設 0，等 onPlaying 補正確音量，
-  //  避免開機瞬間合成音被開到滿又沒被關掉而形成持續嗡嗡聲）；
-  // 只有 audio 留空字串的台，才用合成佔位音當節目聲。
-  if (station.audio) {
-    engine.strengthGain.gain.setTargetAtTime(0.0001, t, 0.05);
-    audioEl.volume = realAudioActive ? Math.min(1, strength * masterVolume) : 0;
-  } else {
-    engine.strengthGain.gain.setTargetAtTime(strength, t, 0.05);
-  }
+  // 節目聲：有真實錄音就用 mp3、音量隨訊號強度變；沒有錄音的台就靜音
+  //（mp3 載入中 realAudioActive 還是 false，音量先設 0，等 onPlaying 補上正確音量）
+  audioEl.volume = (station.audio && realAudioActive) ? Math.min(1, strength * masterVolume) : 0;
 
-  // 雜訊：與訊號互補，越清楚雜訊越小
+  // 掃台雜訊：與訊號互補，越清楚雜訊越小
   const sg = (staticEnabled ? (1 - strength) * STATIC_MAX : 0) + 0.0001;
   engine.sGain.gain.setTargetAtTime(sg, t, 0.06);
 }
