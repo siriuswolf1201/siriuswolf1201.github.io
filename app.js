@@ -17,6 +17,7 @@ const CLUB_IDS = [
 let CLUBS_DATA = [];
 let TIMELINE_DATA = [];
 let DISTRICT_CABINET = null;
+let DISTRICT_PROGRAMS = [];
 
 async function loadSiteData() {
   const [clubs, district] = await Promise.all([
@@ -26,6 +27,7 @@ async function loadSiteData() {
   CLUBS_DATA = clubs;
   TIMELINE_DATA = district.timeline;
   DISTRICT_CABINET = district.cabinet;
+  DISTRICT_PROGRAMS = district.programs || [];
 }
 
 // 2. 媒合器測驗題目資料庫
@@ -90,6 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initCabinetGrid();
   initEventCarousel();
   initClubExplorer();
+  initPrograms();
   initTimeline();
   initQuiz();
   initContactForm();
@@ -413,6 +416,33 @@ window.openClubModal = openClubModal;
 window.closeClubModal = closeClubModal;
 
 // E. 渲染地區年度重大活動時間軸
+// E-1. 全年常態計畫：貫穿整個年度、沒有單一日期，因此獨立於按月行事曆之外呈現
+function initPrograms() {
+  const container = document.getElementById("cal-programs");
+  if (!container) return;
+  if (!DISTRICT_PROGRAMS.length) { container.remove(); return; }
+
+  const cardsHTML = DISTRICT_PROGRAMS.map(p => `
+    <div class="cal-program">
+      <div class="cal-event-top">
+        <span class="cal-event-type timeline-type-${p.type}">${p.typeLabel}</span>
+        <span class="cal-program-badge">${p.period || "全年度"}</span>
+      </div>
+      <h4 class="cal-program-title">${p.title}</h4>
+      ${p.motto ? `<p class="cal-program-motto">「 ${p.motto} 」</p>` : ""}
+      <p class="cal-event-desc">${p.desc}</p>
+    </div>
+  `).join("");
+
+  container.innerHTML = `
+    <div class="cal-month-header">
+      <span class="cal-month-label">全年常態計畫</span>
+      <span class="cal-month-count">${DISTRICT_PROGRAMS.length} 項</span>
+    </div>
+    <div class="cal-program-grid">${cardsHTML}</div>
+  `;
+}
+
 function initTimeline() {
   const timelineContainer = document.getElementById("timeline-flow");
   if (!timelineContainer) return;
