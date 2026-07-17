@@ -7,7 +7,8 @@
         "name": "DRR Ariel",
         "club": "台北魅力扶輪社 / 台北大安扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E4%BB%A3%E8%A1%A8%20D.R.R.%20Ariel.jpg"
       }
     ],
     "tier2": [
@@ -16,28 +17,32 @@
         "name": "DS Emily",
         "club": "台北城中北醫大扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E7%A7%98%E6%9B%B8%20D.S.%20Emily.jpg"
       },
       {
         "role": "地區副秘書",
         "name": "VDS Tanya",
         "club": "台北大稻埕扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%89%AF%E7%A7%98%E6%9B%B8%20V.D.S.%20Tanya.jpg"
       },
       {
         "role": "地區財務",
         "name": "PP Warren",
         "club": "台北上城扶輪社 / 台北上城扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E8%B2%A1%E5%8B%99%E4%B8%BB%E5%A7%94%20P.P.%20Warren.jpg"
       },
       {
         "role": "地區顧問",
         "name": "IPDRR Jacky",
         "club": "台北西北區扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E9%A1%A7%E5%95%8F%20I.P.D.R.R.%20Jacky.jpg"
       }
     ],
     "tier3": [
@@ -46,21 +51,24 @@
         "name": "VDRR Lucy",
         "club": "台北邑德扶青社",
         "avatar": "❓",
-        "desc": "「深耕社區服務與青年培力，擅長活動企劃與跨社串聯，期待與夥伴共創影響力。」"
+        "desc": "「深耕社區服務與青年培力，擅長活動企劃與跨社串聯，期待與夥伴共創影響力。」",
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20V.D.R.R.%20Lucy.jpg"
       },
       {
         "role": "地區副代表",
         "name": "PDRR Stone",
         "club": "台北環河扶輪社 / 台北圓環扶青社",
         "avatar": "❓",
-        "desc": "長期投入社區服務與青年培力，擅長活動企劃、跨社串聯及資源整合，曾帶領團隊完成多項公益專案與年度目標。期待在新年度與各社夥伴攜手合作，透過扶青社平台深化交流、拓展國際視野，共同凝聚青年力量，創造屬於新世代的正向影響力。"
+        "desc": "長期投入社區服務與青年培力，擅長活動企劃、跨社串聯及資源整合，曾帶領團隊完成多項公益專案與年度目標。期待在新年度與各社夥伴攜手合作，透過扶青社平台深化交流、拓展國際視野，共同凝聚青年力量，創造屬於新世代的正向影響力。",
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20P.D.R.R.%20Stone.jpg"
       },
       {
         "role": "地區副代表",
         "name": "VDRR Ethan",
         "club": "台北大稻埕扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20V.D.R.R.%20Ethan.jpg"
       }
     ],
     "tier4": [
@@ -69,77 +77,88 @@
         "name": "Jeff",
         "club": "台北城中北醫大扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94%20Jeff%20Chen.jpg"
       },
       {
         "role": "社務副主委",
         "name": "Fischer",
         "club": "台北邑德扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%89%AF%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94%20Fischer.jpg"
       },
       {
         "role": "社服主委",
         "name": "CP David",
         "club": "台北景文科大扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E7%A4%BE%E6%9C%8D%E4%B8%BB%E5%A7%94%20C.P.%20David.jpg"
       },
       {
         "role": "職業主委",
         "name": "Tina",
         "club": "台北大安扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E8%81%B7%E6%A5%AD%E4%B8%BB%E5%A7%94%20Tina.jpg"
       },
       {
         "role": "職業副主委",
         "name": "PP Tom",
         "club": "台北百城扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%89%AF%E8%81%B7%E6%A5%AD%E4%B8%BB%E5%A7%94%20P.P.%20Tom.jpg"
       },
       {
         "role": "國際主委",
         "name": "Sirius",
         "club": "台北環河扶輪社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%9C%8B%E9%9A%9B%E4%B8%BB%E5%A7%94%20Sirius.jpg"
       },
       {
         "role": "國際副主委",
         "name": "Taming",
         "club": "台北邑德扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%89%AF%E5%9C%8B%E9%9A%9B%E4%B8%BB%E5%A7%94%20Taming.jpg"
       },
       {
         "role": "公共關係主委",
         "name": "Kano",
         "club": "台北魅力扶輪社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94%20Kano.jpg"
       },
       {
         "role": "公共關係副主委",
         "name": "IPP Ian",
         "club": "台北大龍峒扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%89%AF%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94%20I.P.P.%20Ian.jpg"
       },
       {
         "role": "公共形象主委",
         "name": "IPP Borris",
         "club": "台北城中扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E5%85%AC%E5%85%B1%E5%BD%A2%E8%B1%A1%E4%B8%BB%E5%A7%94%20I.P.P.%20Borris.jpg"
       },
       {
         "role": "社員增長主委",
         "name": "PP SyaSya",
         "club": "台北圓環扶青社",
         "avatar": "❓",
-        "desc": "待確認"
+        "desc": "待確認",
+        "image": "images/avatars/%E7%A4%BE%E5%93%A1%E5%A2%9E%E9%95%B7%E4%B8%BB%E5%A7%94%20P.P.%20Syasya.jpg"
       }
     ]
   },

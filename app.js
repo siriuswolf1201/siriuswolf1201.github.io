@@ -146,6 +146,15 @@ function initNavbar() {
   });
 }
 
+// 大頭貼渲染共用邏輯：有 officer.image 就顯示照片，沒有或載入失敗則降級為 SVG + Emoji。
+// data URI 必須整段 encodeURIComponent，否則 SVG 內的雙引號會提前結束 HTML 屬性，
+// 導致 <rect>、<text> 被當成真的 DOM 元素渲染，Emoji 會蓋在照片上。
+function renderAvatarImg(officer) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="#3A5166" opacity="0.05"/><text x="50%" y="65%" font-size="50" dominant-baseline="middle" text-anchor="middle">${officer.avatar}</text></svg>`;
+  const fallback = "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+  return `<img src="${officer.image || fallback}" alt="${officer.name}" onerror="this.onerror=null; this.src='${fallback}';">`;
+}
+
 // B. 動態渲染地區內閣介紹 (樹狀組織架構)
 function initCabinetGrid() {
   const treeContainer = document.getElementById("cabinet-tree") || document.getElementById("cabinet-grid");
@@ -160,9 +169,8 @@ function initCabinetGrid() {
 
   // 輔助函數：渲染幹部卡片 HTML (包含頭像與大頭貼優雅降級機制)
   function renderCard(officer, tierClass) {
-    const fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%233A5166" opacity="0.05"/><text x="50%" y="65%" font-size="50" dominant-baseline="middle" text-anchor="middle">${officer.avatar}</text></svg>`;
-    const avatarHTML = `<img src="${officer.image || fallbackSvg}" alt="${officer.name}" onerror="this.onerror=null; this.src='${fallbackSvg}';">`;
-    
+    const avatarHTML = renderAvatarImg(officer);
+
     return `
       <div class="cabinet-card ${tierClass} fade-in-up">
         <div class="cabinet-avatar">${avatarHTML}</div>
@@ -320,10 +328,8 @@ function openClubModal(clubId) {
   
   // 渲染社團幹部 HTML (依 PDF 社長通訊錄提供的真實名單)
   const officersHTML = club.officers.map(officer => {
-    // 建立大頭貼渲染邏輯：支援 officer.image，若無圖片則使用 SVG + Emoji 進行優雅降級
-    const fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%233A5166" opacity="0.05"/><text x="50%" y="65%" font-size="50" dominant-baseline="middle" text-anchor="middle">${officer.avatar}</text></svg>`;
-    const avatarHTML = `<img src="${officer.image || fallbackSvg}" alt="${officer.name}" onerror="this.onerror=null; this.src='${fallbackSvg}';">`;
-    
+    const avatarHTML = renderAvatarImg(officer);
+
     return `
       <div class="modal-officer-card">
         <div class="mo-avatar">${avatarHTML}</div>
