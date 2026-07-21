@@ -5,11 +5,16 @@
   "sponsor": "台北大龍峒扶輪社",
   "meetingTime": "每雙週日 14:00 - 16:30",
   "meetingPlace": "台北市大同區哈密街 (大龍峒保安宮藝文教室)",
-  "category": "culture",
-  "categoryLabel": "在地文化",
-  "tags": ["文資保存", "傳統技藝", "社區走讀", "民俗文化"],
-  "slogan": "大龍騰飛，峒心協力！活化傳統民俗生命力。",
-  "intro": "以古老歷史街區大龍峒為基地，台北大龍峒扶青社深耕於傳統建築藝術、廟宇民俗與傳統手工藝的推廣。我們與大龍峒保安宮、台北孔廟等單位密切合作，策劃走讀與技藝工作坊，將文化資產轉化為青年的時尚新語言。",
+  "category": "campus",
+  "categoryLabel": "校園大專",
+  "tags": ["勞逸結合", "自在交流", "歸屬感", "共同成長"],
+  "slogan": "大方交流，龍騰共學！勞逸結合，找到屬於自己的歸屬感。",
+  "intro": "大家好，我們是大龍峒扶青社！社團的核心理念是勞逸結合，希望打造一個既能充實自我、也能自在交流的環境，讓每位社員都能在這裡找到歸屬感。在大龍峒，我們不僅能收穫知識與經驗，更能認識一群志同道合的夥伴，一起成長、一起創造難忘的回憶。",
+  "photos": [
+    { "src": "images/clubs/taipei-dalongdong/01.jpg", "caption": "品茶例會" },
+    { "src": "images/clubs/taipei-dalongdong/02.jpg", "caption": "社會服務日" },
+    { "src": "images/clubs/taipei-dalongdong/03.jpg", "caption": "跳脫舒適圈活動" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "周秉學", "title": "P. Eric Chou", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "曾彥清", "title": "I.P.P. Ian", "avatar": "📋" },

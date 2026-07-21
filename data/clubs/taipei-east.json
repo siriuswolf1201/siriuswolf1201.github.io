@@ -6,10 +6,15 @@
   "meetingTime": "每雙週日 10:00 - 12:30",
   "meetingPlace": "台北市大安區和平東路一段 (城東藝文空間)",
   "category": "international",
-  "categoryLabel": "國際多元",
-  "tags": ["國際交流", "英語口說", "跨國友誼", "多元包容"],
-  "slogan": "城東視界，連結國際！展現新世代國際影響力。",
-  "intro": "台北城東扶青社以國際視野與多元包容為核心精神。定期舉辦全英文例會與跨國文化沙龍，並與多個海外姊妹團體保持緊密合作，為青年打造一個無需出國就能對接國際的優質社交平台。",
+  "categoryLabel": "國際交流",
+  "tags": ["社會服務", "國際交流", "職業成長講座", "領導力"],
+  "slogan": "城東視界，連結國際！三十屆傳承，培養領導力與親善友誼。",
+  "intro": "台北城東扶青社（Rotaract Club of Taipei Metro East）是由台北城東扶輪社輔導贊助的青年服務社團，目前已成立第 30 屆。我們是熱愛公益與自我提升的在地青年，透過籌辦社會服務、參與國際交流及舉辦職業成長講座，培養新世代的領導力與親善友誼。",
+  "photos": [
+    { "src": "images/clubs/taipei-east/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-east/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-east/03.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "姜荻泓", "title": "P. Gary", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "江承憶", "title": "S. Dome", "avatar": "📋" },

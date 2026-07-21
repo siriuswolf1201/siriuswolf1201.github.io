@@ -5,11 +5,16 @@
   "sponsor": "台北百城扶輪社",
   "meetingTime": "每雙週日 14:00 - 16:30",
   "meetingPlace": "台北市信義區基隆路一段 (百城新創基地)",
-  "category": "tech",
-  "categoryLabel": "新創科技",
-  "tags": ["青年創業", "新創沙龍", "創投媒合", "商業模式"],
-  "slogan": "百城聚力，築夢新創！引領青年創業新世代。",
-  "intro": "台北百城扶青社是青年創業家的搖籃。我們聚集了許多新創公司創辦人、自媒體工作者以及有志創業的青年，透過商業模式分析、創業資源對接、品牌行銷實戰以及創投沙龍，將好的點子落地生根，共築事業新城堡。",
+  "category": "international",
+  "categoryLabel": "國際交流",
+  "tags": ["國際交流", "跨國互訪", "職業發展", "大型聯誼"],
+  "slogan": "百城連結，世界為友！學知識、做公益、交朋友。",
+  "intro": "台北百城扶青社（Rotaract Club of Taipei Paramount）由台北百城扶輪社長期支持，致力培育優秀青年，透過服務、領導、職業發展與國際交流，打造兼具成長與影響力的青年平台。我們與香港、日本、韓國、越南、泰國等地扶青社維持密切交流，定期舉辦跨國互訪、文化交流及大型聯誼活動，一起實踐「學知識、做公益、交朋友」的精神。",
+  "photos": [
+    { "src": "images/clubs/taipei-hundredcastles/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-hundredcastles/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-hundredcastles/03.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "何欣洋", "title": "P. Sam", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "張子宣", "title": "S. Nadia", "avatar": "📋" },

@@ -5,11 +5,16 @@
   "sponsor": "台北邑德扶輪社",
   "meetingTime": "每雙週日 10:00 - 12:30",
   "meetingPlace": "台北市松山區民生東路五段 (民生社區活動中心教室)",
-  "category": "service",
-  "categoryLabel": "社會服務",
-  "tags": ["銀髮關懷", "代間共融", "長青陪伴", "社區共生"],
-  "slogan": "邑聚賢德，暖心相伴！打造代間和諧新世紀。",
-  "intro": "台北邑德扶青社的核心使命是推動「高齡友善社會」與「代間共融」。我們相信長輩的智慧是社會的寶藏，透過創新的長青陪伴方案、數位科技教學、青銀共創手作等，消弭世代隔閡，打造溫暖和諧的社區共生圈。",
+  "category": "vocational",
+  "categoryLabel": "職涯發展",
+  "tags": ["公益服務", "企業參訪", "Podcast", "國際視野"],
+  "slogan": "邑聚青年，德行致遠！在服務中成長，在交流中創造影響力。",
+  "intro": "台北邑德扶青社隸屬國際扶輪 3482 地區，由台北邑德扶輪社輔導成立，匯聚 18 至 35 歲青年。我們透過公益服務、職涯講座、企業參訪、Podcast、國際交流及聯誼活動，培養領導力、拓展人脈與國際視野，讓青年在服務中成長、在交流中創造影響力。",
+  "photos": [
+    { "src": "images/clubs/taipei-yide/01.jpg", "caption": "第十一屆社慶" },
+    { "src": "images/clubs/taipei-yide/02.jpg", "caption": "2026-27 年度尾牙" },
+    { "src": "images/clubs/taipei-yide/03.jpg", "caption": "生活營" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "許允盛", "title": "P. Jordan", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "邱子瑒", "title": "P.E. Ace", "avatar": "📋" },

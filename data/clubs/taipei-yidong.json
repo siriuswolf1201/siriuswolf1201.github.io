@@ -7,9 +7,17 @@
   "meetingPlace": "台北市信義區光復南路 (怡東綠色共享空間)",
   "category": "service",
   "categoryLabel": "社會服務",
-  "tags": ["都市永續", "綠色生活", "減碳科普", "生態農耕"],
-  "slogan": "怡然自得，綠色永續！怡東引領低碳生活新潮流。",
-  "intro": "台北怡東扶青社聚焦於「綠色永續發展 (Sustainability)」與「都市低碳生活」。我們推廣都市小農契作、廚餘回收製肥、綠色盆栽療癒以及氣候變遷科普教育，讓綠色環保不再是沉重的負擔，而是青年日常時尚的新潮流。",
+  "tags": ["說走就走", "勇於行動", "跨社合作", "聯誼交流"],
+  "slogan": "說走就走，怡東出發！服務不必等待，改變始於行動。",
+  "intro": "大家好，我們是台北怡東扶青社！一群充滿熱情、行動力與服務精神的青年團隊。今年我們以嶄新的陣容重新出發，秉持「說走就走」的核心精神——那不只是旅行的態度，更代表勇於行動、樂於服務、即刻投入的信念。無論是公益服務、交流學習、聯誼活動或跨社合作，我們都以開放的心態迎接每一次挑戰；我們相信服務不必等待，改變始於行動。",
+  "photos": [
+    { "src": "images/clubs/taipei-yidong/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-yidong/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-yidong/03.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-yidong/04.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-yidong/05.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-yidong/06.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "林凡榆", "title": "P. Yuna", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "待確認", "title": "S. Sharon", "avatar": "📋" }

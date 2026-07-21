@@ -7,9 +7,15 @@
   "meetingPlace": "台北市大同區寧夏路 (建成圓環周邊社區據點)",
   "category": "fellowship",
   "categoryLabel": "聯誼休閒",
-  "tags": ["在地飲食", "社區共餐", "老城文化", "跨世代交流"],
-  "slogan": "圓聚老城，環扣人情！以美食與共餐溫暖社區。",
-  "intro": "台北圓環扶青社以大稻埕與建成圓環一帶的老城飲食文化為根，推動「以食會友」的社區連結。我們透過社區共餐、庶民美食走讀與老店故事採集，串起跨世代的圓環記憶，讓在地人情味在新世紀繼續發光。",
+  "tags": ["高爾夫", "從零開始", "運動做公益", "夥伴共學"],
+  "slogan": "圓夢揮桿，環扣友誼！從零開始的高爾夫公益生活。",
+  "intro": "今天，想來點不一樣的扶青嗎？如果你剛好想學高爾夫，又想做公益、認識新朋友，圓環即將展開全新計畫——「圓環扶青之從零開始的高爾夫生活」。在這個計畫中，你將學會一項受用一輩子的運動，並和一群有共同目標的夥伴一起做公益、一起學習交流。讓我們一起揮出漂亮的一桿吧！",
+  "photos": [
+    { "src": "images/clubs/taipei-harmony/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-harmony/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-harmony/03.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-harmony/04.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "張峻華", "title": "P.P. Isaac", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "丘芳瑜", "title": "P.P. Joy", "avatar": "📋" },

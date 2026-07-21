@@ -5,11 +5,16 @@
   "sponsor": "台北城中扶輪社",
   "meetingTime": "每雙週六 14:00 - 16:30",
   "meetingPlace": "台北市中正區徐州路2號 (地區會所 / 輔導社例會所)",
-  "category": "business",
-  "categoryLabel": "學術商務",
-  "tags": ["職業發展", "商務實戰", "簡報演說", "業界對接"],
-  "slogan": "城懷大志，中流砥柱！創造持恆商務影響力。",
-  "intro": "台北城中扶青社是地區最具代表性的商務與職業發展特色社團之一。我們致力於為青年提供商業趨勢論壇、公開演說培訓及跨界資源對接，引導團員在服務中探索職業方向，為職涯鋪路。",
+  "category": "heritage",
+  "categoryLabel": "傳承創新",
+  "tags": ["歷史傳承", "新舊融合", "延續性特色活動", "夥伴情誼"],
+  "slogan": "城承歷史，中續新局！三十餘年傳承，持續突破創新。",
+  "intro": "台北城中扶青社創立三十餘年，社序 03。一路走來，我們承載傳承、開創未來，在歷史底蘊中持續突破，發展具延續性的特色活動，凝聚夥伴情誼、實踐服務精神，展現新舊融合、與時俱進的扶青魅力。",
+  "photos": [
+    { "src": "images/clubs/taipei-central/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-central/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-central/03.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "吳語彤", "title": "P. Eudora", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "陳宜蓁", "title": "S. Ivy", "avatar": "📋" },

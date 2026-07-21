@@ -31,49 +31,50 @@ async function loadSiteData() {
 }
 
 // 2. 媒合器測驗題目資料庫
+// 選項描述取材自各社簡介實際自述的活動，配分對應重新歸類後的七大分類
 const QUIZ_QUESTIONS = [
   {
     id: 1,
     question: "在週六或週日的閒暇時光，你最嚮往哪種活動？",
     options: [
-      { text: "聽一場關於 AI 科技、創業或數位轉型的工作坊", score: { tech: 3, business: 2 } },
-      { text: "戴上厚手套去北海岸淨灘，或是去偏鄉陪伴孩子讀書", score: { service: 4 } },
-      { text: "探訪迪化街的傳統古蹟，或是親自體驗廟宇木雕技藝", score: { culture: 4 } },
-      { text: "在文青空間練習花藝、品味茶道，或是在森林裡練瑜珈", score: { fellowship: 4 } },
-      { text: "參與全英文商務交流，練習英語簡報演說技巧", score: { international: 3, business: 3 } }
+      { text: "從零開始學一項運動、上山下海踏青，順便認識一群新朋友", score: { fellowship: 4 } },
+      { text: "去偏鄉帶英語營陪孩子讀書，或參加淨灘、捐血等公益服務", score: { service: 4 } },
+      { text: "聽一場關於 AI 科技與數位創新的工作坊，動手玩玩新工具", score: { tech: 4 } },
+      { text: "和香港、日本、韓國的青年互訪交流，體驗不同文化", score: { international: 4 } },
+      { text: "參加社上辦了很多屆的傳統特色活動，聽前輩聊聊當年", score: { heritage: 4 } }
     ]
   },
   {
     id: 2,
     question: "如果要在社團中發揮你的「影響力」，你最想成就哪件事？",
     options: [
-      { text: "利用最新的 AI 技術，免費幫傳統商家優化工作流程", score: { tech: 4 } },
-      { text: "建立一個二手書屋，長期為清寒偏鄉學子提供課後輔導", score: { service: 4, campus: 2 } },
-      { text: "將在地傳統老字號結合數位包裝，進行文化地方創生", score: { culture: 4, business: 1 } },
-      { text: "拓展國際姐妹社網絡，爭取代表地區出國演講交流的機會", score: { international: 4 } },
-      { text: "學習商務談判、高階公關簡報，為職涯和創業奠定基礎", score: { business: 4, tech: 1 } }
+      { text: "長期投入一項公益服務，替社區與孩子帶來實際的改變", score: { service: 4 } },
+      { text: "把社團的特色活動延續下去，讓經驗一屆一屆傳承給學弟妹", score: { heritage: 4 } },
+      { text: "在校園裡號召同學一起投入服務，把所學專業實踐於社區", score: { campus: 4, service: 1 } },
+      { text: "拓展國際姐妹社網絡，爭取代表地區出國交流的機會", score: { international: 4 } },
+      { text: "透過職涯講座與企業參訪，替自己和夥伴的下一步鋪路", score: { vocational: 4 } }
     ]
   },
   {
     id: 3,
     question: "你理想中的同儕社交圈，呈現出什麼樣的面貌？",
     options: [
-      { text: "充滿新創企業家、電商主理人與科技狂熱者的創新團隊", score: { tech: 3, business: 2 } },
-      { text: "有一群溫暖、熱心公益且默默深耕社區服務的貼心夥伴", score: { service: 4 } },
-      { text: "熱愛文化歷史、古蹟走讀與傳統工藝美學的文青同好", score: { culture: 4 } },
-      { text: "重視工作與生活平衡，愛好精緻美學手作的心靈知己", score: { fellowship: 4 } },
-      { text: "崇尚國際視野，能用雙語自信暢談地緣政治與財經趨勢的菁英群體", score: { international: 4, business: 2 } }
+      { text: "一群溫暖、熱心公益，默默深耕社區服務的貼心夥伴", score: { service: 4 } },
+      { text: "說走就走、勞逸結合，能一起運動也一起做公益的朋友", score: { fellowship: 4 } },
+      { text: "珍惜社團情誼，樂於把經驗與溫暖交棒給下一屆的前後輩", score: { heritage: 4 } },
+      { text: "來自各行各業的青年，能互相引薦資源與職涯機會", score: { vocational: 4 } },
+      { text: "熱衷 AI 與新科技、喜歡動手嘗試的跨界創新團隊", score: { tech: 3, vocational: 1 } }
     ]
   },
   {
     id: 4,
-    question: "你的目前的身份或生活狀態，比較接近以下哪一項？",
+    question: "你目前的身份或生活狀態，比較接近以下哪一項？",
     options: [
-      { text: "在校大專學生或研究生，希望能將所學專業實踐於社區", score: { campus: 4, service: 1 } },
-      { text: "新創公司創業者、自媒體工作者或有創業意願的青年", score: { tech: 2, business: 3 } },
-      { text: "剛步入職場的社會新鮮人，希望能快速升級職場生存技能", score: { business: 4 } },
-      { text: "日常工作緊湊，下班或假日極度需要美學手作或身心靈放鬆者", score: { fellowship: 4 } },
-      { text: "希望能多參與跨國聯誼交流，培養全球化思維者", score: { international: 4 } }
+      { text: "在校大專學生、研究生或應屆校友，想讓大學生活更精彩", score: { campus: 4 } },
+      { text: "剛步入職場的社會新鮮人，想快速累積實戰經驗與人脈", score: { vocational: 4 } },
+      { text: "日常工作緊湊，下班或假日極度需要運動踏青來釋放壓力", score: { fellowship: 4 } },
+      { text: "希望能多參與跨國聯誼交流，培養全球化視野者", score: { international: 4 } },
+      { text: "從事科技、創新或數位相關工作，想把專業用在服務上", score: { tech: 4 } }
     ]
   }
 ];
@@ -345,19 +346,24 @@ function openClubModal(clubId) {
     `;
   }).join("");
 
-  // 渲染年度活動 HTML
-  const activitiesHTML = club.annualActivities.map(act => `
-    <div class="modal-act-item">
-      <div class="ma-time">${act.time}</div>
-      <div class="ma-content">
-        <h4 class="ma-title">${act.title}</h4>
-        <p class="ma-desc">${act.desc}</p>
-      </div>
-    </div>
-  `).join("");
-
   // 渲染 Tags
   const tagsHTML = club.tags.map(tag => `<span class="tag">#${tag}</span>`).join("");
+
+  // 渲染社團照片牆：尚未提供照片的社先不顯示這一區
+  const photos = club.photos || [];
+  const galleryHTML = photos.length === 0 ? "" : `
+    <div class="modal-gallery-section">
+      <h3 class="modal-section-title">社團活動花絮</h3>
+      <div class="modal-gallery">
+        ${photos.map(photo => `
+          <figure class="mg-item">
+            <img src="${photo.src}" alt="${club.name}${photo.caption ? "－" + photo.caption : "活動照片"}" loading="lazy">
+            ${photo.caption ? `<figcaption class="mg-caption">${photo.caption}</figcaption>` : ""}
+          </figure>
+        `).join("")}
+      </div>
+    </div>
+  `;
 
   modalBody.innerHTML = `
     <div class="modal-grid">
@@ -373,24 +379,17 @@ function openClubModal(clubId) {
         <p class="modal-intro-text">${club.intro}</p>
 
         <div class="modal-tags-container">${tagsHTML}</div>
-
-        <h3 class="modal-section-title">社群聯絡</h3>
-        <div class="modal-social-links">
-          <a href="${club.socialLinks.ig}" target="_blank" class="social-icon-btn ig-btn">Instagram</a>
-          <a href="${club.socialLinks.fb}" target="_blank" class="social-icon-btn fb-btn">Facebook 粉絲頁</a>
-          <a href="mailto:${club.socialLinks.email}" class="social-icon-btn mail-btn">電子郵件信箱</a>
-        </div>
       </div>
-      
-      <!-- 右側：幹部與活動規劃 -->
+
+      <!-- 右側：幹部名單（社群聯絡、年度活動規劃待各社提供後再開啟） -->
       <div class="modal-col-right">
         <h3 class="modal-section-title">2026-27 年度八大內閣幹部</h3>
         <div class="modal-officers-grid">${officersHTML}</div>
-        
-        <h3 class="modal-section-title">2026-27 年度精彩活動規劃</h3>
-        <div class="modal-activities-timeline">${activitiesHTML}</div>
       </div>
     </div>
+
+    <!-- 下方：跨欄的社團活動花絮照片牆 -->
+    ${galleryHTML}
   `;
 
   // 顯示 Modal，並鎖定背景滾動
@@ -480,13 +479,13 @@ function initTimeline() {
 // F. 扶青社員媒合器 (Rotaract Matcher) 趣味問答邏輯
 let currentQuestionIndex = 0;
 const userQuizScores = {
-  business: 0,
-  international: 0,
-  culture: 0,
   service: 0,
-  tech: 0,
+  campus: 0,
+  international: 0,
+  vocational: 0,
   fellowship: 0,
-  campus: 0
+  heritage: 0,
+  tech: 0
 };
 
 function initQuiz() {
@@ -574,9 +573,19 @@ function initQuiz() {
     }
 
     // 地區特色標籤對應與推薦算法
+    // 同分類內先隨機排序，避免同分類社團數超過 3 社時，排在後面的社永遠曝不了光
+    const shuffledOf = cat => {
+      const list = CLUBS_DATA.filter(club => club.category === cat);
+      for (let i = list.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [list[i], list[j]] = [list[j], list[i]];
+      }
+      return list;
+    };
+
     // 取得該類別下的所有社團
-    let matches = CLUBS_DATA.filter(club => club.category === primaryCategory);
-    
+    let matches = shuffledOf(primaryCategory);
+
     // 如果推薦社團不足 3 個，從其他與用戶有得分的類別補齊
     if (matches.length < 3) {
       // 依得分高低排序其他類別
@@ -586,8 +595,7 @@ function initQuiz() {
 
       for (let extraCat of sortedCats) {
         if (matches.length >= 3) break;
-        const extraClubs = CLUBS_DATA.filter(club => club.category === extraCat);
-        matches = [...matches, ...extraClubs];
+        matches = [...matches, ...shuffledOf(extraCat)];
       }
     }
 
@@ -611,7 +619,7 @@ function initQuiz() {
         <ul class="match-info">
           <li>🎯 特色：${club.categoryLabel}</li>
         </ul>
-        <button class="match-action-btn" onclick="openClubModal('${club.id}')">查看詳細社介紹 & 聯絡方式</button>
+        <button class="match-action-btn" onclick="openClubModal('${club.id}')">查看詳細社介紹</button>
       `;
       matchGrid.appendChild(matchCard);
     });

@@ -7,9 +7,14 @@
   "meetingPlace": "台北市信義區信義路四段 (雙子星科技AI孵化器)",
   "category": "tech",
   "categoryLabel": "新創科技",
-  "tags": ["人工智慧", "數位轉型", "AI工作流", "科技創新"],
-  "slogan": "智啟雙子，AI創新！用先進科技共創嶄新世紀。",
-  "intro": "台北雙子星AI扶青社是全台首創以「AI科技創新與數位轉型」為核心定位的扶青社。團員多為 AI 研發工程師、數據分析師、UI 設計師與科技愛好者。我們積極推廣 AI 普惠教育、AI 工作流優化工作坊及科技創新服務，賦能青年共創 AI 時代的持恆影響。",
+  "tags": ["AI科技", "跨界資源整合", "大型國際活動", "跨世代傳承"],
+  "slogan": "智啟雙子，AI 賦能！跨界整合資源，讓服務在傳承中精進。",
+  "intro": "臺北雙子星 AI 扶青社於 2023 年 5 月 12 日授證，以 37 位成員創下地區紀錄。我們結合 AI 科技與扶輪宗旨，透過參與大型國際活動展現行動力；在深耕跨界資源整合的同時，也重視扶輪文化的跨世代傳承與創新思維交融，致力以智慧科技賦能青年，為社會注入永續影響力。",
+  "photos": [
+    { "src": "images/clubs/taipei-gemini-ai/01.jpg", "caption": "創社授證典禮" },
+    { "src": "images/clubs/taipei-gemini-ai/02.jpg", "caption": "淺水灣聯誼例會" },
+    { "src": "images/clubs/taipei-gemini-ai/03.jpg", "caption": "賦權女孩成果發表" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "許若晴", "title": "P. Shine", "avatar": "⭐" },
     { "role": "副社長 Vice President", "name": "吳楺婷", "title": "V.P. Chloe", "avatar": "🌟" },

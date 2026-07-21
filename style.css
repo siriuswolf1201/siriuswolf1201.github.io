@@ -1191,11 +1191,11 @@ section {
   transition: var(--transition);
 }
 
-.club-badge.badge-business { background-color: var(--color-navy); }
+.club-badge.badge-vocational { background-color: var(--color-navy); }
 .club-badge.badge-international { background-color: var(--color-gold); }
 .club-badge.badge-tech { background-color: var(--color-future-blue); }
 .club-badge.badge-service { background-color: var(--color-vision-green); }
-.club-badge.badge-culture { background-color: var(--color-mist-brown); }
+.club-badge.badge-heritage { background-color: var(--color-mist-brown); }
 .club-badge.badge-fellowship { background-color: var(--color-graphite-gray); }
 .club-badge.badge-campus { background-color: var(--primary-light); }
 
@@ -1522,6 +1522,51 @@ section {
 .mo-title {
   font-size: 0.78rem;
   color: var(--text-muted);
+}
+
+/* Modal 社團活動花絮照片牆（跨欄置於幹部名單下方） */
+.modal-gallery-section {
+  margin-top: 45px;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.mg-item {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--bg-contrast);
+  background: var(--bg-light);
+  position: relative;
+}
+
+.mg-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.mg-item:hover img {
+  transform: scale(1.05);
+}
+
+.mg-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 10px 7px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+  pointer-events: none;
 }
 
 /* Modal 活動 Timeline */

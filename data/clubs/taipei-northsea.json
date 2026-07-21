@@ -7,9 +7,14 @@
   "meetingPlace": "台北市中正區忠孝西路一段 (天成商業大樓)",
   "category": "service",
   "categoryLabel": "社會服務",
-  "tags": ["環境保護", "海洋生態", "無塑生活", "環保科技"],
-  "slogan": "愛護海洋，北海最行！共創蔚藍新世紀。",
-  "intro": "台北北海扶青社是一個高度專注於海洋生態保育與環境永續發展的行動派社團。我們秉持「用行動代替口號」的信念，長年深耕北海岸海洋淨灘、無塑生活推廣，並結合環保知識教育，共創永續家園。",
+  "tags": ["黃色球衣", "志願服務", "社區關懷", "正向改變"],
+  "slogan": "黃衫北海，行動最快！每一份小小付出，都帶來正向改變。",
+  "intro": "我們是披著特製黃色球衣的北海扶青社，一群充滿熱情與行動力的青年夥伴，透過志願服務與公益活動關懷社區、傳遞溫暖。我們相信每一份小小的付出，都能帶來正向改變，邀請更多朋友一起用行動服務人群、成就自我。",
+  "photos": [
+    { "src": "images/clubs/taipei-northsea/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-northsea/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-northsea/03.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "謝昀彣", "title": "P. Wendy", "avatar": "⭐" },
     { "role": "副社長 Vice President", "name": "余念祖", "title": "V.P. Jeff", "avatar": "🌟" },

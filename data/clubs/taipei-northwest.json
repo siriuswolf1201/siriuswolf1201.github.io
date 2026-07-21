@@ -5,11 +5,16 @@
   "sponsor": "台北西北區扶輪社",
   "meetingTime": "每雙週防 14:00 - 16:30",
   "meetingPlace": "台北市中山區南京東路二段 (輔導社例會所)",
-  "category": "business",
-  "categoryLabel": "學術商務",
-  "tags": ["職涯探索", "職場實力", "商務引薦", "技能培訓"],
-  "slogan": "西北領航，職引未來！共創專業發展影響力。",
-  "intro": "台北西北區扶青社是青年的「職涯加速器」。我們重點培育團員的職場硬實力與軟實力，包含 AI 辦公工具應用、專案管理、簡報演說以及跨業人脈引薦，幫助剛踏入社會的青年快速適應並在職場上脫穎而出。",
+  "category": "service",
+  "categoryLabel": "社會服務",
+  "tags": ["國際服務", "社會服務", "地區連結", "職業多元"],
+  "slogan": "西北同行，服務不停！自 2007 年起，連結各社、跨行共好。",
+  "intro": "台北西北區扶青社自 2007 年成立以來，始終秉持扶輪精神，從事國際服務、社會服務等公益活動，並積極參與母社及地區活動，增進各社之間的連結。社上成員皆為社會青年人士，來自各種不同的行業類別。",
+  "photos": [
+    { "src": "images/clubs/taipei-northwest/01.jpg", "caption": "捐血服務" },
+    { "src": "images/clubs/taipei-northwest/02.jpg", "caption": "淨灘服務" },
+    { "src": "images/clubs/taipei-northwest/03.jpg", "caption": "聯合職業例會" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "楊凱斌", "title": "P. Jacky", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "鄭嘉緯", "title": "P.P. Martin", "avatar": "📋" }

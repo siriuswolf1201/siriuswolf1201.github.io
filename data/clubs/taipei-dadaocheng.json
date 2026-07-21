@@ -5,11 +5,17 @@
   "sponsor": "台北大稻埕扶輪社",
   "meetingTime": "每雙週六 10:00 - 12:30",
   "meetingPlace": "台北市大同區迪化街一段 (大稻埕歷史街區埕樂軒)",
-  "category": "culture",
-  "categoryLabel": "在地文化",
-  "tags": ["在地文化", "地方創生", "古蹟活化", "休閒聯誼"],
-  "slogan": "埕現經典，創藝無限！讓在地文化發揮持恆影響。",
-  "intro": "根植於大稻埕深厚的歷史底蘊，台北大稻埕扶青社將傳統文化與現代創意完美融合。我們致力於地方創生、古蹟活化推廣以及迪化街商圈導覽服務，以創新的青年視角為老街區注入源源不絕的活力。",
+  "category": "heritage",
+  "categoryLabel": "傳承創新",
+  "tags": ["ROCKER精神", "上山下海", "熱情創新", "傳承溫暖"],
+  "slogan": "上山下海，熱情創新！在扶青找到自己，在服務中成就他人。",
+  "intro": "大稻埕扶青社創立於 2002 年，與創始成員多為扶青出身的母社大稻埕扶輪社一脈相承。我們秉持 ROCKER 精神上山下海、熱情創新，並以「在扶青找到自己，在服務中成就他人」為願景，致力凝聚夥伴、傳承溫暖。",
+  "photos": [
+    { "src": "images/clubs/taipei-dadaocheng/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-dadaocheng/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-dadaocheng/03.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-dadaocheng/04.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "黃湘庭", "title": "P. Imon", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "祝澄羲", "title": "P.E. Kris", "avatar": "📋" },

@@ -5,11 +5,16 @@
   "sponsor": "台北大安扶輪社",
   "meetingTime": "每雙週六 19:00 - 21:30",
   "meetingPlace": "台北市大安區忠孝東路四段 (大安青年活動中心)",
-  "category": "service",
-  "categoryLabel": "社會服務",
-  "tags": ["偏鄉教育", "弱勢關懷", "陪伴計畫", "慈善公益"],
-  "slogan": "大愛無疆，安居樂業！深耕社區弱勢關懷。",
-  "intro": "台北大安扶青社長期關注偏鄉教育與社區弱勢族群。透過長期穩定的「小太陽陪伴計畫」，為弱勢家庭孩童提供課後輔導、科普教育與探索成長營，用愛與耐心陪伴孩子跨越障礙，創造溫暖改變。",
+  "category": "fellowship",
+  "categoryLabel": "聯誼休閒",
+  "tags": ["運動踏青", "社區服務", "職涯交流", "紓壓充電"],
+  "slogan": "大步踏青，安心充電！在服務與交流中玩出精彩人生。",
+  "intro": "我們是大安扶青社！一個專為青年打造、兼具成長與放鬆的活力充電站。在這裡，我們透過運動踏青、社區服務與職涯交流，幫你在忙碌工作之餘釋放壓力。想拓展人脈、充實生活嗎？歡迎加入大安，和我們一起玩出精彩人生！",
+  "photos": [
+    { "src": "images/clubs/taipei-daan/01.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-daan/02.jpg", "caption": "" },
+    { "src": "images/clubs/taipei-daan/03.jpg", "caption": "" }
+  ],
   "officers": [
     { "role": "社長 President", "name": "汪俊宏", "title": "P. Toshi", "avatar": "⭐" },
     { "role": "秘書 Secretary", "name": "張庭瑄", "title": "S. Tina", "avatar": "📋" },
