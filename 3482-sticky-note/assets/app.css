@@ -250,6 +250,17 @@ textarea.input { resize: vertical; min-height: 120px; line-height: 1.6; }
   box-shadow: 0 14px 30px rgba(231, 111, 111, .5); animation: pop .5s ease;
 }
 @keyframes pop { 0% { transform: scale(.4); opacity: 0 } 60% { transform: scale(1.1) } 100% { transform: scale(1) } }
+.success .tick-gold {
+  background: linear-gradient(180deg, var(--note-yellow), var(--note-yellow-edge));
+  box-shadow: 0 14px 30px rgba(244, 221, 106, .6);
+}
+.success .hs-amt-lg {
+  font-family: "Anton", "Noto Sans TC", sans-serif; font-size: 46px; line-height: 1.1;
+  color: var(--coral-deep); text-shadow: 2px 3px 0 rgba(36, 64, 94, .1); margin-bottom: 6px;
+}
+
+/* H&S 登錄表單（工作人員） */
+.card.hs-card h2::before { background: var(--note-yellow-edge); }
 
 /* 便利貼式膠帶 */
 .tape {
@@ -451,6 +462,26 @@ textarea.input { resize: vertical; min-height: 120px; line-height: 1.6; }
 .snote .like.liked { background: var(--coral); border-color: var(--coral); color: #fff; }
 .snote .like .heart { font-size: 1.05em; }
 .snote .like.burst .heart { animation: burst .5s ease; }
+
+/* ---- H&S 便利貼（工作人員登錄，金色） ---- */
+.snote.hs {
+  background: linear-gradient(180deg, #fffdf1, #fdf2c9);
+  border-color: var(--note-yellow-edge);
+  gap: 6px;
+}
+.snote.hs::before { background: rgba(255, 255, 255, .62); }
+.snote.hs .hs-amt {
+  font-family: "Anton", "Noto Sans TC", sans-serif; font-weight: 400;
+  font-size: clamp(30px, 3.8vw, 56px); line-height: 1.05; letter-spacing: .5px;
+  color: var(--coral-deep); text-shadow: 2px 3px 0 rgba(36, 64, 94, .1);
+}
+.snote.hs .hs-club { font-size: clamp(14px, 1.5vw, 20px); font-weight: 900; color: var(--navy); }
+.snote.hs .na {
+  font-size: clamp(15px, 1.7vw, 23px); font-weight: 800; -webkit-line-clamp: 3;
+  margin-top: 2px; text-shadow: none;
+}
+.snote.hs .nby .nm { color: var(--navy-soft); font-weight: 800; }
+.d-item.hs .da { color: var(--coral-deep); }
 
 /* 換卡：舊卡傾斜落下、新卡淡入貼上（單純版，無撕角/翻折） */
 .snote.paste { z-index: 2; transform-origin: 50% 0%; animation: paste .78s cubic-bezier(.2, .8, .2, 1) both; }

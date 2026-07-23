@@ -46,23 +46,29 @@ function setup() {
 
   var c = getOrCreateSheet_(ss, "Cards");
   if (c.getLastRow() === 0) {
-    c.getRange(1, 1, 1, 11).setValues([
-      [
-        "id",
-        "created_at",
-        "question_id",
-        "question_text",
-        "question_color",
-        "answer",
-        "identity",
-        "display_name",
-        "extra_label",
-        "extra_value",
-        "likes",
-      ],
-    ]);
+    c.getRange(1, 1, 1, CARD_COLS.length).setValues([CARD_COLS]);
+  } else {
+    ensureCardCols_(c); // 舊版試算表：補上 type / amount 欄位
   }
 }
+
+// Cards 分頁欄位順序。type = "" 一般回應 / "hs" 工作人員登錄的 H&S；
+// amount 只有 H&S 會填（金額）。
+var CARD_COLS = [
+  "id",
+  "created_at",
+  "question_id",
+  "question_text",
+  "question_color",
+  "answer",
+  "identity",
+  "display_name",
+  "extra_label",
+  "extra_value",
+  "likes",
+  "type",
+  "amount",
+];
 
 // ---- HTTP handlers ------------------------------------------------
 
@@ -148,6 +154,8 @@ function readCards_() {
       extra_label: String(r[8] || ""),
       extra_value: String(r[9] || ""),
       likes: Number(r[10]) || 0,
+      type: String(r[11] || ""),
+      amount: Number(r[12]) || 0,
     });
   }
   return out;
@@ -160,8 +168,10 @@ function submitCard_(card) {
   lock.waitLock(10000);
   try {
     var sh = sheet_("Cards");
+    ensureCardCols_(sh);
     var id = nextId_(sh);
     var now = new Date();
+    var isHS = String(card.type || "") === "hs";
     sh.appendRow([
       id,
       now,
@@ -174,6 +184,8 @@ function submitCard_(card) {
       String(card.extra_label || ""),
       String(card.extra_value || "").slice(0, 120),
       0,
+      isHS ? "hs" : "",
+      isHS ? Math.max(0, Math.round(Number(card.amount) || 0)) : "",
     ]);
     return { ok: true, id: id, created_at: now.getTime() };
   } finally {
@@ -211,6 +223,16 @@ function nextId_(sh) {
   for (var i = 0; i < ids.length; i++)
     max = Math.max(max, Number(ids[i][0]) || 0);
   return max + 1;
+}
+
+// 舊版試算表只有 11 欄，這裡把缺少的 type / amount 標題補上，
+// 不動既有資料，所以直接更新 Code.gs 也能繼續用同一份 Sheet。
+function ensureCardCols_(sh) {
+  var last = sh.getLastColumn();
+  if (last >= CARD_COLS.length) return;
+  sh.getRange(1, last + 1, 1, CARD_COLS.length - last).setValues([
+    CARD_COLS.slice(last),
+  ]);
 }
 
 function sheet_(name) {
