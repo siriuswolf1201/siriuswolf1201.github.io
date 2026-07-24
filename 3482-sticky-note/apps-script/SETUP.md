@@ -82,7 +82,8 @@ WEBAPP_URL: "貼上你的_APPS_SCRIPT_WEB_APP_網址",
 
 - 想刪除不當回應：直接刪那一列即可
 - `likes` 欄是讚數
-- `type` 空白＝一般回應，`hs`＝工作人員在 `#/hs` 登錄的 H&S；`amount` 是 H&S 金額
+- `type` 空白＝一般回應，`hs`＝工作人員在 `#/hs` 登錄的 H&S，`gift`＝工作人員登錄的贊助物品；
+  `amount` 是 H&S 金額、`item` 是贊助物品名稱
 - 已經部署過舊版的人：把 `Code.gs` 更新後**再執行一次 `setup()`**，
   它會自動在 Cards 補上 `type` / `amount` 兩欄，既有資料不受影響
 
