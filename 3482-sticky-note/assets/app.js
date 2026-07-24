@@ -450,7 +450,17 @@
   var GRID = 6;                                    // 一次顯示幾張
   var SLOT_ROT = [-2.2, 1.6, -1.2, 2.0, -1.6, 1.1]; // 每格便利貼的基礎歪斜角
   var wall = { cards: [], deck: [], slots: [], cursor: 0, nextSlot: 0,
-               timer: null, poll: null, liked: {}, drawerOpen: false, paused: false, known: {} };
+               timer: null, poll: null, liked: {}, drawerOpen: false, paused: false, known: {},
+               filter: "all" }; // all / text（一般回應）/ hs / gift
+
+  function matchFilter(c) {
+    if (!c) return false;
+    if (wall.filter === "hs") return c.type === "hs";
+    if (wall.filter === "gift") return c.type === "gift";
+    if (wall.filter === "text") return !c.type;
+    return true;
+  }
+  function filteredCards() { return wall.cards.filter(matchFilter); }
 
   function stopWall() {
     clearInterval(wall.timer); clearInterval(wall.poll);
@@ -461,6 +471,7 @@
   function renderWall() {
     wall.liked = ls("liked_ids") || {};
     wall.cards = []; wall.deck = []; wall.slots = []; wall.cursor = 0; wall.nextSlot = 0; wall.known = {}; wall.paused = false;
+    wall.filter = "all";
     app.innerHTML =
       '<div class="wall">' +
         '<div class="wall-top">' +
@@ -479,6 +490,10 @@
         '<div class="wall-grid" id="grid"></div>' +
         '<div class="wall-bottom" id="wbar" style="display:none">' +
           '<button class="w-btn" id="w-pause">⏸ 暫停輪播</button>' +
+          '<div class="w-filter" id="w-filter">' +
+            filterBtn("all", "全部") + filterBtn("text", "✍️ 文字") +
+            filterBtn("hs", "💛 H&S") + filterBtn("gift", "🎁 贊助") +
+          '</div>' +
           '<div class="wall-count" id="w-count">–</div>' +
         '</div>' +
         drawerHTML() +
@@ -487,6 +502,9 @@
     on(qs("#w-list"), "click", toggleDrawer);
     on(qs("#w-music"), "click", toggleMusic);
     on(qs("#w-pause"), "click", togglePause);
+    qsa("#w-filter .w-btn").forEach(function (b) {
+      on(b, "click", function () { setFilter(b.dataset.f); });
+    });
 
     fetchWall(true);
     wall.poll = setInterval(function () { fetchWall(false); }, (CFG.POLL_SECONDS || 5) * 1000);
@@ -513,7 +531,7 @@
       var incoming = (d.cards || []).slice().sort(function (a, b) { return (a.created_at || 0) - (b.created_at || 0); });
       var hadCards = wall.cards.length > 0;
       wall.cards = incoming;
-      wall.deck = incoming.map(function (c) { return c.id; });
+      wall.deck = filteredCards().map(function (c) { return c.id; });
 
       if (!incoming.length) { showEmpty(); renderDrawer(); return; }
 
@@ -523,11 +541,14 @@
 
       if (!hadCards) {
         initialFill();
+      } else if (!wall.slots.length && wall.deck.length) {
+        initialFill();                                // 篩選中原本沒卡片，現在有了：重新鋪牆
       } else {
         likeRefresh();
         growSlots();                                  // 卡片變多時把格子補到 6 格
-        if (fresh.length && wall.slots.length) {      // 有新回應：立刻撕一張、貼上新的
-          var newest = fresh[fresh.length - 1];
+        var freshMatch = fresh.filter(function (id) { return matchFilter(cardById(id)); });
+        if (freshMatch.length && wall.slots.length) { // 有符合篩選的新回應：立刻撕一張、貼上新的
+          var newest = freshMatch[freshMatch.length - 1];
           if (wall.slots.indexOf(newest) === -1) {
             swapSlot(wall.nextSlot, newest, true);
             wall.nextSlot = (wall.nextSlot + 1) % wall.slots.length;
@@ -542,9 +563,11 @@
   function initialFill() {
     var grid = qs("#grid"); if (!grid) return;
     grid.innerHTML = ""; wall.slots = []; wall.cursor = 0; wall.nextSlot = 0;
-    var n = wall.cards.length, k = Math.min(GRID, n);
+    var list = filteredCards();
+    var n = list.length, k = Math.min(GRID, n);
+    if (!k) { showFilterEmpty(); updateCount(); return; }
     for (var i = 0; i < k; i++) {
-      var card = wall.cards[n - k + i];              // 先貼最新的 k 張（陣列尾端最新）
+      var card = list[n - k + i];                    // 先貼最新的 k 張（陣列尾端最新）
       var slot = document.createElement("div"); slot.className = "slot"; grid.appendChild(slot);
       wall.slots.push(card.id);
       var note = buildNote(card, i);
@@ -557,7 +580,7 @@
 
   function growSlots() {
     var grid = qs("#grid"); if (!grid) return;
-    var want = Math.min(GRID, wall.cards.length);
+    var want = Math.min(GRID, filteredCards().length);
     while (wall.slots.length < want) {
       var id = pickNext(); if (id == null) break;
       var slot = document.createElement("div"); slot.className = "slot"; grid.appendChild(slot);
@@ -571,7 +594,7 @@
     clearInterval(wall.timer);
     wall.timer = setInterval(function () {
       if (wall.paused || wall.drawerOpen) return;
-      if (wall.cards.length <= wall.slots.length) return; // 卡片沒有比格子多，不需輪換
+      if (filteredCards().length <= wall.slots.length) return; // 卡片沒有比格子多，不需輪換
       var id = pickNext(); if (id == null) return;
       swapSlot(wall.nextSlot, id, true);
       wall.nextSlot = (wall.nextSlot + 1) % wall.slots.length;
@@ -614,6 +637,28 @@
     var bar = qs("#wbar"); if (bar) bar.style.display = "none";
   }
 
+  /* 顯示切換：全部 / 文字 / H&S / 贊助 */
+  var FILTER_NAMES = { text: "文字回應", hs: "H&S", gift: "贊助物品" };
+
+  function filterBtn(f, label) {
+    return '<button class="w-btn' + (wall.filter === f ? " on" : "") + '" data-f="' + f + '">' + label + "</button>";
+  }
+
+  function setFilter(f) {
+    if (wall.filter === f) return;
+    wall.filter = f;
+    wall.deck = filteredCards().map(function (c) { return c.id; });
+    qsa("#w-filter .w-btn").forEach(function (b) { b.classList.toggle("on", b.dataset.f === f); });
+    initialFill();          // 依新篩選重新鋪牆（內含空狀態處理與輪播重啟）
+    renderDrawer();
+  }
+
+  function showFilterEmpty() {
+    var grid = qs("#grid"); if (grid) grid.innerHTML =
+      '<div class="wall-empty"><div class="big">還沒有' + (FILTER_NAMES[wall.filter] || "") + '的卡片 ✨</div>' +
+      '<p>切回「全部」看看其他回應吧</p></div>';
+  }
+
   function likeRefresh() {
     var grid = qs("#grid"); if (!grid) return;
     for (var i = 0; i < wall.slots.length; i++) {
@@ -635,7 +680,7 @@
       (hsCount ? " · 💛 H&S " + money(hsTotal) : "") +
       (giftCount ? " · 🎁 贊助 " + giftCount + " 項" : "");
     var bar = qs("#wbar"); if (bar) bar.style.display = wall.cards.length ? "" : "none";
-    var pb = qs("#w-pause"); if (pb) pb.style.display = wall.cards.length > GRID ? "" : "none";
+    var pb = qs("#w-pause"); if (pb) pb.style.display = filteredCards().length > GRID ? "" : "none";
   }
 
   function togglePause() {
@@ -711,7 +756,7 @@
   }
   function renderDrawer() {
     var list = qs("#d-list"); if (!list) return;
-    list.innerHTML = wall.cards.slice().reverse().map(function (c) {
+    list.innerHTML = filteredCards().slice().reverse().map(function (c) {
       var isHS = c.type === "hs", isGift = c.type === "gift";
       return '<button class="d-item' + (isHS ? " hs" : "") + (isGift ? " gift" : "") + '" data-id="' + c.id +
         '" style="--qc:' + esc(isHS ? (CONFIG.hs_color || HS_COLOR) :

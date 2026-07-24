@@ -338,6 +338,9 @@ textarea.input { resize: vertical; min-height: 120px; line-height: 1.6; }
   transition: all .15s ease;
 }
 .w-btn:hover { border-color: var(--coral); color: var(--coral-deep); }
+.w-btn.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.w-btn.on:hover { color: #fff; }
+.w-filter { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 
 /* 浮動舞台 */
 .stage { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 96px 24px; }
