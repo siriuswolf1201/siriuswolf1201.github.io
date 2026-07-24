@@ -6,7 +6,7 @@
 window.APP_CONFIG = {
   // 1) 貼上你部署好的 Apps Script Web App 網址（結尾像 /exec）
   //    參考 apps-script/SETUP.md 的步驟。
-  WEBAPP_URL: "https://script.google.com/macros/s/AKfycbzLleeURKZeiFVywzBfl6xufqCbLVXhYUHUe9DirhoFpsj7xUVfJPi4SnYk1HB2B4RJ/exec",
+  WEBAPP_URL: "https://script.google.com/macros/s/AKfycbyS2fh1ZE3ExEuoWdEbvh1yR87OaSo0dRQHTlJqSEjGBbTvx3La_8naGj4WYPw0bRcd/exec",
 
   // 2) 活動 ID（可放多場活動，這個字串會當作 Google Sheet 分頁前綴/識別）
   //    先用一場即可，維持預設。
