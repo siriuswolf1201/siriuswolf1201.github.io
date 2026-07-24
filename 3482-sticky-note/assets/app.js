@@ -1,7 +1,7 @@
 /* ==================================================================
    時光輪轉初心不變 — 前端 SPA
    Hash 路由： #/(入口)  #/form(填寫)  #/wall(天幕)  #/qr(邀請)
-              #/hs(H&S 登錄，工作人員專用；入口不放連結，靠網址進入)
+              #/hs(H&S／贊助物品登錄，工作人員專用；入口不放連結，靠網址進入)
    後端：Google Apps Script Web App（見 apps-script/SETUP.md）
    ================================================================== */
 (function () {
@@ -305,12 +305,15 @@
   }
 
   /* ================================================================
-     H&S 登錄 (Happy & Sad) — 工作人員專用
+     H&S／贊助物品登錄 — 工作人員專用
      入口頁不放連結，工作人員直接用 #/hs 網址進入。
-     送出的卡片 type = "hs"，會和一般回應一起輪播上天幕。
+     H&S 卡片 type = "hs"（金色）、贊助物品卡片 type = "gift"（青綠色），
+     都會和一般回應一起輪播上天幕。
      ================================================================ */
-  var hsForm = { amount: "", club: "", nickname: "", message: "" };
+  var hsMode = "hs"; // "hs" 登金額 / "gift" 登贊助物品
+  var hsForm = { amount: "", item: "", club: "", nickname: "", message: "" };
   var HS_COLOR = "#f4b942";
+  var GIFT_COLOR = "#86c2b5";
 
   function money(n) {
     var v = Math.max(0, Math.round(Number(n) || 0));
@@ -322,19 +325,27 @@
   }
 
   function drawHS() {
+    var isGift = hsMode === "gift";
     app.innerHTML =
       '<div class="wrap stack">' +
         '<a class="backlink" href="#/">← 回入口</a>' +
         '<div><div class="brandline">工作人員專區</div>' +
-          '<h1 class="title" style="font-size:26px;margin-top:10px">登錄 H&amp;S</h1>' +
-          '<p class="muted" style="margin-top:8px">送出後，這筆 H&amp;S 會變成一張金色便利貼浮上天幕 💛</p></div>' +
+          '<h1 class="title" style="font-size:26px;margin-top:10px">登錄 H&amp;S／贊助物品</h1>' +
+          '<p class="muted" style="margin-top:8px">送出後會變成一張' +
+            (isGift ? "青綠色便利貼浮上天幕 🎁" : "金色便利貼浮上天幕 💛") + '</p></div>' +
 
-        '<div class="card hs-card">' +
-          '<h2>H&amp;S 資料</h2>' +
-          '<div class="stack">' +
-            '<label class="field"><span>H&amp;S 金額 <span class="req">*</span></span>' +
-              '<input class="input" id="h-amount" type="number" inputmode="numeric" min="0" step="100" ' +
-                'placeholder="例如：2000" value="' + esc(hsForm.amount) + '"></label>' +
+        '<div class="card ' + (isGift ? "gift-card" : "hs-card") + '">' +
+          '<div class="field"><span>登錄類型</span><div class="row">' +
+            modeChip("hs", "💛 H&S") + modeChip("gift", "🎁 贊助物品") +
+          '</div></div>' +
+          '<div class="stack" style="margin-top:12px">' +
+            (isGift ?
+              '<label class="field"><span>贊助物品 <span class="req">*</span></span>' +
+                '<input class="input" id="h-item" maxlength="60" placeholder="例如：紅酒兩瓶、按摩券一張" value="' + esc(hsForm.item) + '"></label>'
+              :
+              '<label class="field"><span>H&amp;S 金額 <span class="req">*</span></span>' +
+                '<input class="input" id="h-amount" type="number" inputmode="numeric" min="0" step="100" ' +
+                  'placeholder="例如：2000" value="' + esc(hsForm.amount) + '"></label>') +
             '<label class="field"><span>哪個社 <span class="req">*</span></span>' +
               '<input class="input" id="h-club" list="club-list" placeholder="例如：台北城中社" value="' + esc(hsForm.club) + '"></label>' +
             clubDatalist() +
@@ -344,13 +355,20 @@
               '<textarea class="input" id="h-msg" maxlength="140" placeholder="例如：祝大家新的一年順順利利！">' + esc(hsForm.message) + '</textarea>' +
               '<div class="counter"><span id="h-cnt">' + hsForm.message.length + '</span>/140</div></label>' +
           '</div>' +
-          '<button class="btn btn-gold btn-block" id="h-submit" style="margin-top:10px">送出，讓 H&amp;S 上天幕 →</button>' +
+          '<button class="btn ' + (isGift ? "btn-teal" : "btn-gold") + ' btn-block" id="h-submit" style="margin-top:10px">' +
+            (isGift ? "送出，讓贊助物品上天幕 →" : "送出，讓 H&amp;S 上天幕 →") + '</button>' +
         '</div>' +
 
         '<a class="btn btn-ghost btn-block" href="#/wall">🌌 前往天幕</a>' +
       '</div>';
 
+    qsa(".chip[data-mode]").forEach(function (c) {
+      on(c, "click", function () {
+        if (hsMode !== c.dataset.mode) { hsMode = c.dataset.mode; drawHS(); }
+      });
+    });
     on(qs("#h-amount"), "input", function (e) { hsForm.amount = e.target.value; });
+    on(qs("#h-item"), "input", function (e) { hsForm.item = e.target.value; });
     on(qs("#h-club"), "input", function (e) { hsForm.club = e.target.value; });
     on(qs("#h-nick"), "input", function (e) { hsForm.nickname = e.target.value; });
     on(qs("#h-msg"), "input", function (e) {
@@ -359,15 +377,32 @@
     on(qs("#h-submit"), "click", submitHS);
   }
 
+  function modeChip(mode, label) {
+    return '<button class="chip' + (hsMode === mode ? " active" : "") + '" data-mode="' + mode + '">' + label + "</button>";
+  }
+
   function submitHS() {
+    var isGift = hsMode === "gift";
     var amount = Math.round(Number(hsForm.amount));
-    if (!(amount > 0)) { toast("請填 H&S 金額"); return; }
+    if (isGift) {
+      if (!hsForm.item.trim()) { toast("請填贊助物品"); return; }
+    } else {
+      if (!(amount > 0)) { toast("請填 H&S 金額"); return; }
+    }
     if (!hsForm.club.trim()) { toast("請填是哪個社"); return; }
     if (!hsForm.nickname.trim()) { toast("請填暱稱"); return; }
     if (!hsForm.message.trim()) { toast("請填祝賀詞"); return; }
 
-    var btn = qs("#h-submit"); btn.disabled = true; btn.textContent = "送出中…";
-    var card = {
+    var btn = qs("#h-submit"); btn.disabled = true;
+    var btnText = isGift ? "送出，讓贊助物品上天幕 →" : "送出，讓 H&S 上天幕 →";
+    btn.textContent = "送出中…";
+    var card = isGift ? {
+      type: "gift", item: hsForm.item.trim(),
+      question_id: 0, question_text: "贊助物品", question_color: CONFIG.gift_color || GIFT_COLOR,
+      answer: hsForm.message.trim(), identity: "",
+      display_name: hsForm.nickname.trim(),
+      extra_label: "所屬扶青社", extra_value: hsForm.club.trim()
+    } : {
       type: "hs", amount: amount,
       question_id: 0, question_text: "H&S", question_color: CONFIG.hs_color || HS_COLOR,
       answer: hsForm.message.trim(), identity: "",
@@ -376,30 +411,35 @@
     };
     api.submit(card).then(function (res) {
       if (res && res.ok !== false) { showHSSuccess(card); }
-      else { btn.disabled = false; btn.textContent = "送出，讓 H&S 上天幕 →"; toast("送出失敗，再試一次"); }
+      else { btn.disabled = false; btn.textContent = btnText; toast("送出失敗，再試一次"); }
     }).catch(function () {
-      btn.disabled = false; btn.textContent = "送出，讓 H&S 上天幕 →"; toast("網路連線有點問題");
+      btn.disabled = false; btn.textContent = btnText; toast("網路連線有點問題");
     });
   }
 
   function showHSSuccess(card) {
+    var isGift = card.type === "gift";
     app.innerHTML =
       '<div class="wrap"><div class="spacer"></div>' +
         '<div class="success card">' +
-          '<div class="tick tick-gold">💛</div>' +
-          '<h2 style="font-size:22px">H&amp;S 已登錄！</h2>' +
-          '<p class="muted" style="margin:10px 0 22px">金色便利貼正在天幕上為大家慶祝 🌌</p>' +
-          '<div class="hs-amt-lg">' + esc(money(card.amount)) + '</div>' +
+          '<div class="tick ' + (isGift ? "tick-teal" : "tick-gold") + '">' + (isGift ? "🎁" : "💛") + '</div>' +
+          '<h2 style="font-size:22px">' + (isGift ? "贊助物品已登錄！" : "H&amp;S 已登錄！") + '</h2>' +
+          '<p class="muted" style="margin:10px 0 22px">' +
+            (isGift ? "青綠色便利貼正在天幕上為大家慶祝 🌌" : "金色便利貼正在天幕上為大家慶祝 🌌") + '</p>' +
+          (isGift ?
+            '<div class="gift-item-lg">' + esc(card.item) + '</div>' :
+            '<div class="hs-amt-lg">' + esc(money(card.amount)) + '</div>') +
           '<p style="font-weight:900;color:var(--navy);margin-bottom:10px">' + esc(card.extra_value) + '</p>' +
           '<p style="font-size:19px;font-weight:800;line-height:1.5">「' + esc(card.answer) + '」</p>' +
           '<p class="muted" style="margin-top:6px">— ' + esc(card.display_name) + '</p>' +
           '<div class="stack" style="margin-top:26px">' +
-            '<button class="btn btn-gold btn-block" id="hs-again">💛 再登錄一筆</button>' +
+            '<button class="btn ' + (isGift ? "btn-teal" : "btn-gold") + ' btn-block" id="hs-again">' +
+              (isGift ? "🎁 再登錄一筆" : "💛 再登錄一筆") + '</button>' +
             '<a class="btn btn-ghost btn-block" href="#/wall">🌌 去看天幕</a>' +
           '</div>' +
         '</div><div class="spacer"></div></div>';
     on(qs("#hs-again"), "click", function () {
-      hsForm = { amount: "", club: "", nickname: "", message: "" };
+      hsForm = { amount: "", item: "", club: "", nickname: "", message: "" };
       drawHS(); window.scrollTo(0, 0);
     });
   }
@@ -585,10 +625,15 @@
   }
 
   function updateCount() {
-    var hsCount = 0, hsTotal = 0;
-    wall.cards.forEach(function (c) { if (c.type === "hs") { hsCount++; hsTotal += Number(c.amount) || 0; } });
+    var hsCount = 0, hsTotal = 0, giftCount = 0;
+    wall.cards.forEach(function (c) {
+      if (c.type === "hs") { hsCount++; hsTotal += Number(c.amount) || 0; }
+      else if (c.type === "gift") { giftCount++; }
+    });
     var el = qs("#w-count");
-    if (el) el.textContent = "共 " + wall.cards.length + " 則" + (hsCount ? " · 💛 H&S " + money(hsTotal) : "");
+    if (el) el.textContent = "共 " + wall.cards.length + " 則" +
+      (hsCount ? " · 💛 H&S " + money(hsTotal) : "") +
+      (giftCount ? " · 🎁 贊助 " + giftCount + " 項" : "");
     var bar = qs("#wbar"); if (bar) bar.style.display = wall.cards.length ? "" : "none";
     var pb = qs("#w-pause"); if (pb) pb.style.display = wall.cards.length > GRID ? "" : "none";
   }
@@ -605,20 +650,24 @@
   }
 
   function buildNote(c, slotIndex) {
-    var isHS = c.type === "hs";
+    var isHS = c.type === "hs", isGift = c.type === "gift";
     var note = document.createElement("div");
-    note.className = "snote" + (isHS ? " hs" : "");
-    note.style.setProperty("--qc", (isHS ? (CONFIG.hs_color || HS_COLOR) : c.question_color) || "#9fc9ff");
+    note.className = "snote" + (isHS ? " hs" : "") + (isGift ? " gift" : "");
+    note.style.setProperty("--qc",
+      (isHS ? (CONFIG.hs_color || HS_COLOR) :
+       isGift ? (CONFIG.gift_color || GIFT_COLOR) : c.question_color) || "#9fc9ff");
     note.style.setProperty("--rot", SLOT_ROT[slotIndex % SLOT_ROT.length] + "deg");
 
     var liked = !!wall.liked[c.id];
     var likeBtn = '<button class="like' + (liked ? " liked" : "") + '"><span class="heart">' + (liked ? "❤" : "♡") +
       '</span><span class="n">' + (c.likes || 0) + "</span></button>";
 
-    if (isHS) {
+    if (isHS || isGift) {
       note.innerHTML =
-        '<span class="q-tag">💛 H&amp;S</span>' +
-        '<div class="hs-amt">' + esc(money(c.amount)) + "</div>" +
+        '<span class="q-tag">' + (isGift ? "🎁 贊助物品" : "💛 H&amp;S") + '</span>' +
+        (isGift ?
+          '<div class="gift-item">' + esc(c.item || "") + "</div>" :
+          '<div class="hs-amt">' + esc(money(c.amount)) + "</div>") +
         (c.extra_value ? '<div class="hs-club">' + esc(c.extra_value) + "</div>" : "") +
         '<div class="na">「' + esc(c.answer) + "」</div>" +
         '<div class="nby"><span class="nm">— ' + esc(c.display_name || "匿名") + "</span></div>" +
@@ -663,12 +712,14 @@
   function renderDrawer() {
     var list = qs("#d-list"); if (!list) return;
     list.innerHTML = wall.cards.slice().reverse().map(function (c) {
-      var isHS = c.type === "hs";
-      return '<button class="d-item' + (isHS ? " hs" : "") + '" data-id="' + c.id +
-        '" style="--qc:' + esc(isHS ? (CONFIG.hs_color || HS_COLOR) : c.question_color) + '">' +
-        '<div class="da">' + (isHS ? "💛 " + esc(money(c.amount)) + "　" : "") + esc(c.answer) + '</div>' +
+      var isHS = c.type === "hs", isGift = c.type === "gift";
+      return '<button class="d-item' + (isHS ? " hs" : "") + (isGift ? " gift" : "") + '" data-id="' + c.id +
+        '" style="--qc:' + esc(isHS ? (CONFIG.hs_color || HS_COLOR) :
+                               isGift ? (CONFIG.gift_color || GIFT_COLOR) : c.question_color) + '">' +
+        '<div class="da">' + (isHS ? "💛 " + esc(money(c.amount)) + "　" :
+                              isGift ? "🎁 " + esc(c.item || "") + "　" : "") + esc(c.answer) + '</div>' +
         '<div class="dm"><span>' + esc(c.display_name || "匿名") +
-          (isHS && c.extra_value ? " · " + esc(c.extra_value) : "") + '</span>' +
+          ((isHS || isGift) && c.extra_value ? " · " + esc(c.extra_value) : "") + '</span>' +
         '<span class="dl">❤ ' + (c.likes || 0) + '</span></div></button>';
     }).join("");
     qsa(".d-item", list).forEach(function (b) {
@@ -749,8 +800,8 @@
   function buildCloud() {
     var box = qs("#cloudbox"); if (box) box.innerHTML = '<div class="cloud-loading">正在整理關鍵字…</div>';
     api.wall().then(function (d) {
-      // H&S 是祝賀詞，不列入題目回答的關鍵字統計
-      var cards = ((d && d.cards) || []).filter(function (c) { return c.type !== "hs"; });
+      // H&S／贊助物品是祝賀詞，不列入題目回答的關鍵字統計
+      var cards = ((d && d.cards) || []).filter(function (c) { return c.type !== "hs" && c.type !== "gift"; });
       paintCloud(tallyKeywords(cards), cards.length);
     }).catch(function () { paintCloud([], 0); });
   }
