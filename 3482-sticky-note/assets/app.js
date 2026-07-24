@@ -341,19 +341,19 @@
           '<div class="stack" style="margin-top:12px">' +
             (isGift ?
               '<label class="field"><span>贊助物品 <span class="req">*</span></span>' +
-                '<input class="input" id="h-item" maxlength="60" placeholder="例如：紅酒兩瓶、按摩券一張" value="' + esc(hsForm.item) + '"></label>'
+                '<input class="input" id="h-item" maxlength="30" placeholder="例如：紅酒兩瓶、按摩券一張" value="' + esc(hsForm.item) + '"></label>'
               :
               '<label class="field"><span>H&amp;S 金額 <span class="req">*</span></span>' +
                 '<input class="input" id="h-amount" type="number" inputmode="numeric" min="0" step="100" ' +
                   'placeholder="例如：2000" value="' + esc(hsForm.amount) + '"></label>') +
             '<label class="field"><span>哪個社 <span class="req">*</span></span>' +
-              '<input class="input" id="h-club" list="club-list" placeholder="例如：台北城中社" value="' + esc(hsForm.club) + '"></label>' +
+              '<input class="input" id="h-club" list="club-list" maxlength="20" placeholder="例如：台北城中社" value="' + esc(hsForm.club) + '"></label>' +
             clubDatalist() +
             '<label class="field"><span>暱稱 <span class="req">*</span></span>' +
-              '<input class="input" id="h-nick" placeholder="會顯示在天幕卡片上（如：小明）" value="' + esc(hsForm.nickname) + '"></label>' +
+              '<input class="input" id="h-nick" maxlength="12" placeholder="會顯示在天幕卡片上（如：小明）" value="' + esc(hsForm.nickname) + '"></label>' +
             '<label class="field"><span>祝賀詞 <span class="req">*</span></span>' +
-              '<textarea class="input" id="h-msg" maxlength="140" placeholder="例如：祝大家新的一年順順利利！">' + esc(hsForm.message) + '</textarea>' +
-              '<div class="counter"><span id="h-cnt">' + hsForm.message.length + '</span>/140</div></label>' +
+              '<textarea class="input" id="h-msg" maxlength="50" placeholder="例如：祝大家新的一年順順利利！">' + esc(hsForm.message) + '</textarea>' +
+              '<div class="counter"><span id="h-cnt">' + hsForm.message.length + '</span>/50</div></label>' +
           '</div>' +
           '<button class="btn ' + (isGift ? "btn-teal" : "btn-gold") + ' btn-block" id="h-submit" style="margin-top:10px">' +
             (isGift ? "送出，讓贊助物品上天幕 →" : "送出，讓 H&amp;S 上天幕 →") + '</button>' +
