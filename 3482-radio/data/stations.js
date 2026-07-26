@@ -29,11 +29,10 @@ export const STATIONS = [
   { id: 5,  name: "台北圓環社",     freq: 345.2, audio: "audio/台北圓環扶青社.mp3", intro: "圓聚老城，環扣人情！以美食與共餐溫暖社區。",           color: "#9ec9a3" },
   { id: 6,  name: "台北大安社",     freq: 346.2, audio: "audio/台北大安扶青社.mp3", intro: "大愛無疆，安居樂業！深耕社區弱勢關懷。",             color: "#86c2b5" },
   { id: 7,  name: "台北大龍峒社",   freq: 347.2, audio: "audio/台北大龍峒扶青社.mp3", intro: "大龍騰飛，峒心協力！活化傳統民俗生命力。",           color: "#7fc0c8" },
-  { id: 9,  name: "FM348.2 主頻道", freq: 348.2, audio: "audio/demo.mp3", intro: "FM348.2，這個頻率，讓我們連結在一起。\nCreate Lasting Impact！", color: "#e76f6f" },
-  { id: 10, name: "台北百城社",     freq: 349.2, audio: "audio/台北百城扶青社.mp3", intro: "百城聚力，築夢新創！引領青年創業新世代。",           color: "#6c9bd1" },
-  { id: 12, name: "台北邑德社",     freq: 350.2, audio: "audio/台北邑德扶青社.mp3", intro: "邑聚賢德，暖心相伴！打造代間和諧新世紀。",           color: "#9384c9" },
-  { id: 15, name: "台北城中北醫大社", freq: 351.2, audio: "audio/台北北醫大扶青社.mp3", intro: "北醫城中，醫心守護！發揮醫學大專青年影響力。",     color: "#dd8bb0" },
-  { id: 17, name: "台北雙子星AI社",  freq: 352.2, audio: "audio/台北雙子星AI扶青社.mp3", intro: "智啟雙子，AI創新！用先進科技共創嶄新世紀。",         color: "#f49191" },
+  { id: 10, name: "台北百城社",     freq: 348.2, audio: "audio/台北百城扶青社.mp3", intro: "百城聚力，築夢新創！引領青年創業新世代。",           color: "#6c9bd1" },
+  { id: 12, name: "台北邑德社",     freq: 349.2, audio: "audio/台北邑德扶青社.mp3", intro: "邑聚賢德，暖心相伴！打造代間和諧新世紀。",           color: "#9384c9" },
+  { id: 15, name: "台北城中北醫大社", freq: 350.2, audio: "audio/台北北醫大扶青社.mp3", intro: "北醫城中，醫心守護！發揮醫學大專青年影響力。",     color: "#dd8bb0" },
+  { id: 17, name: "台北雙子星AI社",  freq: 351.2, audio: "audio/台北雙子星AI扶青社.mp3", intro: "智啟雙子，AI創新！用先進科技共創嶄新世紀。",         color: "#f49191" },
 ];
 
 /* 尚未提供音檔、暫時隱藏的社（音檔到位後搬回上方 STATIONS 並重排 freq） */
@@ -49,7 +48,7 @@ export const HIDDEN_STATIONS = [
 /* 調頻刻度的顯示範圍（兩端各留一點邊，純粹是刻度好看用，不影響選台容差） */
 export const BAND = {
   min: 340.6,
-  max: 352.8,
+  max: 351.8,
 };
 
 /* 選台容差：指針距離某台中心 < tolerance 即鎖定該台 */
