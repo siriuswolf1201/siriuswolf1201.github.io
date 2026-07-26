@@ -528,7 +528,7 @@
         var mbtn = qs("#w-music");
         if (mbtn && ytId(CONFIG.music_url)) mbtn.style.display = "";
       }
-      var incoming = (d.cards || []).slice().sort(function (a, b) { return (a.created_at || 0) - (b.created_at || 0); });
+      var incoming = (d.cards || []).slice().sort(function (a, b) { return Math.random() - 0.5; });
       var hadCards = wall.cards.length > 0;
       wall.cards = incoming;
       wall.deck = filteredCards().map(function (c) { return c.id; });
