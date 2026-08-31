@@ -1,6 +1,6 @@
 {
   "cabinet": {
-    "_note": "地區確認之正式編制，共 20 位幹部。簡介取自各幹部就任心得（資料區 Excel）；公共關係副主委 Amy 的所屬社與簡介待確認。avatar 圖檔名沿用公共形象委員會提供的原始命名，其中職務字樣可能與現行職務不同。",
+    "_note": "地區確認之正式編制，共 20 位幹部。簡介取自各幹部就任心得（資料區 Excel）；公共關係副主委 Amy 的所屬社、簡介與形象照待補。",
     "tier1": [
       {
         "role": "地區代表",
@@ -86,7 +86,7 @@
         "club": "台北魅力扶輪社",
         "avatar": "❓",
         "desc": "第一年擔任扶青地區幹部，期待延續扶輪服務精神，與大家共同打造熱情有活力的一年。",
-        "image": "images/avatars/%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94_Kano.png"
+        "image": "images/avatars/%E5%89%AF%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94_Kano.png"
       },
       {
         "role": "社服主委",
@@ -102,7 +102,7 @@
         "club": "台北大龍峒扶青社",
         "avatar": "❓",
         "desc": "回顧去年地區的歷練，深刻感受團隊合作與青年服務的力量。期許串聯更多夥伴，發揮青年影響力。",
-        "image": "images/avatars/%E5%89%AF%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94_I.P.P._Ian.png"
+        "image": "images/avatars/%E5%89%AF%E7%A4%BE%E6%9C%8D%E4%B8%BB%E5%A7%94_I.P.P._Ian.png"
       },
       {
         "role": "職業主委",
@@ -142,7 +142,7 @@
         "club": "台北邑德扶青社",
         "avatar": "❓",
         "desc": "扶青不只是服務的平台，更是持續學習、拓展視野的地方。期許成為團隊可靠的夥伴，創造正向影響。",
-        "image": "images/avatars/%E5%89%AF%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94_Fischer.png"
+        "image": "images/avatars/%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94_Fischer.png"
       },
       {
         "role": "公共關係主委",
@@ -150,7 +150,7 @@
         "club": "台北城中扶青社",
         "avatar": "❓",
         "desc": "與優秀夥伴共事既震撼又幸運。期許用公共關係的力量放大青年影響力，寫下 3482 精彩新頁。",
-        "image": "images/avatars/%E5%85%AC%E5%85%B1%E5%BD%A2%E8%B1%A1%E4%B8%BB%E5%A7%94_I.P.P._Borris.png"
+        "image": "images/avatars/%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94_I.P.P._Borris.png"
       },
       {
         "role": "公共關係副主委",
