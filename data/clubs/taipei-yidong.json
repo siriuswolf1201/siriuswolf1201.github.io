@@ -20,7 +20,12 @@
   ],
   "officers": [
     { "role": "社長 President", "name": "林凡榆", "title": "P. Yuna", "avatar": "⭐" },
-    { "role": "秘書 Secretary", "name": "待確認", "title": "S. Sharon", "avatar": "📋" }
+    {
+      "role": "秘書 Secretary",
+      "name": "陳子軒",
+      "title": "S. Sharon",
+      "avatar": "📋"
+    }
   ],
   "annualActivities": [
     { "time": "08月", "title": "怡東都市屋頂小農契作體驗", "desc": "在市區頂樓推行都市農耕，親手栽種無毒蔬菜，推廣地產地消。" },

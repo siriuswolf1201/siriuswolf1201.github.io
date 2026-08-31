@@ -1,6 +1,6 @@
 {
   "cabinet": {
-    "_note": "地區確認之正式編制，共 19 位幹部。姓名/所屬社/簡介皆待地區團隊確認後填入。",
+    "_note": "地區確認之正式編制，共 19 位幹部。簡介取自各幹部就任心得（資料區 Excel），已全數確認填入。",
     "tier1": [
       {
         "role": "地區代表",
@@ -33,7 +33,7 @@
         "name": "PP Warren",
         "club": "台北上城扶輪社 / 台北上城扶青社",
         "avatar": "❓",
-        "desc": "待確認",
+        "desc": "秉持公開透明、嚴謹合規、效益極大化三大原則為地區財務把關，優化流程，做團隊最堅實的後盾。",
         "image": "images/avatars/%E8%B2%A1%E5%8B%99%E4%B8%BB%E5%A7%94%20P.P.%20Warren.jpg"
       },
       {
@@ -41,7 +41,7 @@
         "name": "IPDRR Jacky",
         "club": "台北西北區扶青社",
         "avatar": "❓",
-        "desc": "待確認",
+        "desc": "卸任地區代表後換個身分續留大家庭。位置不同但初心未變，是地區代表最堅實的後援與夥伴。",
         "image": "images/avatars/%E9%A1%A7%E5%95%8F%20I.P.D.R.R.%20Jacky.jpg"
       }
     ],
@@ -59,7 +59,7 @@
         "name": "PDRR Stone",
         "club": "台北環河扶輪社 / 台北圓環扶青社",
         "avatar": "❓",
-        "desc": "待確認",
+        "desc": "扶青扶輪像一場奇幻旅程，每個角色都是新的學習。帶著前地區代表的經歷，陪團隊繼續向前邁進。",
         "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20P.D.R.R.%20Stone.jpg"
       },
       {
@@ -85,7 +85,7 @@
         "name": "Fischer",
         "club": "台北邑德扶青社",
         "avatar": "❓",
-        "desc": "待確認",
+        "desc": "扶青不只是服務的平台，更是持續學習、拓展視野的地方。期許成為團隊可靠的夥伴，創造正向影響。",
         "image": "images/avatars/%E5%89%AF%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94%20Fischer.jpg"
       },
       {
@@ -149,7 +149,7 @@
         "name": "IPP Borris",
         "club": "台北城中扶青社",
         "avatar": "❓",
-        "desc": "待確認",
+        "desc": "與優秀夥伴共事既震撼又幸運。期許用公共形象的力量放大青年影響力，寫下 3482 精彩新頁。",
         "image": "images/avatars/%E5%85%AC%E5%85%B1%E5%BD%A2%E8%B1%A1%E4%B8%BB%E5%A7%94%20I.P.P.%20Borris.jpg"
       },
       {
