@@ -1,0 +1,15 @@
+{
+  "_note": "WOW 雙月刊。issues 陣列以最新一期在最前面，第一筆會以 Canva 內嵌方式呈現，其餘列為往期連結。embed 為 Canva 的 /view?embed 網址（供 iframe 使用），view 為可另開分頁的分享網址，ratio 為 iframe 的高/寬比（Canva 提供的 padding-top 百分比 ÷ 100）。",
+  "issues": [
+    {
+      "title": "WOW 雙月刊",
+      "issue": "AUG — SEP 2026",
+      "period": "2026 年 8-9 月號",
+      "designer": "林品妤",
+      "desc": "創刊號記錄地區團隊就任、各社年度計畫啟動，以及夏季社服與聯誼活動的第一手現場。",
+      "embed": "https://www.canva.com/design/DAHT1lWBKTs/ia5YCkDIiFlcJC0N8WVrqQ/view?embed",
+      "view": "https://www.canva.com/design/DAHT1lWBKTs/ia5YCkDIiFlcJC0N8WVrqQ/view?utm_content=DAHT1lWBKTs&utm_campaign=designshare&utm_medium=embeds&utm_source=link",
+      "ratio": 1.777778
+    }
+  ]
+}

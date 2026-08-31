@@ -18,16 +18,20 @@ let CLUBS_DATA = [];
 let TIMELINE_DATA = [];
 let DISTRICT_CABINET = null;
 let DISTRICT_PROGRAMS = [];
+let MAGAZINES = [];
 
 async function loadSiteData() {
-  const [clubs, district] = await Promise.all([
+  const [clubs, district, magazines] = await Promise.all([
     Promise.all(CLUB_IDS.map(id => fetch(`data/clubs/${id}.json`).then(res => res.json()))),
-    fetch("data/district.json").then(res => res.json())
+    fetch("data/district.json").then(res => res.json()),
+    // 雙月刊尚未發行或檔案缺漏時不影響其他區塊，取空陣列讓該區塊自行隱藏。
+    fetch("data/magazines.json").then(res => res.json()).catch(() => ({ issues: [] }))
   ]);
   CLUBS_DATA = clubs;
   TIMELINE_DATA = district.timeline;
   DISTRICT_CABINET = district.cabinet;
   DISTRICT_PROGRAMS = district.programs || [];
+  MAGAZINES = magazines.issues || [];
 }
 
 // 2. 媒合器測驗題目資料庫
@@ -95,6 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initClubExplorer();
   initPrograms();
   initTimeline();
+  initMagazine();
   initQuiz();
   initContactForm();
   initSponsors();
@@ -918,4 +923,57 @@ function initSponsors() {
       </div>
     `;
   }).join("");
+}
+
+// J. WOW 雙月刊：最新一期以 Canva 內嵌呈現，其餘列為往期連結
+// 注意：本函式在 initScrollAnimations() 之前呼叫，產生的 .fade-in-up 由後者統一觀察。
+function initMagazine() {
+  const container = document.getElementById("magazine-container");
+  if (!container) return;
+
+  const section = document.getElementById("magazine");
+  if (!MAGAZINES.length) {
+    // 沒有任何一期就整個區塊移除，連同導覽列上的錨點，避免留下空白區與死連結。
+    if (section) section.remove();
+    document.querySelector('.nav-link[href="#magazine"]')?.remove();
+    return;
+  }
+
+  // Canva 分享網址帶有 & 參數，寫進 HTML 屬性前需轉義。
+  const attr = str => String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+
+  const [latest, ...past] = MAGAZINES;
+  const ratio = (latest.ratio || 1.777778) * 100;
+
+  const pastHTML = past.length ? `
+    <div class="magazine-past fade-in-up">
+      <h3 class="magazine-past-title">往期回顧</h3>
+      <div class="magazine-past-list">
+        ${past.map(m => `
+          <a class="magazine-past-item" href="${attr(m.view)}" target="_blank" rel="noopener">
+            <span class="magazine-past-issue">${m.issue}</span>
+            <span class="magazine-past-name">${m.period || m.title}</span>
+          </a>
+        `).join("")}
+      </div>
+    </div>` : "";
+
+  container.innerHTML = `
+    <div class="magazine-feature fade-in-up">
+      <div class="magazine-frame" style="padding-top: ${ratio.toFixed(4)}%;">
+        <iframe src="${attr(latest.embed)}" title="${attr(latest.title)} ${attr(latest.issue)}"
+          loading="lazy" allowfullscreen allow="fullscreen"></iframe>
+      </div>
+      <div class="magazine-meta">
+        <span class="magazine-badge">最新一期</span>
+        <h3 class="magazine-name">${latest.title}</h3>
+        <p class="magazine-issue">${latest.issue}</p>
+        ${latest.period ? `<p class="magazine-period">${latest.period}</p>` : ""}
+        ${latest.desc ? `<p class="magazine-desc">${latest.desc}</p>` : ""}
+        ${latest.designer ? `<p class="magazine-credit">設計｜${latest.designer}</p>` : ""}
+        <a class="magazine-link" href="${attr(latest.view)}" target="_blank" rel="noopener">在 Canva 開啟全螢幕閱讀 &rarr;</a>
+      </div>
+    </div>
+    ${pastHTML}
+  `;
 }
