@@ -8,7 +8,7 @@
         "club": "台北魅力扶輪社 / 台北大安扶青社",
         "avatar": "❓",
         "desc": "地區扶青邁入第十年，專注青年成長、社群凝聚與品牌提升三件事，讓扶青成為扶輪最值得投資的未來。",
-        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E4%BB%A3%E8%A1%A8%20D.R.R.%20Ariel.jpg"
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E4%BB%A3%E8%A1%A8_D.R.R._Ariel.png"
       }
     ],
     "tier2": [
@@ -18,7 +18,7 @@
         "club": "台北城中北醫大扶青社",
         "avatar": "❓",
         "desc": "第四次擔任地區幹部、二度接下秘書。期許成為團隊最強大的後盾，協助地區順暢運作。",
-        "image": "images/avatars/%E7%A7%98%E6%9B%B8%20D.S.%20Emily.jpg"
+        "image": "images/avatars/%E7%A7%98%E6%9B%B8_D.S._Emily.png"
       },
       {
         "role": "地區副秘書",
@@ -26,7 +26,7 @@
         "club": "台北大稻埕扶青社",
         "avatar": "❓",
         "desc": "從 3482 第二屆加入扶青，一路走到第十屆。二度擔任副秘書，期待與夥伴發揮最大影響力。",
-        "image": "images/avatars/%E5%89%AF%E7%A7%98%E6%9B%B8%20V.D.S.%20Tanya.jpg"
+        "image": "images/avatars/%E5%89%AF%E7%A7%98%E6%9B%B8_V.D.S._Tanya.png"
       },
       {
         "role": "地區財務",
@@ -34,7 +34,7 @@
         "club": "台北上城扶輪社 / 台北上城扶青社",
         "avatar": "❓",
         "desc": "秉持公開透明、嚴謹合規、效益極大化三大原則為地區財務把關，優化流程，做團隊最堅實的後盾。",
-        "image": "images/avatars/%E8%B2%A1%E5%8B%99%E4%B8%BB%E5%A7%94%20P.P.%20Warren.jpg"
+        "image": "images/avatars/%E8%B2%A1%E5%8B%99%E4%B8%BB%E5%A7%94_P.P._Warren.png"
       },
       {
         "role": "地區顧問",
@@ -42,7 +42,7 @@
         "club": "台北西北區扶青社",
         "avatar": "❓",
         "desc": "卸任地區代表後換個身分續留大家庭。位置不同但初心未變，是地區代表最堅實的後援與夥伴。",
-        "image": "images/avatars/%E9%A1%A7%E5%95%8F%20I.P.D.R.R.%20Jacky.jpg"
+        "image": "images/avatars/%E9%A1%A7%E5%95%8F_I.P.D.R.R._Jacky.png"
       }
     ],
     "tier3": [
@@ -52,7 +52,7 @@
         "club": "台北邑德扶青社",
         "avatar": "❓",
         "desc": "從社服主委、社長、秘書到地區公關，五年歷練走到副代表。相信地區是串聯各社、凝聚夥伴的平台。",
-        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20V.D.R.R.%20Lucy.jpg"
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8_V.D.R.R._Lucy.png"
       },
       {
         "role": "地區副代表",
@@ -60,7 +60,7 @@
         "club": "台北環河扶輪社 / 台北圓環扶青社",
         "avatar": "❓",
         "desc": "扶青扶輪像一場奇幻旅程，每個角色都是新的學習。帶著前地區代表的經歷，陪團隊繼續向前邁進。",
-        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20P.D.R.R.%20Stone.jpg"
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8_P.D.R.R._Stone.png"
       },
       {
         "role": "地區副代表",
@@ -68,7 +68,7 @@
         "club": "台北大稻埕扶青社",
         "avatar": "❓",
         "desc": "第三次擔任地區幹部，每次都在不同委員會，累積了不同的體驗與學習。期待今年地區的精采。",
-        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8%20V.D.R.R.%20Ethan.jpg"
+        "image": "images/avatars/%E5%9C%B0%E5%8D%80%E5%89%AF%E4%BB%A3%E8%A1%A8_V.D.R.R._Ethan.png"
       }
     ],
     "tier4": [
@@ -78,7 +78,7 @@
         "club": "台北城中北醫大扶青社",
         "avatar": "❓",
         "desc": "首次加入地區團隊的全新挑戰。期許透過每一次合作與交流，讓扶青與扶輪建立更深厚的連結。",
-        "image": "images/avatars/%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94%20Jeff%20Chen.jpg"
+        "image": "images/avatars/%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94_Jeff_Chen.png"
       },
       {
         "role": "社務副主委",
@@ -86,7 +86,7 @@
         "club": "台北邑德扶青社",
         "avatar": "❓",
         "desc": "扶青不只是服務的平台，更是持續學習、拓展視野的地方。期許成為團隊可靠的夥伴，創造正向影響。",
-        "image": "images/avatars/%E5%89%AF%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94%20Fischer.jpg"
+        "image": "images/avatars/%E5%89%AF%E7%A4%BE%E5%8B%99%E4%B8%BB%E5%A7%94_Fischer.png"
       },
       {
         "role": "社服主委",
@@ -94,7 +94,7 @@
         "club": "台北景文科大扶青社",
         "avatar": "❓",
         "desc": "首次加入地區，視這份邀請為能力被看見的認可。相信能把夢想一步步化為理想，再變成現實。",
-        "image": "images/avatars/%E7%A4%BE%E6%9C%8D%E4%B8%BB%E5%A7%94%20C.P.%20David.jpg"
+        "image": "images/avatars/%E7%A4%BE%E6%9C%8D%E4%B8%BB%E5%A7%94_C.P._David.png"
       },
       {
         "role": "職業主委",
@@ -102,7 +102,7 @@
         "club": "台北大安扶青社",
         "avatar": "❓",
         "desc": "跳脫舒適圈首次加入地區。期許打破框架，規劃具啟發性的職涯活動，打造彼此成就的平台。",
-        "image": "images/avatars/%E8%81%B7%E6%A5%AD%E4%B8%BB%E5%A7%94%20Tina.jpg"
+        "image": "images/avatars/%E8%81%B7%E6%A5%AD%E4%B8%BB%E5%A7%94_Tina.png"
       },
       {
         "role": "職業副主委",
@@ -110,7 +110,7 @@
         "club": "台北百城扶青社",
         "avatar": "❓",
         "desc": "參加扶青四年，終於有機會參與地區。今年活動豐富且多有嘗試，希望為大家創造更多美好回憶。",
-        "image": "images/avatars/%E5%89%AF%E8%81%B7%E6%A5%AD%E4%B8%BB%E5%A7%94%20P.P.%20Tom.jpg"
+        "image": "images/avatars/%E5%89%AF%E8%81%B7%E6%A5%AD%E4%B8%BB%E5%A7%94_P.P._Tom.png"
       },
       {
         "role": "國際主委",
@@ -118,7 +118,7 @@
         "club": "台北環河扶輪社",
         "avatar": "❓",
         "desc": "再次有機會在地區服務。每次參與都有不同感受，比以前更熟練，也更看見自己可以學習的部分。",
-        "image": "images/avatars/%E5%9C%8B%E9%9A%9B%E4%B8%BB%E5%A7%94%20Sirius.jpg"
+        "image": "images/avatars/%E5%9C%8B%E9%9A%9B%E4%B8%BB%E5%A7%94_Sirius.png"
       },
       {
         "role": "國際副主委",
@@ -126,7 +126,7 @@
         "club": "台北邑德扶青社",
         "avatar": "❓",
         "desc": "首次進入地區團隊，原本只是想來玩，卻發現夥伴個個優秀。期待一起辦出連自己都感動的活動。",
-        "image": "images/avatars/%E5%89%AF%E5%9C%8B%E9%9A%9B%E4%B8%BB%E5%A7%94%20Taming.jpg"
+        "image": "images/avatars/%E5%89%AF%E5%9C%8B%E9%9A%9B%E4%B8%BB%E5%A7%94_Taming.png"
       },
       {
         "role": "公共關係主委",
@@ -134,7 +134,7 @@
         "club": "台北魅力扶輪社",
         "avatar": "❓",
         "desc": "第一年擔任扶青地區幹部，期待延續扶輪服務精神，與大家共同打造熱情有活力的一年。",
-        "image": "images/avatars/%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94%20Kano.jpg"
+        "image": "images/avatars/%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94_Kano.png"
       },
       {
         "role": "公共關係副主委",
@@ -142,7 +142,7 @@
         "club": "台北大龍峒扶青社",
         "avatar": "❓",
         "desc": "再次加入地區團隊。期許善用公共關係的力量，串聯更多夥伴、傳遞扶青價值，開創地區新世紀。",
-        "image": "images/avatars/%E5%89%AF%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94%20I.P.P.%20Ian.jpg"
+        "image": "images/avatars/%E5%89%AF%E5%85%AC%E5%85%B1%E9%97%9C%E4%BF%82%E4%B8%BB%E5%A7%94_I.P.P._Ian.png"
       },
       {
         "role": "公共形象主委",
@@ -150,7 +150,7 @@
         "club": "台北城中扶青社",
         "avatar": "❓",
         "desc": "與優秀夥伴共事既震撼又幸運。期許用公共形象的力量放大青年影響力，寫下 3482 精彩新頁。",
-        "image": "images/avatars/%E5%85%AC%E5%85%B1%E5%BD%A2%E8%B1%A1%E4%B8%BB%E5%A7%94%20I.P.P.%20Borris.jpg"
+        "image": "images/avatars/%E5%85%AC%E5%85%B1%E5%BD%A2%E8%B1%A1%E4%B8%BB%E5%A7%94_I.P.P._Borris.png"
       },
       {
         "role": "社員增長主委",
@@ -158,7 +158,7 @@
         "club": "台北圓環扶青社",
         "avatar": "❓",
         "desc": "社員增長不只是人數的增加，更是讓更多人走進扶青、找到歸屬感。期待創造有溫度的扶青環境。",
-        "image": "images/avatars/%E7%A4%BE%E5%93%A1%E5%A2%9E%E9%95%B7%E4%B8%BB%E5%A7%94%20P.P.%20Syasya.jpg"
+        "image": "images/avatars/%E7%A4%BE%E5%93%A1%E5%A2%9E%E9%95%B7%E4%B8%BB%E5%A7%94_P.P._Syasya.png"
       }
     ]
   },
