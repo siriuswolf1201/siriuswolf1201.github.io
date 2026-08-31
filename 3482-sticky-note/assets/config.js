@@ -6,7 +6,7 @@
 window.APP_CONFIG = {
   // 1) 貼上你部署好的 Apps Script Web App 網址（結尾像 /exec）
   //    參考 apps-script/SETUP.md 的步驟。
-  WEBAPP_URL: "https://script.google.com/macros/s/AKfycbzLleeURKZeiFVywzBfl6xufqCbLVXhYUHUe9DirhoFpsj7xUVfJPi4SnYk1HB2B4RJ/exec",
+  WEBAPP_URL: "https://script.google.com/macros/s/AKfycbyS2fh1ZE3ExEuoWdEbvh1yR87OaSo0dRQHTlJqSEjGBbTvx3La_8naGj4WYPw0bRcd/exec",
 
   // 2) 活動 ID（可放多場活動，這個字串會當作 Google Sheet 分頁前綴/識別）
   //    先用一場即可，維持預設。
@@ -59,7 +59,11 @@ window.APP_CONFIG = {
       // H&S（工作人員在 #/hs 登錄的快樂捐），和一般回應一起輪播上天幕
       { id: 4, type: "hs", amount: 2000, question_id: 0, question_text: "H&S", question_color: "#f4b942",
         answer: "祝地區就職順利，大家平安喜樂！", identity: "", display_name: "小明",
-        extra_label: "所屬扶青社", extra_value: "台北城中社", likes: 4, created_at: Date.now() - 15000 }
+        extra_label: "所屬扶青社", extra_value: "台北城中社", likes: 4, created_at: Date.now() - 15000 },
+      // 贊助物品（工作人員在 #/hs 切到「贊助物品」登錄），青綠色便利貼上天幕
+      { id: 5, type: "gift", item: "紅酒兩瓶", question_id: 0, question_text: "贊助物品", question_color: "#86c2b5",
+        answer: "小小心意，祝活動圓滿成功！", identity: "", display_name: "小華",
+        extra_label: "所屬扶青社", extra_value: "台北大安社", likes: 2, created_at: Date.now() - 8000 }
     ]
   }
 };
