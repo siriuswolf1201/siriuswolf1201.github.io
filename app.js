@@ -10,7 +10,7 @@
 const CLUB_IDS = [
   "taipei-central", "taipei-east", "taipei-dadaocheng", "taipei-northsea",
   "taipei-daan", "taipei-dalongdong", "taipei-northwest", "taipei-hundredcastles",
-  "taipei-harmony", "taipei-uptown", "taipei-yide", "taipei-lily",
+  "taipei-uptown", "taipei-harmony", "taipei-yide", "taipei-lily",
   "taipei-yidong", "taipei-tmu", "taipei-risingsun", "taipei-gemini-ai", "taipei-just"
 ];
 
