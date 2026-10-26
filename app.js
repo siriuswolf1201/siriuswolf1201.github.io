@@ -19,19 +19,23 @@ let TIMELINE_DATA = [];
 let DISTRICT_CABINET = null;
 let DISTRICT_PROGRAMS = [];
 let MAGAZINES = [];
+let DONOR_ROLL = { records: [] };
 
 async function loadSiteData() {
-  const [clubs, district, magazines] = await Promise.all([
+  const [clubs, district, magazines, sponsors] = await Promise.all([
     Promise.all(CLUB_IDS.map(id => fetch(`data/clubs/${id}.json`).then(res => res.json()))),
     fetch("data/district.json").then(res => res.json()),
     // 雙月刊尚未發行或檔案缺漏時不影響其他區塊，取空陣列讓該區塊自行隱藏。
-    fetch("data/magazines.json").then(res => res.json()).catch(() => ({ issues: [] }))
+    fetch("data/magazines.json").then(res => res.json()).catch(() => ({ issues: [] })),
+    // 贊助芳名錄尚未建檔或檔案缺漏時同樣不影響其他區塊。
+    fetch("data/sponsors.json").then(res => res.json()).catch(() => ({ records: [] }))
   ]);
   CLUBS_DATA = clubs;
   TIMELINE_DATA = district.timeline;
   DISTRICT_CABINET = district.cabinet;
   DISTRICT_PROGRAMS = district.programs || [];
   MAGAZINES = magazines.issues || [];
+  DONOR_ROLL = sponsors || { records: [] };
 }
 
 // 2. 媒合器測驗題目資料庫
@@ -103,6 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initQuiz();
   initContactForm();
   initSponsors();
+  initDonors();
   initScrollAnimations();
 });
 
@@ -923,6 +928,58 @@ function initSponsors() {
       </div>
     `;
   }).join("");
+}
+
+// I. 贊助芳名錄 (Happy Smile & IOU)：逐筆紀錄合併為每位社友的總額，依總額由大到小排序
+// 注意：本函式在 initScrollAnimations() 之前呼叫，產生的 .fade-in-up 由後者統一觀察。
+function initDonors() {
+  const tier = document.getElementById("sponsors-tier-donors");
+  if (!tier) return;
+
+  const records = (DONOR_ROLL.records || []).filter(r => r && r.name && Number(r.amount) > 0);
+  if (!records.length) {
+    // 尚無贊助紀錄時整個區塊移除，避免留下空標題。
+    tier.remove();
+    return;
+  }
+
+  // 同一社籍、同一名字（忽略大小寫與空白差異）的多筆贊助合併為一位，首次出現的順序作為同額時的排序依據。
+  const donors = [];
+  const index = new Map();
+  records.forEach(r => {
+    const club = String(r.club || "").trim();
+    const key = `${club}|${String(r.name).replace(/\s+/g, "").toLowerCase()}`;
+    let donor = index.get(key);
+    if (!donor) {
+      donor = { club, name: String(r.name).trim(), amount: 0 };
+      index.set(key, donor);
+      donors.push(donor);
+    }
+    donor.amount += Number(r.amount);
+  });
+  donors.sort((a, b) => b.amount - a.amount); // sort 為穩定排序，同額者維持先後
+
+  const esc = str => String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const money = n => `NT$ ${n.toLocaleString("en-US")}`;
+  const total = donors.reduce((sum, d) => sum + d.amount, 0);
+  const topAmount = donors[0].amount;
+
+  const desc = document.getElementById("sponsors-donors-desc");
+  if (desc) {
+    const label = [DONOR_ROLL.year ? `${DONOR_ROLL.year} 年度` : "", DONOR_ROLL.title || ""].filter(Boolean).join(" ");
+    desc.textContent = `${label ? label + "｜" : ""}共 ${donors.length} 位社友贊助，合計 ${money(total)}`;
+  }
+
+  const grid = document.getElementById("sponsors-grid-donors");
+  grid.innerHTML = donors.map(d => `
+    <div class="donor-card${d.amount === topAmount ? " donor-card-top" : ""} fade-in-up">
+      <div class="donor-info">
+        <h4 class="donor-name">${esc(d.name)}</h4>
+        ${d.club ? `<p class="donor-club">${esc(d.club)}</p>` : ""}
+      </div>
+      <span class="donor-amount">${money(d.amount)}</span>
+    </div>
+  `).join("");
 }
 
 // J. WOW 雙月刊：最新一期以 Canva 內嵌呈現，其餘列為往期連結

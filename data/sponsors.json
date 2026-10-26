@@ -1,0 +1,29 @@
+{
+  "_note": "贊助芳名錄（Happy Smile & IOU）。records 為逐筆贊助紀錄，依收款順序往下加即可；網頁會自動把同一社籍、同一位社友的多筆合併為總額，依總額由大到小排序，同額者維持此處先後順序。club 為社籍或身分（例如地區職務），name 為社友稱謂與名字，amount 為新台幣金額。",
+  "year": "2026-27",
+  "title": "Happy Smile & IOU",
+  "records": [
+    { "club": "台北寰宇", "name": "Charles", "amount": 1000 },
+    { "club": "台北上城", "name": "Warren", "amount": 1000 },
+    { "club": "台北寰宇", "name": "Charles", "amount": 2000 },
+    { "club": "台北邑德", "name": "PP. Marco", "amount": 2000 },
+    { "club": "台北華城", "name": "CP. Ken", "amount": 10000 },
+    { "club": "台北鳴鳳", "name": "CP. Base", "amount": 2000 },
+    { "club": "台北北門", "name": "Designer", "amount": 2000 },
+    { "club": "3522忠山扶青", "name": "DRR. Dennis", "amount": 1000 },
+    { "club": "台北大稻埕", "name": "PP. ID", "amount": 1000 },
+    { "club": "RIT主席", "name": "IPDRR. Tom", "amount": 2000 },
+    { "club": "3462DRR", "name": "DRR. Ted", "amount": 1000 },
+    { "club": "3461PDRR", "name": "PDRR. Eric", "amount": 1000 },
+    { "club": "台北大稻埕", "name": "CPA", "amount": 5000 },
+    { "club": "3461DRR", "name": "DRR. Angel", "amount": 1000 },
+    { "club": "台北大稻埕", "name": "Color", "amount": 1000 },
+    { "club": "台北新世紀", "name": "DG. Fanny", "amount": 5000 },
+    { "club": "台北北海", "name": "P. Justin", "amount": 1000 },
+    { "club": "台北環河", "name": "PP. Young", "amount": 1000 },
+    { "club": "台北大安", "name": "P. Samuel", "amount": 10000 },
+    { "club": "台北大安", "name": "PP. Jose", "amount": 10000 },
+    { "club": "台北邑德", "name": "PP. Marco", "amount": 2000 },
+    { "club": "台北圓滿", "name": "PP. Nana", "amount": 1000 }
+  ]
+}
